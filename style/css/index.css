@@ -1,0 +1,136 @@
+/*-----------------------------Common--------------------------------*/
+.NewsAndCommnet, .Products, .Features, .PartFour, .Cooperate { margin: 30px auto; }
+.indexTitle{height:40px; line-height:40px;}
+/*-----------------------------Banner--------------------------------*/
+.bAS { width: 95%; margin: 0 auto; overflow: hidden; position: relative; height: 300px; z-index: 1; }
+.bannerI0 { top: -400px; left: 0; }
+.bannerS0 { right: -300px; bottom: 100px; background: #FE4C40 }
+.bannerI1 { top: -400px; left: 0; bottom: 0; }
+.bannerS1 { bottom: -300px; right: 0; background: #3cd3dc; }
+.bannerI2 { right: -400px; bottom: 0; }
+.bannerS2 { top: -300px; right: 0; background: #f89b18; }
+.bannerI3 { top: -400px; left: 0; }
+.bannerS3 { bottom: -300px; right: 0; background: #a700af; }
+.bannerI4 { top: -400px; left: 0; }
+.bannerS4 { bottom: -300px; right: 0; background: #32912f; }
+.Banner { height: 600px; overflow: hidden; position: relative; z-index: 3; }
+.bannerLeftBar, .bannerRightBar { height: 40px; top: 285px; width: 40px;}
+.bannerLeftBar { background: url(../images/bigPng.png) -167px 0; }
+.bannerRightBar { background: url(../images/bigPng.png) -167px -40px; }
+.bannerImage { opacity: 0; }
+.bannerSlogan { opacity: 0; text-align: center; position: absolute; width: 300px; height: 300px; z-index: 2; padding: 0 20px; }
+.bannerInner { height: 600px; }
+.bannerInner h1, .bannerInner h3 { color: white; font-size: 14pt; line-height: 30px; }
+.bannerInner h3 { text-align: left; text-indent: 20px; font-size: 11pt; line-height: 30px; font-weight: normal; margin-top: 30px; }
+.bannerControl { margin: 0; padding: 0; position: absolute; bottom: 10px; right: 0px; }
+.bannerControl li { width: 25px; height: 2px; margin-left: 6px; _margin-left: 3px; background: black; float: left; cursor: pointer; }
+.bannerIcon, .bannerTitle, .bannerDesc, .bannerButton { position: absolute; z-index: 1; }
+.bannerIcon { width: 27px; height: 27px; left: -120px; top: 20px; }
+.bannerTitle { width: 210px; height: 40px; line-height: 70px; font-size: 13pt; color: white; top: -300px; left: 55px; text-indent: 10px; }
+.bannerDesc { width: 275px; font-size: 11pt; color: white; line-height: 30px; text-align: left; left: 300px; top: 90px; }
+.bannerButton { width: 100px; right: 450px; bottom: 20px; cursor:pointer;}
+.bannerButton a { display: block; width: 160px; height: 25px; background: url(../images/morearrow.jpg) right no-repeat; color: white; padding: 5px; }
+/*-----------------------------Slogan--------------------------------*/
+.Slogan { color: #30363f; margin: 20px auto; }
+.Slogan h1, .Slogan a { display: inline; font-size: 11pt; font-weight: normal; color: #30363f; line-height: 30px; }
+/*-----------------------------PartFour--------------------------------*/
+.PartFour li { width: 228px; margin: 10px 10px; _margin: 10px 5px; float: left; border: 1px solid #F0F0F0; padding: 15px 0; cursor: pointer; height: 230px; position: relative; }
+.PartFour span { display: block; margin: 0 auto; color: #787887; font-size: 9pt; line-height: 30px; }
+.PartFour h3 { font-size: 11pt; font-weight: bold; color: #4c4c59; text-align: center; margin-top: 5px; }
+.partFourImg { width: 80px; height: 80px; }
+.smallP { background: #F2044D; position: absolute; top: 0px; left: 115px; width: 0px; height: 90px; z-index: -1; }
+.bottomShadow { position: absolute; bottom: -12px; _top: 262px; width: 230px; height: 10px; }
+/*-----------------------------Features--------------------------------*/
+#fea_spec { position: absolute; width: 312px; height: 109px; background: #F2044D; left: 318px; top: 0; z-index: -1; }
+.Features a { overflow: hidden; display: block; width: 312px; height: 76px; margin: 10px 10px; _margin: 10px 5px; float: left; padding: 15px 0; position: relative; }
+.Features .featuresEnd { width: 316px; }
+.Features a:hover { color: white; background: #F2054D; }
+.Features dl { display: block; }
+.Features dt { width: 66px; height: 66px; float: left; margin: 5px 10px; _margin: 5px 5px; }
+.Features h3 { font-size: 11pt; line-height: 30px; }
+.Features dd { font-size: 9pt; margin-right: 6px; _margin-right: 3px; line-height: 22px; }
+.f1 { background: url(../images/sprite.jpg) 0 -152px; }
+.f2 { background: url(../images/sprite.jpg) -66px -152px; }
+.f3 { background: url(../images/sprite.jpg) -132px -152px; }
+.f4 { background: url(../images/sprite.jpg) -198px -152px; }
+.f5 { background: url(../images/sprite.jpg) -264px -152px; }
+.f6 { background: url(../images/sprite.jpg) -330px -152px; }
+/*-----------------------------ProductShow-------------------------------*/
+.mlr16{margin:0 16px;}
+.mlr27{margin:10px 27px;}
+.proRow{ margin-top:10px;}
+.proRow li{ width:320px; height:250px; float:left; margin:10px 10px 0px 5px; position:relative; background:#fff;  overflow:hidden; cursor:pointer; border-bottom:1px solid #efefef;}
+.proImg{ width:320px; height:220px;}
+.proTitle{ width:320px;height:30px; line-height:30px; text-align:center; margin:0 auto; }
+.proBelow{background:#FAFAFA; width:320px; top:220px; left:0; height:30px; z-index:10;}
+.proImg2{ position:absolute; left:-320px; top:0;}
+/*.proDesc{ height:110px; width:200px; margin:10px auto; font-size:9pt; }
+*/.proLink{ width:318px; height:28px; margin:0 auto; line-height:30px; text-align:center;border:1px solid #efefef;}
+.proLink a{ font-size:9pt;}
+/*.idxProType1{width:321px; height:350px;   position:relative; border:1px solid #ECECEC; overflow:hidden; cursor:pointer;box-shadow:0px 1px 2px #cbcbcb}
+.idxProType2{ margin:0 16px; width:321px; height:350px; position:relative; border:1px solid #ECECEC; overflow:hidden;cursor:pointer; box-shadow:0px 1px 2px #cbcbcb}
+.idxImg{ width:321px; height:200px; float:left}
+.idxContent{position:absolute; top:200px; left:0; background:#fff; display:block;}
+.idxTitle{ width:311px; height:25px; line-height:25px; float:left; color:#444; text-align:center; padding:10px 5px;}
+.idxDesc{ width:301px; padding:0 10px; float:left; color:#999; font-size:9pt; line-height:25px; height:100px;}
+.idxShowMore{ margin-top:105px; float:left}
+.idxShowMore a{ display:inline-block; margin:10px; font-size:9pt;}
+.proRow{ height:360px; margin-top:15px;}
+.idxMask{ left:0; top:0;width:321px; height:200px; background:#000;}*/
+.proControl{ width:200px; height:30px; overflow:hidden; margin-top:10px;cursor:pointer;}
+.proControl a{ display:inline-block;}
+.proControl .showMore{ width:50px; font-size:9pt; line-height:30px; }
+.proCUp , .proCDown{ width:30px; height:30px;float:right; margin:0 5px;}
+.proCUp{ background:url(../images/proArrowUp.jpg) center no-repeat;}
+.proCDown{background:url(../images/proArrowDown.jpg) center no-repeat;}
+/*-----------------------------News--------------------------------*/
+.News { width: 480px; }
+.newsTitle { height: 40px; line-height: 40px; color: #F8044E; }
+.newsTitle span.l { width: 158px; display: block; background: #EDEDED; text-align: center; border: 1px solid #D8D8D8; cursor: pointer; }
+.newsContent { border: 1px solid #D8D8D8; width: 478px; height: 269px; border-top: none; }
+.news_part { height: 290px; }
+.news_part_Content { width: 478px; height: 270px; }
+.newsContentInner { height: 1500px; width: 478px; }
+.news_part_Content li { height: 32px; line-height: 32px; font-size: 10pt; color: #656573; _height: 26px; _line-height: 26px; }
+.news_part_Content a { display: block; }
+.news_part_Content a:hover { background: #F8044E; color: white; }
+.news_part_Content .l { text-indent: 30px; }
+.news_part_Content .r { margin-right: 26px; _margin-right: 13px; color: #bbbbc8; }
+/*-----------------------------Comment--------------------------------*/
+.br3 { border-right: 3px solid white; }
+.Comment { border: 1px solid #D8D8D8; width: 478px; }
+.commentControl { right: 23px; top: 20px; }
+.CButtonLeft, .CButtonRight { width: 40px; height: 40px; }
+.CButtonLeft { background: url(../images/bigPng.png) -167px 0; }
+.CButtonRight { background: url(../images/bigPng.png) -167px -40px; }
+.commentTitle { height: 60px; line-height: 60px; color: #575757; font-size: 12pt; text-indent: 30px; }
+.commentInner { width: 476px; height: 245px; }
+.commentLine { height: 2px; background: #fff; border: 1px solid #ededed; font-size: 2px; line-height: 2px; }
+.commentLeft { width: 40px; padding: 10px 10px 0 20px; }
+.commentContent, .commentOuter { width: 360px; padding-top: 10px; line-height: 27px; color: #525252; font-size: 11pt; }
+.commentWriter { width: 300px; height: 30px; line-height: 30px; background: #f9f9f9; text-align: center; font-size: 9pt; margin-top: 10px; }
+.commentContentContainer { width: 4000px; }
+.leftCorner { width: 29px; height: 27px; bottom: -26px; left: -1px; }
+.titleBesides { color: #F8044E; font-size: 9pt; line-height: 40px; }
+/*-----------------------------Cooperate--------------------------------*/
+.imgBorder { width: 140px; height: 140px; display: block; }
+.cooperateControl { right: 0; top: -5px; }
+.blk_29 { OVERFLOW: hidden; ZOOM: 1; POSITION: relative }
+span.LeftBotton, span.RightBotton { display: block; width: 40px; height: 40px; CURSOR: pointer; background: #f3f3f3; }
+.Cont { padding-top: 5px; }
+.box { float: left; width: 140px; height: 140px; margin: 13px; _margin: 12px 13px; }
+.Cooperate .indexContent { position: relative; padding: 0 30px; width: 940px; }
+.Cooperate .indexContent li { margin: 0 23px; margin: 10px 8px; _margin: 10px 4px; float: left; }
+#cooperateLeftButton, #cooperateRightButton { width: 32px; height: 65px; margin: 0; margin-top: 40px; cursor: pointer; position: absolute; }
+/*-----------------------------lightBox--------------------------------*/
+#pbCaption { font-weight: bold; padding: 4px; display: inline-block;  *display: inline; background-color: rgba(0,0,0,0.7);  filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#B0000000, EndColorStr=#B0000000);zoom: 1; }
+#pbNav { display: block; width: 200px; height: 65px; margin: auto; margin-top: 5px; }
+#pbPrevBtn, #pbNextBtn, #pbZoomBtn { display: inline-block; width: 70px; height: 65px; outline: none; text-indent: -9000px; background: url(../images/navbtns.png) no-repeat; }
+#pbPrevBtn { background-position: -70px 0; float: left; }
+#pbPrevBtn.pbgreyed { background-position: 0 0; }
+#pbNextBtn { background-position: -320px 0; float: right; }
+#pbNextBtn.pbgreyed { background-position: -390px; }
+#pbZoomBtn { width: 60px; background-position: -140px 0; float: left; }
+#pbZoomBtn.pbgreyed { background-position: -200px 0; }
+#pbZoomBtn.pbzoomed { background-position: -260px 0; }
+

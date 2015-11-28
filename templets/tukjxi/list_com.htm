@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description'  function='html2text(@me)'/}" />
+<link href="/style/css/base.css" rel="stylesheet" type="text/css" />
+<link href="/style/css/page.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<!--------------------------------------Header------------------------------------>
+{dede:include filename="/tukjxi/header.htm"/}
+<!-------------------------------------SonBanner---------------------------------->
+<div class="sonBanner wa">
+  <div class="banner_02_01">
+  <div class="width m"><img src="/style/images/10.jpg" height="300" /></div>
+  </div>
+  <div class="mbx">
+    <div class="mbxContent r pr">
+      <div class="wa mbxMk"></div>
+      <span class="showPath1">位置&#160;:&#160;</span> <span class="showPath2">{dede:field name='position'/}</span> </div>
+    <div class="mbxCorner r"><img src="/style/images/mbxLeft3.png" width="60" height="60" /></div>
+  </div>
+  <div class="mbx2">
+    <div class="mbxContent2 r pr">
+      <div class="wa mbxMk2"></div>
+      <span class="showPath2">咨询:028-88888888</span> </div>
+    <div class="mbxCorner2 r"><img src="/style/images/mbxLeft2.png" width="21" height="40" /></div>
+  </div>
+</div>
+<div class="wrapper width C"> 
+  <div class="wrapperLeft l"><div class="host_text">
+{dede:field.content/}
+</div>
+<style type="text/css">
+.host_text{
+float:left;
+width:100%;
+color:#444;
+line-height:1.7em;
+}
+.host_text2{
+float:left;
+width:99%;
+padding:10px 0 0 1%;
+color:#444;
+line-height:1.7em;
+}
+.host_text h2{color:#326BA2;font:700 14px/1.8em arial;}
+.host_text h1{
+font-size:14px;
+}
+.host_text h1 a{color:#316499;text-decoration:none;}
+.host_table td{
+padding-left:12px;
+}
+.red_t{
+color:#f60;
+border-bottom:1px dashed #f60;
+}
+.red_t a{color:#f60;text-decoration:none;}
+.f-th12 {
+color: #555;
+padding: 1px 0 0 12px;
+}
+.f-th11 {
+color: #555;
+padding: 1px 0 0 12px;
+}
+</style></div>
+  <div class="wrapperRight r pr">
+    <ul class="C">
+      <li id="rightTitle">织梦猫</li>
+      {dede:channel type="son"}
+<li class="wa l rightItemLi pr ItemUnHovered"><a href='[field:typeurl/]' class="rightItemA">[field:typename/]</a>
+<div class="dnRightItem pa"> <a href="[field:typeurl/]" class="rightItemA">[field:typename/]</a> </div>
+</li>
+
+{/dede:channel}
+    </ul>
+    <div class="contactBox"> 
+	 <a class="contactBox_00 l" href="tencent://message/?uin=83036000&Site=Mzip.taobao.com&Menu=yes"></a>
+      <a class="contactBox_01 l" href="http://weibo.com/stzhen"></a>
+      <a class="contactBox_02 l" href="http://t.qq.com/"></a>
+      <a class="contactBox_03 l" href="mailto:soxl@qq.com"></a>
+	</a> </div>
+  </div>
+</div>
+<!-------------------------------------Footer------------------------------------->
+{dede:include filename="/tukjxi/footer.htm"/}
+</body>
+</html>

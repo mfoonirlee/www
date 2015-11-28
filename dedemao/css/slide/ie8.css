@@ -1,0 +1,35 @@
+body {
+
+}
+.body-wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+.box {
+    width: 100%;
+    display: block;
+}
+.box-border {
+    border: 0
+}
+.row{
+	width:96%;}
+
+.menu ul#tiny {
+    display: block
+}
+.services .tab .icon:before {
+	display: none;
+}
+.services .tab.active .icon:before {
+	display: block;
+}
+.postb figure{
+	width:480px;}
+	
+	
+.item6 div{
+	background:url(../../images/demo03.png) repeat;
+}
+.item6 .cornerCC{left:0px;top:205px; width:205px; height:205px;}
+

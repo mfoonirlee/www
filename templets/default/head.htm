@@ -1,0 +1,28 @@
+<div class="M-top clearfix">
+        <div class="M-logo fl"> <a href="/"><img src="/dedemao/images/logo.png"></a> </div>
+        <div class="M-top-right fr clearfix">
+          <div class="M-nav clearfix fl" id="menu1">
+            <ul>
+
+              <li><a href="/" class={dede:field name=typeid runphp="yes"}(@me=="")? @me="cur":@me="";{/dede:field}>
+                <div style="margin-top: 0px;">
+                  <p><span>首页</span><font>首页</font></p>
+                </div>
+                </a></li>
+      	{dede:channel type='top' row='10' currentstyle="<li><a href='~typelink~' class='cur'><div style='margin-top: 0px;'><p>~typename~</p></div></a></li>"}     
+              <li><a href="[field:typeurl/]">
+                <div style="margin-top: 0px;">
+                  <p>[field:typename/]</p>
+                </div>
+                </a></li>
+		{/dede:channel} 
+        <li><a href="/#contact"><div style="margin-top: 0px;"><p><span>联系我们</span></p><font>CONTACT</font></div></a></li>               
+            
+            </ul>
+          </div>
+          <ul id="iconbar" class="fl">
+            <li> <a href="/#section-5"> <img src="/dedemao/images/tel-icoo.png" alt="" /> <span style="color:white">{dede:global.phone_one/}请拨打:400 821 3860</span></a></li>
+            <li> <a href="/#section-5"> <img src="/dedemao/images/tel-ico3o.png" alt="" /><span style="color:white">微信搜索：君禾</span></a> </li>
+          </ul>
+        </div>
+      </div>

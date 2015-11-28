@@ -1,0 +1,2 @@
+INSERT INTO `dede_search_keywords` VALUES('1','aqqq','aqqq','1','0','1411291403','0','0');
+INSERT INTO `dede_search_keywords` VALUES('2','#1123','#1123','2','0','1411708640','0','0');

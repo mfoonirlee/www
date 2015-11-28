@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description'  function='html2text(@me)'/}" />
+<link href="/style/css/base.css" rel="stylesheet" type="text/css" />
+<link href="/style/css/page.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.5&ak=04d87c5321c3fd9bc383cf967c6bad7c"></script>
+</head>
+
+<body>
+<!--------------------------------------Header------------------------------------>
+{dede:include filename="/tukjxi/header.htm"/}
+<!-------------------------------------SonBanner---------------------------------->
+<div class="sonBanner wa">
+  <div class="banner_09_01">
+  <div class="width m"><img src="/style/images/32.jpg" height="300" /></div>
+  </div>
+   <div class="mbx">
+    <div class="mbxContent r pr">
+      <div class="wa mbxMk"></div>
+      <span class="showPath1">位置:</span> <span class="showPath2"> 联系我们</span> <span class="showPath3">/ <a href="/index.html" >首页</a></span> </div>
+    <div class="mbxCorner r"><img src="/style/images/mbxLeft3.png" width="60" height="60" /></div>
+  </div>
+  <div class="mbx2">
+    <div class="mbxContent2 r pr">
+      <div class="wa mbxMk2"></div>
+      <span class="showPath2">咨询:028-88888888</span> </div>
+    <div class="mbxCorner2 r"><img src="/style/images/mbxLeft2.png" width="21" height="40" /></div>
+  </div>
+</div>
+<div id="allmap"></div>
+<div class="contactUsWrapper width C">
+  <div class="pa wa ha contactBelow"></div>
+  <div class="contactLeft C l mt30">
+    <ul class="C l bgw">
+      <li class="sp">信任我们专业的视觉，发掘设计最大的价值……</li>
+      <li>+Add: 江苏省苏州市沧浪区</li>
+      <li>+Email: niceholinchow@sina.com</li>
+      <li>+Tel: 028-88888888</li>
+      <li>+Site: www.czxixi.com</li>
+      <li>+Mob: 189 123 123 68</li>
+    </ul>
+    <ul class="mt20 C l bgw">
+      <li class="sp">附近的公交</li>
+      <li>(14路; 38路; 225路)</li>
+      <li>(14路; 28路; 38路; 55路; 68a路; 68b路; 68c路; 68路; 225路; 308路; 312-1路; 312路)</li>
+    </ul>
+  </div>
+  <div class="contactRight C r mt30">
+    <div class="bgw">
+	<!--微博调用开始-->
+    <iframe width="100%" height="400" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=2&ptype=1&speed=0&skin=1&isTitle=1&noborder=1&isWeibo=1&isFans=1&uid=1228216583&verifier=7cf1afbe&dpc=1"></iframe>
+	 <!--微博调用结束-->
+	 
+    </div>
+  </div>
+  <div class="showPath wa tac C"> <span class="showPathInner C"><span class="showPath4">填写表单与我们联系</span></span> </div>
+  <div class="tac M"><img src="/style/images/bg-separate.png" width="518" height="27" /></div>
+  <div class="contactUsWay C l">
+  
+    <form action="/plus/diy.php" enctype="multipart/form-data" method="post">
+<input type="hidden" name="action" value="post" />
+<input type="hidden" name="diyid" value="1" />
+<input type="hidden" name="do" value="2" />
+      <input type="input" class="name" name="xingming" onfocus="if (value =='姓 名'){value =''}" onblur="if (value ==''){value='姓 名'}" value="姓 名" />
+      <input type="input" class="email" name="dzyx" onfocus="if (value =='邮 箱'){value =''}" onblur="if (value ==''){value='邮 箱'}" value="邮 箱" />
+      <input type="input" class="phone" name="lxdh" onfocus="if (value =='电 话'){value =''}" onblur="if (value ==''){value='电 话'}" value="电 话" />
+      <textarea class="youWant" name='content' id='content' ></textarea>
+      <input type="submit" class="submit" />
+	  <input type="hidden" name="dede_fields" value="xingming,text;dzyx,text;lxdh,text;content,multitext" />
+<input type="hidden" name="dede_fieldshash" value="ff161b69d884253a9bcf66b57445518c" /></table>
+    </form>
+	
+  </div>
+</div>
+<script type="text/javascript">
+var map = new BMap.Map("allmap");
+var point = new BMap.Point(113.638805,34.732456);
+map.centerAndZoom(point, 15);
+var marker = new BMap.Marker(point); // 创建标注
+map.addOverlay(marker);       // 将标注添加到地图中
+marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+</script> 
+<!-------------------------------------Footer------------------------------------->
+{dede:include filename="/tukjxi/footer.htm"/}
+<script type="text/javascript">
+$(function(){
+$(".anchorBL , .BMap_cpyCtrl").css({display:"none"});
+})
+</script>
+</body>
+</html>

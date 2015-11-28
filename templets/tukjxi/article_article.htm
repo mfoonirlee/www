@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field.keywords/}" />
+<meta name="description" content="{dede:field.description  function='html2text(@me)'/}" />
+<link href="/style/css/base.css" rel="stylesheet" type="text/css" />
+<link href="/style/css/page.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<!--------------------------------------Header------------------------------------>
+{dede:include filename="/tukjxi/header.htm"/}
+<!-------------------------------------SonBanner---------------------------------->
+<div class="sonBanner wa">
+  <div class="banner_07_04">
+    <div class="width m"><img src="/style/images/26.jpg" height="300" /></div>
+  </div>
+  <div class="mbx">
+    <div class="mbxContent r pr">
+      <div class="wa mbxMk"></div>
+      <span class="showPath1">位置&nbsp;:&nbsp;</span> <span class="showPath2">{dede:field name='position'/}</span></div>
+    <div class="mbxCorner r"><img src="/style/images/mbxLeft3.png" width="60" height="60" /></div>
+  </div>
+  <div class="mbx2">
+    <div class="mbxContent2 r pr">
+      <div class="wa mbxMk2"></div>
+      <span class="showPath2">咨询:028-88888888</span> </div>
+    <div class="mbxCorner2 r"><img src="/style/images/mbxLeft2.png" width="21" height="40" /></div>
+  </div>
+</div>
+<div class="wrapper width C" id="fwryh">
+  <div class="wrapperLeft l">
+    <div class="wrapperInner m C">
+       <h1 class="info_title" >{dede:field.title/}</h1>
+        <table align="center" width="700" bfuwuliucheng="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td class="info_content">
+            {dede:field.body/}
+            </td>
+          </tr>
+        </table>
+        <div class="content_page"></div>
+        <div class="info_next l">{dede:prenext get='pre'/}</div>
+        <div class="info_next r">{dede:prenext get='next'/}</div>
+
+    </div>
+  </div>
+  <div class="wrapperRight r pr">
+   <ul class="C">
+      <li id="rightTitle">织梦猫</li>
+      {dede:channel type="son"}
+<li class="wa l rightItemLi pr ItemUnHovered"><a href='[field:typeurl/]' class="rightItemA">[field:typename/]</a>
+<div class="dnRightItem pa"> <a href="[field:typeurl/]" class="rightItemA">[field:typename/]</a> </div>
+</li>
+
+{/dede:channel}
+
+    </ul>
+    <div class="contactBox">
+    <a class="contactBox_00 l" href="tencent://message/?uin=884358&Site=www.dedemao.com&Menu=yes"></a>
+      <a class="contactBox_01 l" href="http://weibo.com/zjlxingewang"></a>
+      <a class="contactBox_02 l" href="#"></a>
+      <a class="contactBox_03 l" href="#"></a>
+    </div>
+  </div>
+</div>
+<!-------------------------------------Footer------------------------------------->
+{dede:include filename="/tukjxi/footer.htm"/}
+
+</body>
+</html>

@@ -1,0 +1,472 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<link rel="shortcut icon" href="/dedemao/images/logo-ico.png" type="image/x-icon">
+<link rel="icon" href="/dedemao/images/logo-ico.png" type="/dedemao/images/png"/>
+<title>我的服务_君禾园</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+<!--常用CSS-->
+<link rel="stylesheet" type="text/css" href="/dedemao/css/basic.css">
+<link rel="stylesheet" type="text/css" href="/dedemao/css/expertise.css">
+<!--常用CSS end-->
+<!--轮播CSS-->
+<link rel="stylesheet" type="text/css" href="/dedemao/css/slide/settings.css">
+<link rel="stylesheet" type="text/css" href="/dedemao/css/slide/styles.css">
+<!--轮播CSS end-->
+
+<!--tel CSS-->
+<link rel="stylesheet" type="text/css" href="/dedemao/css/tel/borrar.css">
+<link rel="stylesheet" type="text/css" href="/dedemao/css/tel/estilos.css">
+<!--tel CSS end-->
+
+<!--轮播JS-->
+<script src="/dedemao/js/slide/jquery.js"></script> 
+<script src="/dedemao/js/slide/jquery.themepunch.plugins.min.js"></script> 
+<script src="/dedemao/js/slide/jquery.themepunch.revolution.min.js"></script> 
+<script src="/dedemao/js/slide/jquery.themepunch.showbizpro.min.js"></script> 
+<script src="/dedemao/js/slide/jquery.fancybox.pack.js"></script> 
+<script src="/dedemao/js/slide/jquery.isotope.min.js"></script> 
+<script src="/dedemao/js/slide/scripts.js"></script>
+<!--轮播JS end-->
+
+<!--tel JS-->
+<script type="text/javascript" src="/dedemao/js/tel.js"></script>
+<!--tel JS end-->
+<!--首页滚动JS-->
+<script type="text/javascript" src="/dedemao/js/index.js"></script>
+<!--首页滚动JS end-->
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="/dedemao/css/slide/ie8.css" media="all" />
+<![endif]-->
+<!--[if lt IE 9]>
+<script src="/dedemao/js/slide/html5shiv.js"></script>
+<![endif]-->
+
+
+<!--workJS-->
+<script type="text/javascript" src="/dedemao/js/work.js"></script>
+<script type="text/javascript"> 
+	$(function(){ 
+		var H=$(window).width()/2-10
+		if(H)
+		{
+			$(".ss-left").css("width",H)	
+			$(".ss-right").css("width",H)	
+		} 
+	})
+	$(function(){ 
+		var T=$(window).width()
+		if(T<=3840 & T>=1890 ){
+			$("#brand").css("width","1820px")
+		}else{
+			$("#brand").css("width","1090px")
+		}
+	}) 
+</script> 
+<script>
+$(window).resize(function(){
+	var resolutionList="320,400,640,800,1024,1280,1400,1440,1600,1680,1920,2048,2560,3200,3840,";
+	var nowwidth=window.screen.width;
+	var H=$(window).width()/2-10
+	var T=$(window).width()
+	if(resolutionList.indexOf(nowwidth + ",")==-1 ){
+		if(H)
+		{
+			$(".ss-left").css("width",H)	
+			$(".ss-right").css("width",H)	
+		}
+	}
+	else{
+			if(H)
+			{
+				$(".ss-left").css("width",H)	
+				$(".ss-right").css("width",H)	
+			}
+		}
+	if(resolutionList.indexOf(nowwidth + ",")==-1 ){
+				if(T<=3840 & T>=1890 ){
+					$("#brand").css("width","1820px")
+				}else{
+					$("#brand").css("width","1090px")
+				}
+	}
+	else{
+			if(T<=3840 & T>=1890 ){
+				$("#brand").css("width","1820px")
+			}else{
+				$("#brand").css("width","1090px")
+			}
+		}
+
+});
+</script>
+<!--workJS end-->
+<script type="text/javascript" src="/dedemao/js/jquery.SuperSlide.2.1.1.js"></script>
+
+<!--导航JS-->
+<script>
+$(document).ready(function() {	
+	$("#menu1 a").each(function() { //For each list item...
+		var linkText = $(this).find("div").html(); //Find the text inside of the a tag
+	}); 
+	
+	$("#menu1 a").hover(function() {	//On hover...
+		$(this).find("p").stop().animate({ 
+			marginTop: "-20" //Find the span tag and move it up 40 pixels
+		}, 200);
+	} , function() { //On hover out...
+		$(this).find("p").stop().animate({
+			marginTop: "0" //Move the span back to its original state (0px)
+		}, 200);
+	});	
+});
+</script>
+<script type="text/javascript" src="/dedemao/js/right-nav.js"></script>
+<script>
+	$(window).bind("scroll", function(){ 
+	//当滚动条滚动时
+		var scroll_top = $(document).scrollTop();
+		if(scroll_top == 0)
+		{
+			$(".M-top").removeClass("M-top-show");
+			$(".M-top").animate({top:'0px'},"slow");
+			$(".M-top").css("left","0px");
+		}
+		if(scroll_top > 0)
+		{
+			$(".M-top").addClass("M-top-show");
+			$(".M-top").css("left","0px");
+			$(".M-top").css("top","-165px");
+			
+		}
+		
+	});
+	
+	$(function(){
+		$(".M-menu2").click(function(){
+			$(".M-top").addClass("M-top-show");
+			$(".M-top").animate({top:'0px'},"slow");
+			$("#topcontrol").animate({right:'-122px'},"slow");
+		})
+		
+	})
+</script>
+<!--导航JS end-->
+
+<!--new-->
+<link rel="stylesheet" type="text/css" href="/dedemao/css/new/new.css">
+
+<link rel="stylesheet" type="text/css" href="/dedemao/css/new/reset.css">
+
+<link rel="stylesheet" type="text/css" href="/dedemao/css/new/style.css">
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="new/css/styleIE.css" />
+<![endif]-->
+
+<script type="text/javascript" src="/dedemao/js/new/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="/dedemao/js/new/modernizr.custom.11333.js"></script>
+<!--new end-->
+<script type="text/javascript">
+$(document).ready(
+function () {
+var m_st, m_po = 230; //滚动到600像素时显示
+$(window).scroll(function(){
+	m_st = Math.max(document.body.scrollTop || document.documentElement.scrollTop);
+	if (m_st > m_po) 
+	{
+	$(".M-design").animate({top:'0px'},1000);
+	$(".Brand").animate({top:'0px'},1500);
+	$(".move").animate({top:'0px'},2000);
+	$(".ui").animate({top:'0px'},2500);
+	}	
+});
+
+});
+</script>
+<script>
+$(document).keydown(function(event){
+		var t=$(document).scrollTop();
+		if(t>=0 & t<=586){
+			if (event.keyCode == 40){ 
+			$("html,body").animate({scrollTop:600},1000);
+			return false; 
+		  }
+		  if (event.keyCode == 38){ 
+			$("html,body").animate({scrollTop:0},1000);
+			return false; 
+		  }
+		}
+		if(t>=600 & t<=1240){
+			if (event.keyCode == 40){ 
+			$("html,body").animate({scrollTop:1250},1000);
+			return false; 
+		  }
+		  if (event.keyCode == 38){ 
+			$("html,body").animate({scrollTop:0},1000);
+			return false; 
+		  }
+		}
+		if(t>=1240 & t<=2090){
+			if (event.keyCode == 40){ 
+			$("html,body").animate({scrollTop:2100},1000);
+			return false; 
+		  }
+		  if (event.keyCode == 38){ 
+			$("html,body").animate({scrollTop:600},1000);
+			return false; 
+		  }
+		}
+		if(t>=2100 & t<=2240){
+			if (event.keyCode == 40){ 
+			$("html,body").animate({scrollTop:2840},1000);
+			return false; 
+		  }
+		  if (event.keyCode == 38){ 
+			$("html,body").animate({scrollTop:1250},1000);
+			return false; 
+		  }
+		}
+		if(t>=2240){
+		  if (event.keyCode == 38){ 
+			$("html,body").animate({scrollTop:2102},1000);
+			return false; 
+		  }
+		}
+		if($(document).scrollTop() >= $(document).height() - $(window).height()){
+		  if (event.keyCode == 38){ 
+			$("html,body").animate({scrollTop:2100},1000);
+			return false; 
+		  }
+		}
+})
+</script>
+</head>
+
+<body>
+<div class="page_spinner"></div>
+<div id="wrap">
+	<div class="M-top clearfix">
+        <div class="M-logo fl"> <a href="/"><img src="/dedemao/images/logo.png"></a> </div>
+        <div class="M-top-right fr clearfix">
+          <div class="M-nav clearfix fl" id="menu1">
+            <ul>
+
+              <li><a href="/" class=>
+                <div style="margin-top: 0px;">
+                  <p><span>首页</span><font>首页</font></p>
+                </div>
+                </a></li>
+      	<li><a href='/expertise/' class='cur'><div style='margin-top: 0px;'><p><span>我的服务</span>SERVICE</p></div></a></li>     
+              <li><a href="http://shop.dream-gardens.com.cn">
+                <div style="margin-top: 0px;">
+                  <p><span>我的菜园</span>GARDEN</p>
+                </div>
+                </a></li>
+		     
+              <li><a href="/about/">
+                <div style="margin-top: 0px;">
+                  <p><span>农场故事</span>STORY</p>
+                </div>
+                </a></li>
+		     
+              <li><a href="/life/">
+                <div style="margin-top: 0px;">
+                  <p><span>慢生活</span>LIFE-OF-EASE</p>
+                </div>
+                </a></li>
+		     
+              <li><a href="/news/">
+                <div style="margin-top: 0px;">
+                  <p><span>君禾动态</span>NEWS</p>
+                </div>
+                </a></li>
+		 
+        <li><a href="/#contact"><div style="margin-top: 0px;"><p><span>联系我们</span></p><font>CONTACT</font></div></a></li>               
+            
+            </ul>
+          </div>
+          <ul id="iconbar" class="fl">
+            <li> <a href="/#section-5"> <img src="/dedemao/images/tel-icoo.png" alt="" /> <span style="color:white">请拨打:400 821 3860</span></a></li>
+            <li> <a href="/#section-5"> <img src="/dedemao/images/tel-ico3o.png" alt="" /><span style="color:white">微信搜索：君禾</span></a> </li>
+          </ul>
+        </div>
+      </div>
+    <script>
+$(function(){
+    if($.browser.safari && navigator.userAgent.toLowerCase().match(/chrome/) == null) {
+        $(".expertise-content2-main").css("padding-top","91px")
+    }
+})
+</script>
+    <div id="section-2"></div>
+    <div class="expertise-content2" id="expertise-content2" style="background:url(/dedemao/images/expertise-bj3.png) center; height:755px;">
+    	<div class="expertise-content2-main">
+        	<div class="expertise-content2-title">
+            	<img src="/dedemao/images/gaoduan.png">
+            </div>
+            <div class="expertise-content2-list clearfix">
+            <span><strong>亲爱的会员朋友，欢迎您加入君禾园！</strong></br></br>
+			<font>我们将为您提供高品质的产品和服务，同时也努力营造尊重自然生态的人文交流环境。</br>君禾园非常重视您对产品或服务的意见或建议，您的反馈将有助于我们不断完善自己。</font>
+            </div>
+			<span><strong>入会与兑现</strong></span>
+			<font>可享受从农场到家庭，24小时专业冷链每周新鲜直送服务</br>
+			承诺2小时内解决问题，提供完善的售后服务</br>
+			优先享有参与农场田园休憩及主题活动的贵宾礼遇</br>
+			节日礼券礼包为您专属定制</font></br></br>
+            <a href="http://www.dream-gardens.com.cn/a/huiyuanshouce/2014/0707/60.html" class="btn2">会员手册</a></br></br>
+            <a href="#expertise-content3" class="top-ico4"></a>
+        </div>
+    </div>
+    <div id="section-3"></div>
+    <div class="expertise-content3" id="expertise-content3" style="height:702px;">
+    	<div class="expertise-content2-main">
+        	<div class="expertise-content2-title">
+            	<img src="/dedemao/images/pinpai.png">
+            </div></br></br>
+ <div class="M-what clearfix" style=" overflow:hidden !important; height:198px;position:relative"> <a href="/life/c1/#expertise-content2">
+        <div class="M-design fl" ><a href="http://shop.dream-gardens.com.cn/goods.php?id=21" target="_blank"><em class="M-design-ico"></em></a>
+          <div class="M-design-bottom">
+		  <div class="M-design-title"><font color="white"><strong>800元</strong></font><font>Experience card</font> </div>
+            <span class="M-btn"></span> </div>
+        </div>
+        </a> <a href="/life/c2/#expertise-content3">
+        <div class="Brand fl"><a href="http://shop.dream-gardens.com.cn/goods.php?id=22" target="_blank"><em class="Brand-ico"></em></a>
+          <div class="M-design-bottom">
+            <div class="M-design-title"><font color="white"><strong>2600元</strong></font><font>Half year card</font> </div>
+            <span class="M-btn"></span> </div>
+        </div>
+        </a> <a href="#expertise-content4">
+        <div class="move fl"><a href="http://shop.dream-gardens.com.cn/goods.php?id=23" target="_blank"><em class="move-ico"></em></a>
+          <div class="M-design-bottom">
+            <div class="M-design-title"><font color="white"><strong>4800元</strong></font><font>One year card 1#</font> </div>
+            <span class="M-btn M-left"></span> </div>
+        </div>
+        </a> <a href="#expertise-content5">
+        <div class="ui fl"><a href="http://shop.dream-gardens.com.cn/goods.php?id=24" target="_blank"><em class="ui-ico"></em></a>
+          <div class="M-design-bottom">
+            <div class="M-design-title"><font color="white"><strong>9500元</strong></font> <font>One year card 2#</font> </div>
+            <span class="M-btn"></span> </div>
+        </div>
+        </a> </div>
+      <a href="#section-3" class="top-ico2"></a> </div>
+    <div id="section-3"></div></br></br></br>
+	 <center><span style="color:#FFF;"> </span></center></br>
+           <center><font color="white">请先<font color="#5c4512"><a href="http://shop.dream-gardens.com.cn/user.php?act=register" target="_blank">注册</a></font>君禾园账号，再选购您所需要办理的会员套餐</font></center>
+            <a href="#expertise-content3" class="top-ico3"></a>
+
+        </div>
+    </div>
+    <div id="section-4"></div>
+    <div class="expertise-content2" id="expertise-content4">
+    	<div class="expertise-content2-main">
+        	<div class="expertise-content2-title">
+            	<img src="/dedemao/images/title2.png">
+            </div>
+            <div class="expertise-content2-list clearfix">
+            <span><br>
+            <span><strong>客户下单→农场采摘→检验分拣→冷链配送→客户确认→客户验收→售后回访</strong></br></br>
+            </div>
+			<font>订购产品可任意选配；每份订单满RMB90免运费</br></br>
+			提前一日下单，每日订单截止时间是中午12:30分</font></br></br>
+			<a href="http://www.dream-gardens.com.cn/a/huiyuanshouce/2014/0905/94.html" ">会员订购方式详解</a>
+            <span><br>
+</span>
+            <a href="#expertise-content5" class="top-ico4"></a>
+        </div>
+    </div>
+    <div id="section-5"></div>
+    <div class="expertise-content3" id="expertise-content5">
+    	<div class="expertise-content2-main">
+        	<div class="expertise-content2-title">
+            	<img src="/dedemao/images/title3.png">
+            </div></br>
+
+            <div class="expertise-content2-list clearfix" style="width:1100px; margin-bottom:70px;">
+            	<div class="expertise-content2-list-left fl" style="width:300px; margin-left:100px; color:#FFF;">
+                	<strong>实物礼盒定制：价值150--300元</strong><br>
+					可按照您的要求定制及包装，自然健康的蔬菜，是您的馈赠佳品
+                </div>
+			    <div class="expertise-content2-list-right  fl" style="width:300px;  margin-left:40px; color:#FFF;">
+                	<strong>礼券：面额150--300元</strong><br>
+					适合低面值普惠性的企业需求
+                </div>
+				 <div class="expertise-content2-list-right fr" style="width:260px; margin-right:100px; color:#FFF;">
+                	<strong>礼品卡：面额800--1000元以上</strong><br>
+					相当于会员卡，可采用分批的形式进行消费
+                </div>
+            </div>
+			<span style="color:#FFF;">&nbsp;致电&nbsp;<img src="/dedemao/images/tel-icoo.png" </img><strong> 021-50306602 </strong>咨询订购</span>
+            <a href="#foot" class="top-ico3"></a>
+        </div>
+    </div>
+    <div class="work-foot" id="foot" style="margin-top:-140px; background:url(/dedemao/images/work-foot-bj2.png) center no-repeat;">
+  <div class="foot-content2 clearfix"> <span class="fl"><font color="#90">乐享君禾，体验自然</font></span>
+          <div class="fl clearfix" style="margin-left:47px;"> 
+          <a href="javascript:void(0);" class="WX-ico"></a>
+          <a target="blank" class="QQ-ico" href="/" title="上海君禾园艺有限公司"></a>
+          <a href="http://weibo.com/dreamgardens" target="_blank" class="WB-ico"></a> </div>
+    <span class="fr m_wnews clearfix"> <span class="fl"><font color="#90">欢迎拨打: <font color="#aed208">400 821 3860</font></font></span> <span id="miniNewsRegion" class="fl" style="line-height:20px; margin-top:40px;color:#000;">
+    </span>
+    <style>
+.m_wnews .tempWrap{ margin-top:20px; height:40px !important;}
+</style>
+    </span> 
+    <script type="text/javascript">
+            jQuery(".m_wnews").slide({ mainCell:"#miniNewsRegion", effect:"topLoop", autoPlay:true});
+            </script> 
+  </div>
+        <span class="foot-font2">上海君禾园艺有限公司版权所有   沪ICP备11031278号</span> </div>
+
+</div>
+<ul id="nav" class="clearfix" style="display:block;">
+  <li class="current"><a href="#section-1">顶部<em class="nav-ico fr"></em></a></li>
+  <li><a href="#section-2">手册<em class="nav-ico fr"></em></a></li>
+  <li><a href="#section-3">套餐<em class="nav-ico fr"></em></a></li>
+  <li><a href="#section-4">配送<em class="nav-ico fr"></em></a></li>
+  <li><a href="#section-5">企业<em class="nav-ico fr"></em></a></li>
+</ul>
+</body>
+</html>
+<!--左侧导航JS-->
+<script type="text/javascript" src="/dedemao/js/left-nav/jquery.nav.js"></script>
+<script type="text/javascript" src="/dedemao/js/left-nav/jquery.scrollTo.js"></script>
+<script>
+$(document).ready(function() {
+  $('#nav').onePageNav({
+    begin: function() {
+	  console.log('start');
+    },
+    end: function() {
+	  console.log('stop');
+    },
+	scrollOffset: 30
+  });
+});
+$(document).ready(function() {
+  $('#nav2').onePageNav({
+    begin: function() {
+	  console.log('start');
+    },
+    end: function() {
+	  console.log('stop');
+    },
+	scrollOffset: 30
+  });
+});
+</script>
+<!--左侧导航JS-->
+<!--login-->
+<!-- =========================== END FOOTER ======================== -->
+<script>
+$(window).load(function(){$('.page_spinner').fadeOut(1000);$('body').css({overflow:'visible'})})
+</script>
+<div style="display:none">
+
+</div>

@@ -1,0 +1,1 @@
+INSERT INTO `dede_admin` VALUES('1','10','admin','1d65e043f085735dc4d5','admin','Paulyang','paulyang@dream-gardens.com.cn','','1413338549','36.250.232.128');

@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description'  function='html2text(@me)'/}" />
+<link href="/style/css/base.css" rel="stylesheet" type="text/css" />
+<link href="/style/css/page.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<!--------------------------------------Header------------------------------------>
+{dede:include filename="/tukjxi/header.htm"/}
+<!-------------------------------------SonBanner---------------------------------->
+<div class="sonBanner wa">
+  <div class="banner_05_02">
+     <div class="width m"><img src="/style/images/16.jpg" height="300" /></div>
+  </div>
+  <div class="mbx">
+    <div class="mbxContent r pr">
+      <div class="wa mbxMk"></div>
+       <span class="showPath1">位置&#160;:&#160;</span> <span class="showPath2">{dede:field name='position'/}</span> </div>
+    <div class="mbxCorner r"><img src="/style/images/mbxLeft3.png" width="60" height="60" /></div>
+  </div>
+  <div class="mbx2">
+    <div class="mbxContent2 r pr">
+      <div class="wa mbxMk2"></div>
+      <span class="showPath2">咨询:028-88888888</span> </div>
+    <div class="mbxCorner2 r"><img src="/style/images/mbxLeft2.png" width="21" height="40" /></div>
+  </div>
+</div>
+<div class="wrapper width C"> 
+  <div class="wrapperLeft l">
+     <ul class="wrapperInner m C pr mtb20" style="height:1000px">
+    <div class="vice_pro_container C allp">
+<ul class="vice_pro_wrap C">
+   
+  {dede:list pagesize='10'}
+          <li class="C">
+    <span class="index_pro_img">
+                <a href="[field:arcurl/]"><img src="[field:picname/]" width="320" height="160" /></a>
+                <span class="index_pro_ally C">
+                  <span class="index_pro_date"></span>
+                  <a class="index_pro_amplify" href='[field:picname/]' rel="lightbox-demo"></a>
+                  <a class="index_pro_link" href="/html/webshow/309.html"></a>
+                </span>
+        
+      </span>
+              <span class="index_pro_name C">
+                <span class="index_pro_name_prefix"></span>
+                <span class="index_pro_name_content"><a href="[field:arcurl/]">[field:title/]</a></span>
+              </span>
+      <span class="index_pro_desc"><a href="[field:arcurl/]">[field:description function="cn_substr(@me,100)"/]...</a></span>
+    </li>
+    {/dede:list}    
+  </ul>
+     <div class="lmlpage">
+{dede:pagelist listitem="info,index,end,pre,next,pageno" listsize="5"/}
+</div>
+</div>
+    </ul>
+  </div>
+  <div class="wrapperRight r pr">
+    <ul class="C">
+      <li id="rightTitle">网站案例</li>
+      <li class="wa l rightItemLi pr ItemUnHovered" id="ItemHovered"> <a href="/webshow/" class="rightItemA">1 / 我们的客户</a>
+        <div class="dnRightItem pa"> <a href="/webshow/" class="rightItemA">1 / 我们的客户</a> </div>
+      </li>
+      <li class="wa l rightItemLi pr ItemUnHovered"> <a href="/neimaowangzhananli/" class="rightItemA">2 / 内贸网站</a>
+        <div class="dnRightItem pa"> <a href="/neimaowangzhananli/" class="rightItemA">2 / 内贸网站</a> </div>
+      </li>
+      <li class="wa l rightItemLi pr ItemUnHovered"> <a href="/waimaowangzhananli/" class="rightItemA">3 / 外贸网站</a>
+        <div class="dnRightItem pa"> <a href="/waimaowangzhananli/" class="rightItemA">3 / 外贸网站</a> </div>
+      </li>
+    </ul>
+    
+  </div>
+</div>
+<!-------------------------------------Footer------------------------------------->
+{dede:include filename="/tukjxi/footer.htm"/}
+</body>
+</html>

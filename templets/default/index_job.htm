@@ -1,0 +1,707 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="/dedemao/images/logo-ico.png" type="image/x-icon">
+<link rel="icon" href="/dedemao/images/logo-ico.png" type="/dedemao/images/png"/>
+<title>{dede:field.seotitle /}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<!--常用CSS-->
+<link rel="stylesheet" type="text/css" href="/dedemao/css/basic.css">
+<link rel="stylesheet" type="text/css" href="/dedemao/css/style.css">
+<!--常用CSS end-->
+<!--轮播CSS-->
+<link rel="stylesheet" type="text/css" href="/dedemao/css/slide/settings.css">
+<link rel="stylesheet" type="text/css" href="/dedemao/css/slide/styles.css">
+<!--轮播CSS end-->
+<!--tel CSS-->
+<link rel="stylesheet" type="text/css" href="/dedemao/css/tel/borrar.css">
+<link rel="stylesheet" type="text/css" href="/dedemao/css/tel/estilos.css">
+<!--tel CSS end-->
+<!--轮播JS-->
+<script src="/dedemao/js/slide/jquery.js"></script> 
+<script src="/dedemao/js/slide/jquery.themepunch.plugins.min.js"></script> 
+<script src="/dedemao/js/slide/jquery.themepunch.revolution.min.js"></script> 
+<script src="/dedemao/js/slide/jquery.themepunch.showbizpro.min.js"></script> 
+<script src="/dedemao/js/slide/jquery.fancybox.pack.js"></script> 
+<script src="/dedemao/js/slide/jquery.isotope.min.js"></script> 
+<script src="/dedemao/js/slide/scripts.js"></script>
+<!--轮播JS end-->
+<!--tel JS-->
+<script type="text/javascript" src="/dedemao/js/tel.js"></script>
+<!--tel JS end-->
+<!--首页滚动JS-->
+<script type="text/javascript" src="/dedemao/js/index.js"></script>
+<!--首页滚动JS end-->
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="/dedemao/css/slide/ie8.css" media="all" />
+<![endif]-->
+<!--[if lt IE 9]>
+<script src="/dedemao/js/slide/html5shiv.js"></script>
+<![endif]-->
+<!--workJS-->
+<script type="text/javascript" src="/dedemao/js/work.js"></script>
+<script type="text/javascript"> 
+
+	$(function(){ 
+
+		var H=$(window).width()/2-10
+
+		if(H)
+
+		{
+
+			$(".ss-left").css("width",H)	
+
+			$(".ss-right").css("width",H)	
+
+		} 
+
+	})
+
+	$(function(){ 
+
+		var T=$(window).width()
+
+		if(T<=3840 & T>=1890 ){
+
+			$("#brand").css("width","1820px")
+
+		}else{
+
+			$("#brand").css("width","1090px")
+
+		}
+
+	}) 
+
+</script> 
+
+<script>
+
+$(window).resize(function(){
+
+	var resolutionList="320,400,640,800,1024,1280,1400,1440,1600,1680,1920,2048,2560,3200,3840,";
+
+	var nowwidth=window.screen.width;
+
+	var H=$(window).width()/2-10
+
+	var T=$(window).width()
+
+	if(resolutionList.indexOf(nowwidth + ",")==-1 ){
+
+		if(H)
+
+		{
+
+			$(".ss-left").css("width",H)	
+
+			$(".ss-right").css("width",H)	
+
+		}
+
+	}
+
+	else{
+
+			if(H)
+
+			{
+
+				$(".ss-left").css("width",H)	
+
+				$(".ss-right").css("width",H)	
+
+			}
+
+		}
+
+	if(resolutionList.indexOf(nowwidth + ",")==-1 ){
+
+				if(T<=3840 & T>=1890 ){
+
+					$("#brand").css("width","1820px")
+
+				}else{
+
+					$("#brand").css("width","1090px")
+
+				}
+
+	}
+
+	else{
+
+			if(T<=3840 & T>=1890 ){
+
+				$("#brand").css("width","1820px")
+
+			}else{
+
+				$("#brand").css("width","1090px")
+
+			}
+
+		}
+
+
+
+});
+
+</script>
+
+<!--workJS end-->
+
+<script type="text/javascript" src="/dedemao/js/jquery.SuperSlide.2.1.1.js"></script>
+
+
+
+<!--导航JS-->
+
+<script>
+$(document).ready(function() {	
+	$("#menu1 a").each(function() { //For each list item...
+		var linkText = $(this).find("div").html(); //Find the text inside of the a tag
+	}); 
+	
+	$("#menu1 a").hover(function() {	//On hover...
+		$(this).find("p").stop().animate({ 
+			marginTop: "-20" //Find the span tag and move it up 40 pixels
+		}, 200);
+	} , function() { //On hover out...
+		$(this).find("p").stop().animate({
+			marginTop: "0" //Move the span back to its original state (0px)
+		}, 200);
+	});	
+});
+</script>
+
+<script type="text/javascript" src="/dedemao/js/right-nav.js"></script>
+
+<script>
+
+	$(window).bind("scroll", function(){ 
+
+	//当滚动条滚动时
+
+		var scroll_top = $(document).scrollTop();
+
+		if(scroll_top == 0)
+
+		{
+
+			$(".M-top").removeClass("M-top-show");
+
+			$(".M-top").animate({top:'0px'},"slow");
+
+			$(".M-top").css("left","0px");
+
+		}
+
+		if(scroll_top > 0)
+
+		{
+
+			$(".M-top").addClass("M-top-show");
+
+			$(".M-top").css("left","0px");
+
+			$(".M-top").css("top","-165px");
+
+			
+
+		}
+
+		if(scroll_top <500)
+
+		{
+
+			$("#nav").hide();
+
+			
+
+		}
+
+		if(scroll_top >=400)
+
+		{
+
+			$("#nav").show();
+
+			
+
+		}
+
+	});
+
+	
+
+	$(function(){
+
+		$(".M-menu2").click(function(){
+
+			$(".M-top").addClass("M-top-show");
+
+			$(".M-top").animate({top:'0px'},"slow");
+
+			$("#topcontrol").animate({right:'-122px'},"slow");
+
+		})
+
+		
+
+	})
+
+</script>
+
+<!--导航JS end-->
+
+
+
+<!--new-->
+
+<link rel="stylesheet" type="text/css" href="/dedemao/css/new/new.css">
+
+
+
+<link rel="stylesheet" type="text/css" href="/dedemao/css/new/reset.css">
+
+
+
+<link rel="stylesheet" type="text/css" href="/dedemao/css/new/style.css">
+
+<!--[if lt IE 9]>
+
+<link rel="stylesheet" type="text/css" href="newcss/styleIE.css" />
+
+<![endif]-->
+
+
+
+<script type="text/javascript" src="/dedemao/js/new/jquery.easing.1.3.js"></script>
+
+<script type="text/javascript" src="/dedemao/js/new/modernizr.custom.11333.js"></script>
+
+<!--new end-->
+
+<script type="text/javascript">
+
+$(document).ready(
+
+function () {
+
+var m_st, m_po = 230; //滚动到600像素时显示
+
+$(window).scroll(function(){
+
+	m_st = Math.max(document.body.scrollTop || document.documentElement.scrollTop);
+
+	if (m_st > m_po) 
+
+	{
+
+	$(".M-design").animate({top:'0px'},1000);
+
+	$(".Brand").animate({top:'0px'},1500);
+
+	$(".move").animate({top:'0px'},2000);
+
+	$(".ui").animate({top:'0px'},2500);
+
+	}	
+
+});
+
+
+
+});
+
+</script>
+
+<script>
+
+$(document).keydown(function(event){
+
+		var t=$(document).scrollTop();
+
+		if(t>=0 & t<=586){
+
+			if (event.keyCode == 40){ 
+
+			$("html,body").animate({scrollTop:600},1000);
+
+			return false; 
+
+		  }
+
+		  if (event.keyCode == 38){ 
+
+			$("html,body").animate({scrollTop:0},1000);
+
+			return false; 
+
+		  }
+
+		}
+
+		if(t>=600 & t<=1240){
+
+			if (event.keyCode == 40){ 
+
+			$("html,body").animate({scrollTop:1250},1000);
+
+			return false; 
+
+		  }
+
+		  if (event.keyCode == 38){ 
+
+			$("html,body").animate({scrollTop:0},1000);
+
+			return false; 
+
+		  }
+
+		}
+
+		if(t>=1240 & t<=2090){
+
+			if (event.keyCode == 40){ 
+
+			$("html,body").animate({scrollTop:2100},1000);
+
+			return false; 
+
+		  }
+
+		  if (event.keyCode == 38){ 
+
+			$("html,body").animate({scrollTop:600},1000);
+
+			return false; 
+
+		  }
+
+		}
+
+		if(t>=2100 & t<=2240){
+
+			if (event.keyCode == 40){ 
+
+			$("html,body").animate({scrollTop:2840},1000);
+
+			return false; 
+
+		  }
+
+		  if (event.keyCode == 38){ 
+
+			$("html,body").animate({scrollTop:1250},1000);
+
+			return false; 
+
+		  }
+
+		}
+
+		if(t>=2240){
+
+		  if (event.keyCode == 38){ 
+
+			$("html,body").animate({scrollTop:2102},1000);
+
+			return false; 
+
+		  }
+
+		}
+
+		if($(document).scrollTop() >= $(document).height() - $(window).height()){
+
+		  if (event.keyCode == 38){ 
+
+			$("html,body").animate({scrollTop:2100},1000);
+
+			return false; 
+
+		  }
+
+		}
+
+})
+
+</script>
+
+</head>
+<body style="background:#fafbfb !important;">
+<div class="page_spinner"></div>
+<div id="wrap">
+	{dede:include filename="head.htm"/}
+        <div class="job">
+    	<div class="job-top">
+        	<span>欢迎<font>有创意，有激情，有真心</font>的您加入，<br>
+与我们一起扬帆起航！</span>
+			<p>从进入的第一天起, 你就开始了一边工作一边培训的过程。 你将发现我们多年积累的专业经验对你受益良多。加入我们，你将被
+列入公司的员工职业发展培训计划之中。对公司而言，培训不仅是每位员工自身素质及潜能获得 不断提高和发展的需要，也是促进公
+司获取更大成功的重要标志之一。公司根据实际情况评估你的发展潜力，计划对你的培训。在公司内，每一个努力工作的员工， 都能
+获得与其能力相适应的发展机会。我们可以很有信心地说, 通过在这里的工作和学习, 你将有机会成为这个行业内的专家。</p>
+        </div>
+        <!--job-->
+<div class="theme-popover">
+     <div class="theme-poptit">
+          <a href="javascript:;" title="关闭" class="close"></a>
+     </div>
+     <div class="theme-popbod" id="jobcontent">
+     	
+     </div>
+</div>
+<div class="theme-popover-mask"></div>
+<script>
+$(function(){
+	$('.theme-login').click(function(){
+		$('.theme-popover-mask').fadeIn(100);
+		$('.theme-popover').slideDown(200);
+	})
+	$('.theme-popover-mask').click(function(){
+		$(this).fadeOut(100);
+		$('.theme-popover').slideUp(200);
+	})
+
+})
+</script>
+        <div class="job-list clearfix">
+        	<div class="job-list-main clearfix fl theme-login" id="td_26"  onclick="showtitle(this.id);">
+            	<em class="job-ico1 fl"></em>
+                <div class="fl job-content">
+                	<ul>
+                    	<li class="job-title">资深网页/UI设计师</li>
+                        <li class="job-title-en">Web/UI Designer</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="job-list-main2 clearfix fl theme-login" id="td_27" onclick="showtitle(this.id);">
+            	<em class="job-ico2 fl"></em>
+                <div class="fl job-content">
+                	<ul>
+                    	<li class="job-title">程序开发工程师</li>
+                        <li class="job-title-en">Program Development</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="job-list-main3 clearfix fl theme-login" id="td_28" onclick="showtitle(this.id);">
+            	<em class="job-ico3 fl"></em>
+                <div class="fl job-content">
+                	<ul>
+                    	<li class="job-title">前端工程师</li>
+                        <li class="job-title-en">Front-end Development</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="job-list-main4 clearfix fl theme-login" id="td_29" onclick="showtitle(this.id);">
+            	<em class="job-ico4 fl"></em>
+                <div class="fl job-content">
+                	<ul>
+                    	<li class="job-title">营销顾问/销售/AE</li>
+                        <li class="job-title-en">Marketing Consultant</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="job-list-main5 clearfix fl theme-login" id="td_30" onclick="showtitle(this.id);">
+            	<em class="job-ico5 fl"></em>
+                <div class="fl job-content">
+                	<ul>
+                    	<li class="job-title">网络策划/运营/推广</li>
+                        <li class="job-title-en">Planning/Promotion</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="job-list-main6 clearfix fl theme-login" id="td_31" onclick="showtitle(this.id);">
+            	<em class="job-ico6 fl"></em>
+                <div class="fl job-content">
+                	<ul>
+                    	<li class="job-title">其它及实习岗位</li>
+
+                        <li class="job-title-en">Other and Internships </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+			$(function(){
+				$(".job-list-main").hover(
+					function(){
+						$(".job-ico1").css("background", "url(/dedemao/images/job-ico1-hover.png)");
+						$(this).children().children().children(".job-title").css("color","#01A7D4")
+					}, 
+					function(){
+						$(".job-ico1").css("background", "url(/dedemao/images/job-ico1.png)");
+						$(this).children().children().children(".job-title").css("color","#636363")
+				});
+				$(".job-list-main2").hover(
+					function(){
+						$(".job-ico2").css("background", "url(/dedemao/images/job-ico2-hover.png)");
+						$(this).children().children().children(".job-title").css("color","#01A7D4")
+					}, 
+					function(){
+						$(".job-ico2").css("background", "url(/dedemao/images/job-ico2.png)");
+						$(this).children().children().children(".job-title").css("color","#636363")
+				});	
+				$(".job-list-main3").hover(
+					function(){
+						$(".job-ico3").css("background", "url(/dedemao/images/job-ico3-hover.png)");
+						$(this).children().children().children(".job-title").css("color","#01A7D4")
+					}, 
+					function(){
+						$(".job-ico3").css("background", "url(/dedemao/images/job-ico3.png)");
+						$(this).children().children().children(".job-title").css("color","#636363")
+				});	
+				$(".job-list-main4").hover(
+					function(){
+						$(".job-ico4").css("background", "url(/dedemao/images/job-ico4-hover.png)");
+						$(this).children().children().children(".job-title").css("color","#01A7D4")
+					}, 
+					function(){
+						$(".job-ico4").css("background", "url(/dedemao/images/job-ico4.png)");
+						$(this).children().children().children(".job-title").css("color","#636363")
+				});	
+				$(".job-list-main5").hover(
+					function(){
+						$(".job-ico5").css("background", "url(/dedemao/images/job-ico5-hover.png)");
+						$(this).children().children().children(".job-title").css("color","#01A7D4")
+					}, 
+					function(){
+						$(".job-ico5").css("background", "url(/dedemao/images/job-ico5.png)");
+						$(this).children().children().children(".job-title").css("color","#636363")
+				});	
+				$(".job-list-main6").hover(
+					function(){
+						$(".job-ico6").css("background", "url(/dedemao/images/job-ico6-hover.png)");
+						$(this).children().children().children(".job-title").css("color","#01A7D4")
+					}, 
+					function(){
+						$(".job-ico6").css("background", "url(/dedemao/images/job-ico6.png)");
+						$(this).children().children().children(".job-title").css("color","#636363")
+				});	
+			})
+        </script>
+        <div class="job-links">
+        	<span>加盟邮箱：884358(at)qq.com</span>
+            <font>注：如果是设计类岗位请记得附上作品。<br>
+</font>
+        </div>
+    </div>
+    {dede:include filename="footer2.htm"/}
+</div>
+</body>
+</html>
+<!--左侧导航JS-->
+<script type="text/javascript" href="/dedemao/js/left-nav/jquery.nav.js"></script>
+<script type="text/javascript" href="/dedemao/js/left-nav/jquery.scrollTo.js"></script>
+<script>
+$(document).ready(function() {
+  $('#nav').onePageNav({
+    begin: function() {
+	  console.log('start');
+    },
+    end: function() {
+	  console.log('stop');
+    },
+	scrollOffset: 30
+  });
+});
+</script>
+<!--左侧导航JS-->
+<!--login-->
+<!-- =========================== END FOOTER ======================== -->
+<script>
+$(window).load(function(){$('.page_spinner').fadeOut(1000);$('body').css({overflow:'visible'})})
+</script>
+
+
+
+<!--new-->
+<script>
+var warpWidth = 297; //格子宽度
+var margin = 50; //格子间距
+function postPosition(el,childTagName){
+	var h = []; //记录每列的高度
+	var box = el.getElementsByTagName(childTagName);	
+	var minH = box[0].offsetHeight,
+	boxW = box[0].offsetWidth+margin;
+	n = document.documentElement.offsetWidth / boxW | 0;  
+	//计算页面能排下多少Pin
+	el.style.width = n * boxW - margin + "px";
+	el.style.visibility = "visible";
+	for(var i = 0; i < box.length; i++) {//排序算法，有待完善
+		boxh = box[i].offsetHeight; //获取每个Pin的高度
+		if(i < n) { //第一行特殊处理
+				h[i] = boxh;
+				box[i].style.top = 0 + 'px';
+				box[i].style.left = (i * boxW) + 'px';
+		} 
+		else {
+				minH = Array.min(h); //取得各列累计高度最低的一列
+				minKey = getarraykey(h, minH);
+				h[minKey] += boxh+margin ; //加上新高度后更新高度值
+				el.style.height = h[minKey] +"px";
+				box[i].style.top = minH+margin + 'px';
+				box[i].style.left = (minKey * boxW) + 'px';
+		}
+	}
+	for(var i = 0; i < box.length; i++) {
+		box[i].style.visibility = "visible"; //定位完毕后显示新增节点
+	}
+}
+Array.min=function(array)
+{
+    return Math.min.apply(Math,array);
+}
+/* 返回数组中某一值的对应项数 */
+function getarraykey(s, v) {
+        for(k in s) {
+                if(s[k] == v) {
+                        return k;
+                }
+        }
+}
+
+window.onload = function() {
+	postPosition($id("wrapp"),"div");
+};
+
+var re;
+window.onresize = function() {
+	clearTimeout(re);
+	re = setTimeout(resize,10);				
+};
+
+function resize(){
+	$id("wrapp").className = "wrap active";
+	postPosition($id("wrapp"),"div");
+}
+
+</script>
+
+
+
+
+
+
+<script>
+function showtitle(id){
+	$.get(
+		"/getdata.php",
+		{id:id},
+		function (data, textStatus) {
+			$("#jobcontent").html(data);
+	});
+}
+
+</script>

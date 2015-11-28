@@ -1,0 +1,667 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="/dedemao/images/logo-ico.png" type="image/x-icon">
+<link rel="icon" href="/dedemao/images/logo-ico.png" type="/dedemao/images/png"/>
+<title>{dede:field.seotitle /}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<!--常用CSS-->
+<link rel="stylesheet" type="text/css" href="/dedemao/css/basic.css">
+<link rel="stylesheet" type="text/css" href="/dedemao/css/style.css">
+<!--常用CSS end-->
+<!--轮播CSS-->
+<link rel="stylesheet" type="text/css" href="/dedemao/css/slide/settings.css">
+<link rel="stylesheet" type="text/css" href="/dedemao/css/slide/styles.css">
+<!--轮播CSS end-->
+<!--tel CSS-->
+<link rel="stylesheet" type="text/css" href="/dedemao/css/tel/borrar.css">
+<link rel="stylesheet" type="text/css" href="/dedemao/css/tel/estilos.css">
+<!--tel CSS end-->
+<!--轮播JS-->
+<script src="/dedemao/js/slide/jquery.js"></script> 
+<script src="/dedemao/js/slide/jquery.themepunch.plugins.min.js"></script> 
+<script src="/dedemao/js/slide/jquery.themepunch.revolution.min.js"></script> 
+<script src="/dedemao/js/slide/jquery.themepunch.showbizpro.min.js"></script> 
+<script src="/dedemao/js/slide/jquery.fancybox.pack.js"></script> 
+<script src="/dedemao/js/slide/jquery.isotope.min.js"></script> 
+<script src="/dedemao/js/slide/scripts.js"></script>
+<!--轮播JS end-->
+<!--tel JS-->
+<script type="text/javascript" src="/dedemao/js/tel.js"></script>
+<!--tel JS end-->
+<!--首页滚动JS-->
+<script type="text/javascript" src="/dedemao/js/index.js"></script>
+<!--首页滚动JS end-->
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="/dedemao/css/slide/ie8.css" media="all" />
+<![endif]-->
+<!--[if lt IE 9]>
+<script src="/dedemao/js/slide/html5shiv.js"></script>
+<![endif]-->
+<!--workJS-->
+<script type="text/javascript" src="/dedemao/js/work.js"></script>
+<script type="text/javascript"> 
+
+	$(function(){ 
+
+		var H=$(window).width()/2-10
+
+		if(H)
+
+		{
+
+			$(".ss-left").css("width",H)	
+
+			$(".ss-right").css("width",H)	
+
+		} 
+
+	})
+
+	$(function(){ 
+
+		var T=$(window).width()
+
+		if(T<=3840 & T>=1890 ){
+
+			$("#brand").css("width","1820px")
+
+		}else{
+
+			$("#brand").css("width","1090px")
+
+		}
+
+	}) 
+
+</script> 
+
+<script>
+
+$(window).resize(function(){
+
+	var resolutionList="320,400,640,800,1024,1280,1400,1440,1600,1680,1920,2048,2560,3200,3840,";
+
+	var nowwidth=window.screen.width;
+
+	var H=$(window).width()/2-10
+
+	var T=$(window).width()
+
+	if(resolutionList.indexOf(nowwidth + ",")==-1 ){
+
+		if(H)
+
+		{
+
+			$(".ss-left").css("width",H)	
+
+			$(".ss-right").css("width",H)	
+
+		}
+
+	}
+
+	else{
+
+			if(H)
+
+			{
+
+				$(".ss-left").css("width",H)	
+
+				$(".ss-right").css("width",H)	
+
+			}
+
+		}
+
+	if(resolutionList.indexOf(nowwidth + ",")==-1 ){
+
+				if(T<=3840 & T>=1890 ){
+
+					$("#brand").css("width","1820px")
+
+				}else{
+
+					$("#brand").css("width","1090px")
+
+				}
+
+	}
+
+	else{
+
+			if(T<=3840 & T>=1890 ){
+
+				$("#brand").css("width","1820px")
+
+			}else{
+
+				$("#brand").css("width","1090px")
+
+			}
+
+		}
+
+
+
+});
+
+</script>
+
+<!--workJS end-->
+
+<script type="text/javascript" src="/dedemao/js/jquery.SuperSlide.2.1.1.js"></script>
+
+
+
+<!--导航JS-->
+
+<script>
+$(document).ready(function() {	
+	$("#menu1 a").each(function() { //For each list item...
+		var linkText = $(this).find("div").html(); //Find the text inside of the a tag
+	}); 
+	
+	$("#menu1 a").hover(function() {	//On hover...
+		$(this).find("p").stop().animate({ 
+			marginTop: "-20" //Find the span tag and move it up 40 pixels
+		}, 200);
+	} , function() { //On hover out...
+		$(this).find("p").stop().animate({
+			marginTop: "0" //Move the span back to its original state (0px)
+		}, 200);
+	});	
+});
+</script>
+
+<script type="text/javascript" src="/dedemao/js/right-nav.js"></script>
+
+<script>
+
+	$(window).bind("scroll", function(){ 
+
+	//当滚动条滚动时
+
+		var scroll_top = $(document).scrollTop();
+
+		if(scroll_top == 0)
+
+		{
+
+			$(".M-top").removeClass("M-top-show");
+
+			$(".M-top").animate({top:'0px'},"slow");
+
+			$(".M-top").css("left","0px");
+
+		}
+
+		if(scroll_top > 0)
+
+		{
+
+			$(".M-top").addClass("M-top-show");
+
+			$(".M-top").css("left","0px");
+
+			$(".M-top").css("top","-165px");
+
+			
+
+		}
+
+		if(scroll_top <500)
+
+		{
+
+			$("#nav").hide();
+
+			
+
+		}
+
+		if(scroll_top >=400)
+
+		{
+
+			$("#nav").show();
+
+			
+
+		}
+
+	});
+
+	
+
+	$(function(){
+
+		$(".M-menu2").click(function(){
+
+			$(".M-top").addClass("M-top-show");
+
+			$(".M-top").animate({top:'0px'},"slow");
+
+			$("#topcontrol").animate({right:'-122px'},"slow");
+
+		})
+
+		
+
+	})
+
+</script>
+
+<!--导航JS end-->
+
+
+
+<!--new-->
+
+<link rel="stylesheet" type="text/css" href="/dedemao/css/new/new.css">
+
+
+
+<link rel="stylesheet" type="text/css" href="/dedemao/css/new/reset.css">
+
+
+
+<link rel="stylesheet" type="text/css" href="/dedemao/css/new/style.css">
+
+<!--[if lt IE 9]>
+
+<link rel="stylesheet" type="text/css" href="newcss/styleIE.css" />
+
+<![endif]-->
+
+
+
+<script type="text/javascript" src="/dedemao/js/new/jquery.easing.1.3.js"></script>
+
+<script type="text/javascript" src="/dedemao/js/new/modernizr.custom.11333.js"></script>
+
+<!--new end-->
+
+<script type="text/javascript">
+
+$(document).ready(
+
+function () {
+
+var m_st, m_po = 230; //滚动到600像素时显示
+
+$(window).scroll(function(){
+
+	m_st = Math.max(document.body.scrollTop || document.documentElement.scrollTop);
+
+	if (m_st > m_po) 
+
+	{
+
+	$(".M-design").animate({top:'0px'},1000);
+
+	$(".Brand").animate({top:'0px'},1500);
+
+	$(".move").animate({top:'0px'},2000);
+
+	$(".ui").animate({top:'0px'},2500);
+
+	}	
+
+});
+
+
+
+});
+
+</script>
+
+<script>
+
+$(document).keydown(function(event){
+
+		var t=$(document).scrollTop();
+
+		if(t>=0 & t<=586){
+
+			if (event.keyCode == 40){ 
+
+			$("html,body").animate({scrollTop:600},1000);
+
+			return false; 
+
+		  }
+
+		  if (event.keyCode == 38){ 
+
+			$("html,body").animate({scrollTop:0},1000);
+
+			return false; 
+
+		  }
+
+		}
+
+		if(t>=600 & t<=1240){
+
+			if (event.keyCode == 40){ 
+
+			$("html,body").animate({scrollTop:1250},1000);
+
+			return false; 
+
+		  }
+
+		  if (event.keyCode == 38){ 
+
+			$("html,body").animate({scrollTop:0},1000);
+
+			return false; 
+
+		  }
+
+		}
+
+		if(t>=1240 & t<=2090){
+
+			if (event.keyCode == 40){ 
+
+			$("html,body").animate({scrollTop:2100},1000);
+
+			return false; 
+
+		  }
+
+		  if (event.keyCode == 38){ 
+
+			$("html,body").animate({scrollTop:600},1000);
+
+			return false; 
+
+		  }
+
+		}
+
+		if(t>=2100 & t<=2240){
+
+			if (event.keyCode == 40){ 
+
+			$("html,body").animate({scrollTop:2840},1000);
+
+			return false; 
+
+		  }
+
+		  if (event.keyCode == 38){ 
+
+			$("html,body").animate({scrollTop:1250},1000);
+
+			return false; 
+
+		  }
+
+		}
+
+		if(t>=2240){
+
+		  if (event.keyCode == 38){ 
+
+			$("html,body").animate({scrollTop:2102},1000);
+
+			return false; 
+
+		  }
+
+		}
+
+		if($(document).scrollTop() >= $(document).height() - $(window).height()){
+
+		  if (event.keyCode == 38){ 
+
+			$("html,body").animate({scrollTop:2100},1000);
+
+			return false; 
+
+		  }
+
+		}
+
+})
+
+</script>
+
+</head>
+
+<body style="background:#e5e5e5 !important;">
+
+<div id="wrap">
+
+	{dede:include filename="head.htm"/}
+    <div class="news">
+
+<div class="news-nav"> <a href="{dede:type typeid='10'}[field:typelink /]{/dede:type}" class={dede:field name=typeid runphp='yes'}(@me=='10')? @me='on':@me='';{/dede:field}>全部</a> {dede:channel type='son' currentstyle="<a href='~typelink~' class='on'>~typename~</a>"} <a href='[field:typeurl/]'>[field:typename/]</a>
+    
+    {/dede:channel} </div>
+
+            <div id="brand" class="clearfix">
+
+                <ul class="bd-box" id="mainContent">
+                <script type="text/javascript" src="/dedemao/js/CJL.0.1.min.js"></script>
+                    <script type="text/javascript" src="/dedemao/js/LazyLoad.js"></script>
+                    <style>
+					.floorMain a{background:url(/dedemao/images/loading.gif) center center no-repeat;float:left; display:block; width:355px; height:211px;}
+					.floorMain img{border:0;filter:alpha(opacity:0);opacity:0;}
+					</style>
+
+				 
+
+                         
+
+
+    {dede:list pagesize='30'}
+
+                    <li>
+
+                        <a href="[field:arcurl/]"> </a>
+
+                        <div class="just floorMain">
+
+                        	<a href="#"><img _lazysrc="[field:litpic2 function='GetOneImgUrl(@me,1)'/]" /></a>
+
+                        </div>
+
+                        <div class="against"><img _lazysrc="[field:litpic/]"></div>
+
+                    </li>
+                    
+   {/dede:list}
+   
+       <script language="javascript">
+
+            var $id = function(o){ return document.getElementById(o) || o};
+
+       
+
+                         				
+{dede:list pagesize='9'}
+					  var div = document.createElement("div");
+
+                div.className = "mode popup_in";
+
+                div.innerHTML =  "<p class='pic'><a href='[field:arcurl/]'><img src=[field:litpic/] style='height:"+"auto"+";'/></a></p><font><span class='clearfix news-title'><a href='[field:arcurl/]'>[field:title/]</a><font class='fr'>[field:pubdate function="MyDate('Y-m-d',@me)"/]</font></span></font><font><a href='[field:arcurl/]' class='news-content'>[field:description function='cn_substr(@me,200)'/]</a></font>";
+
+                div.style.top = 0;
+
+                div.style.left = 0;
+
+                document.getElementById("wrapp").appendChild(div);
+				{/dede:list}
+
+                         
+
+            </script>
+                                                 
+
+
+
+
+                          
+
+
+
+                    
+                    <script language="javascript">
+					function isIE() { //ie?
+						if (window.navigator.userAgent.toLowerCase().indexOf("msie") >= 1) return true;
+						else return false;
+					}
+					var _ie = isIE();
+					(function(){
+						var row = $$("mainContent"), total = row.getElementsByTagName("img").length, cells = [];
+						for (var i = 0, n = total; i < n; i++){
+							var img = row.getElementsByTagName("img")[i];
+							if(img){
+								//图片地址添加随机数避免缓存，可删除
+								img.setAttribute("_lazysrc", img.getAttribute("_lazysrc") + "?" + Math.random());
+								cells.push(img);
+							}
+						}
+						var lazy = new ImagesLazyLoad({
+							container: window, mode: "vertical",
+							holder: "/dedemao/images/s.gif",
+							onLoad: function(img){
+								img.onload = function(){
+									showPic(this);
+								}
+							}
+						});
+						function showPic(img) {
+							var t = setInterval(function(){
+								var opacity = _ie?img.filters.alpha.opacity:img.style.opacity*100
+								if(opacity < 100){
+									(_ie?img.filters.alpha.opacity += 10 : img.style.opacity = (opacity + 10)/100);
+								}else{
+									clearInterval(t);
+								}
+							}, 15);
+						}
+					})();
+					</script>
+
+                </ul>
+            </div>
+
+            <!--page-work-->
+
+<script>
+                $(function(){
+                    var aLi = $('#brand .bd-box li');
+                    var aImg =  $('#brand .bd-box li div.just img');
+                    var aSpan = $('#brand .bd-box li div.against img');
+                    var aSpann = $('#brand .bd-box li div.against');
+                    aLi.each(function(index){
+                        $(this).mouseover(function(){
+                            aSpan.eq(index).stop();
+                            aSpann.eq(index).stop();
+                            aImg.eq(index).stop();
+                            aImg.eq(index).css({zIndex:1}).animate({
+                                left:177.5,
+                                width:0
+                            },80,'',function(){
+                                $(this).hide();
+                                aSpan.eq(index).show().css({zIndex:3}).animate({
+                                    left:0,
+                                    width:355
+                                },80)
+                                aSpann.eq(index).show().css({zIndex:4}).animate({
+                                    left:0,
+                                    width:355
+                                },80)
+                            })
+                        })
+                        $(this).mouseout(function(){
+                            aSpan.eq(index).stop();
+                            aSpann.eq(index).stop();
+                            aImg.eq(index).stop();
+                            aSpan.eq(index).css({zIndex:1}).animate({
+                                left:177.5,
+                                width:0
+                            },80,''),
+                            aSpann.eq(index).css({zIndex:1}).animate({
+                                left:177.5,
+                                width:0
+                            },80,'',function(){
+                                $(this).hide();
+                                aImg.eq(index).show().css({zIndex:2}).animate({
+                                    left:0,
+                                    width:355
+                                },80)
+                            })
+                        })
+                    })
+                })
+            </script>
+
+        </div>
+
+    </div>
+        {dede:include filename="footer2.htm"/}
+
+   </div>
+
+   </div>
+
+</div>
+
+
+<div style="display:none">
+{dede:global.tongji/}
+</div>
+</body>
+
+</html>
+
+
+
+<!--login-->
+
+<!-- =========================== END FOOTER ======================== -->
+
+<script>
+
+$(window).load(function(){$('.page_spinner').fadeOut(1000);$('body').css({overflow:'visible'})})
+
+</script>
+
+
+
+<script>
+
+	$(function(){
+
+		var browser=navigator.appName 
+
+		var b_version=navigator.appVersion 
+
+		var version=b_version.split(";"); 
+
+		var trim_Version=version[1].replace(/[ ]/g,""); 
+
+		if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE7.0") 
+
+		{ 
+
+		$("#ifrm").hide();	
+
+		} 
+
+	})
+
+</script>

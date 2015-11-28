@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312 />
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<style type="text/css">
+body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;}
+
+</style>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=kOkmIaGKrMbxHlAtudGMvtYi"></script>
+<title>君禾园</title>
+</head>
+<body>
+<div id="allmap"></div>
+</body>
+</html>
+
+
+<link rel="stylesheet" type="text/css" href="dedemao/css/SearchInfoWindow_min.css">
+<script src="dedemao/js/SearchInfoWindow_min.js"></script>
+
+
+
+<script type="text/javascript">
+
+// 百度地图API功能
+    var map = new BMap.Map('allmap');
+	var poi = new BMap.Point(121.537879,31.597588);
+	var point = new BMap.Point(121.537879,31.597588);
+	map.centerAndZoom(point,19);
+			
+    map.setZoom(16);  //将视图切换到指定的缩放等级，中心点坐标不变
+	var  mapStyle ={ 
+        features: ["road", "building","water","land"],//隐藏地图上的poi
+        style : "normal"  //设置地图风格为高端黑
+    }
+	map.setMapStyle(mapStyle);
+        
+
+	
+
+    var content = '<div style="margin:0;line-height:20px;padding:2px;">' +
+                    '电话：400 821 3860<br/>地址：上海市崇明县新河镇金桥村村委' +
+                  '</div>';
+
+    //创建检索信息窗口对象
+    
+	var pt = new BMap.Point(121.537210,31.597200);
+	
+	var icon = new BMap.Icon("dedemao/images/icon_map.png", new BMap.Size(95,119), {'anchor':new BMap.Size(25,111)});
+	
+	var marker = new BMap.Marker(pt,{icon:icon});
+	
+	map.addOverlay(marker);
+	var searchInfoWindow = null;
+	searchInfoWindow = new BMapLib.SearchInfoWindow(map, content, {
+			title  : "www.dream-gardens.com.cn",      //标题
+			width  : 390,             //宽度
+			height : 140,              //高度
+			panel  : "panel",         //检索结果面板
+			enableAutoPan : true,     //自动平移
+			searchTypes   :[
+				BMAPLIB_TAB_SEARCH,   //周边检索
+				BMAPLIB_TAB_TO_HERE,  //到这里去
+				BMAPLIB_TAB_FROM_HERE //从这里出发
+			]
+			
+		});
+		
+    marker.addEventListener("click", function(e){
+	    searchInfoWindow.open(marker);
+    })
+    map.addOverlay(marker); //在地图中添加marker
+    $("close").onclick = function(){
+        searchInfoWindow.close();
+    }
+    $("open").onclick = function(){
+		var enableSendToPhone = false;
+        if ($("enableSendToPhone").checked) {
+            enableSendToPhone = true;
+        }
+		searchInfoWindow = new BMapLib.SearchInfoWindow(map, content, {
+			title  : "君禾园",      //标题
+			width  : 290,             //宽度
+			height : 105,              //高度
+			panel  : "panel",         //检索结果面板
+			enableAutoPan : true,     //自动平移
+						searchTypes   :[
+				BMAPLIB_TAB_SEARCH,   //周边检索
+				BMAPLIB_TAB_TO_HERE,  //到这里去
+				BMAPLIB_TAB_FROM_HERE //从这里出发
+			]
+		});
+        if ($("enableAutoPan").checked) {
+            searchInfoWindow.enableAutoPan();
+        } else {
+            searchInfoWindow.disableAutoPan();
+        };
+        searchInfoWindow.open(marker);
+    }
+    $("show").onclick = function(){
+        searchInfoWindow.show();
+    }
+    $("hide").onclick = function(){
+        searchInfoWindow.hide();
+    }
+    $("getPosition").onclick = function(){
+        var position = searchInfoWindow.getPosition();
+        alert("经度：" + position.lng + "；纬度：" + position.lat);
+    }
+    $("setValue").onclick = function(){
+        searchInfoWindow.setPosition(new BMap.Point($("lng").value, $("lat").value));
+        searchInfoWindow.setTitle($("title").value);
+        searchInfoWindow.setContent($("content").value);
+    }
+    $("getContent").onclick = function(){
+        alert(searchInfoWindow.getContent());
+    }
+    $("getTitle").onclick = function(){
+        alert(searchInfoWindow.getTitle());
+    }
+    function $(id){
+        return document.getElementById(id);
+    }
+
+//样式1
+var searchInfoWindow1 = new BMapLib.SearchInfoWindow(map, "信息框1内容", {
+    title: "信息框1", //标题
+    panel : "panel", //检索结果面板
+    enableAutoPan : true, //自动平移
+    searchTypes :[
+        BMAPLIB_TAB_FROM_HERE, //从这里出发
+        BMAPLIB_TAB_SEARCH   //周边检索
+    ]
+});
+function openInfoWindow1() {
+    searchInfoWindow1.open(new BMap.Point(121.537879,31.597588));
+}
+
+//样式2
+var searchInfoWindow2 = new BMapLib.SearchInfoWindow(map, "信息框2内容", {
+    title: "信息框2", //标题
+    panel : "panel", //检索结果面板
+    enableAutoPan : true, //自动平移
+    searchTypes :[
+        BMAPLIB_TAB_SEARCH   //周边检索
+    ]
+});
+function openInfoWindow2() {
+    searchInfoWindow2.open(new BMap.Point(121.537879,31.597588));
+}
+
+//样式3
+var searchInfoWindow3 = new BMapLib.SearchInfoWindow(map, "信息框3内容", {
+    title: "信息框3", //标题
+    width: 290, //宽度
+    height: 40, //高度
+    panel : "panel", //检索结果面板
+    enableAutoPan : true, //自动平移
+    searchTypes :[
+    ]
+});
+function openInfoWindow3() {
+    searchInfoWindow3.open(new BMap.Point(121.537879,31.597588)); 
+}
+
+
+    var isPanelShow = false;
+    //显示结果面板动作
+    $("showPanelBtn").onclick = function(){
+        if (isPanelShow == false) {
+            isPanelShow = true;
+            $("showPanelBtn").style.right = "300px";
+            $("panelWrap").style.width = "300px";
+            $("map").style.marginRight = "300px";
+            $("showPanelBtn").innerHTML = "隐藏检索结果面板<br/>>";
+        } else {
+            isPanelShow = false;
+            $("showPanelBtn").style.right = "0px";
+            $("panelWrap").style.width = "0px";
+            $("map").style.marginRight = "0px";
+            $("showPanelBtn").innerHTML = "显示检索结果面板<br/><";
+        }
+    }
+</script>
+
+
+
