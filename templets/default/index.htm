@@ -14,13 +14,14 @@
 
 <link rel="stylesheet" type="text/css" href="/dedemao/css/basic.css">
 <link rel="stylesheet" type="text/css" href="/dedemao/css/style.css">
+<link rel="stylesheet" type="text/css" href="/dedemao/css/index.css">
 
 <!--常用CSS end-->
 <style type="text/css">
 
 #ie6-warning{background:#FF0; position:absolute; left:150px; top:10px;font-size:12px; line-height:24px; color:#F00; padding:0 10px;}
-#ie6-warning a{text-decoration:none;}  
-#ie6-warning img{float:right; cursor:pointer; margin-top:4px; margin-left:10px;} 
+#ie6-warning a{text-decoration:none;}
+#ie6-warning img{float:right; cursor:pointer; margin-top:4px; margin-left:10px;}
 
 </style>
 <!--轮播CSS-->
@@ -46,6 +47,8 @@
 <script src="/dedemao/js/slide/jquery.fancybox.pack.js"></script>
 <script src="/dedemao/js/slide/jquery.isotope.min.js"></script>
 <script src="/dedemao/js/slide/scripts.js"></script>
+<script src="/dedemao/js/config.js"></script>
+<script src="/dedemao/js/underscore.js"></script>
 
 <!--轮播JS end-->
 
@@ -76,9 +79,9 @@
 <!--workJS-->
 
 <script type="text/javascript" src="/dedemao/js/work.js"></script>
-<script type="text/javascript"> 
+<script type="text/javascript">
 
-	$(function(){ 
+	$(function(){
 
 		var H=$(window).width()/2-80
 
@@ -86,13 +89,13 @@
 
 		{
 
-			$(".ss-left").css("width",H)	
+			$(".ss-left").css("width",H)
 
-			$(".ss-right").css("width",H)	
+			$(".ss-right").css("width",H)
 
-		} 
+		}
 
-	}) 
+	})
 
 </script>
 <script>
@@ -113,9 +116,9 @@ $(window).resize(function(){
 
 		{
 
-			$(".ss-left").css("width",H)	
+			$(".ss-left").css("width",H)
 
-			$(".ss-right").css("width",H)	
+			$(".ss-right").css("width",H)
 
 		}
 
@@ -127,9 +130,9 @@ $(window).resize(function(){
 
 			{
 
-				$(".ss-left").css("width",H)	
+				$(".ss-left").css("width",H)
 
-				$(".ss-right").css("width",H)	
+				$(".ss-right").css("width",H)
 
 			}
 
@@ -147,26 +150,26 @@ $(window).resize(function(){
 <!--导航JS-->
 
 <script>
-$(document).ready(function() {	
+$(document).ready(function() {
 	$("#menu1 a").each(function() { //For each list item...
 		var linkText = $(this).find("div").html(); //Find the text inside of the a tag
-	}); 
-	
+	});
+
 	$("#menu1 a").hover(function() {	//On hover...
-		$(this).find("p").stop().animate({ 
+		$(this).find("p").stop().animate({
 			marginTop: "-20" //Find the span tag and move it up 40 pixels
 		}, 200);
 	} , function() { //On hover out...
 		$(this).find("p").stop().animate({
 			marginTop: "0" //Move the span back to its original state (0px)
 		}, 200);
-	});	
+	});
 });
 </script>
 <script type="text/javascript" src="/dedemao/js/right-nav.js"></script>
 <script>
 
-	$(window).bind("scroll", function(){ 
+	$(window).bind("scroll", function(){
 
 	//当滚动条滚动时
 
@@ -201,7 +204,7 @@ $(document).ready(function() {
 		{
 
 			$("#nav").hide();
-	
+
 
 		}
 
@@ -260,7 +263,7 @@ $(window).scroll(function(){
 
 	m_st = Math.max(document.body.scrollTop || document.documentElement.scrollTop);
 
-	if (m_st > m_po) 
+	if (m_st > m_po)
 
 	{
 
@@ -272,7 +275,7 @@ $(window).scroll(function(){
 
 	$(".ui").animate({top:'0px'},2500);
 
-	}	
+	}
 
 });
 
@@ -289,19 +292,19 @@ $(document).keydown(function(event){
 
 		if(t>=0 & t<=586){
 
-			if (event.keyCode == 40){ 
+			if (event.keyCode == 40){
 
 			$("html,body").animate({scrollTop:600},1000);
 
-			return false; 
+			return false;
 
 		  }
 
-		  if (event.keyCode == 38){ 
+		  if (event.keyCode == 38){
 
 			$("html,body").animate({scrollTop:0},1000);
 
-			return false; 
+			return false;
 
 		  }
 
@@ -309,19 +312,19 @@ $(document).keydown(function(event){
 
 		if(t>=600 & t<=1240){
 
-			if (event.keyCode == 40){ 
+			if (event.keyCode == 40){
 
 			$("html,body").animate({scrollTop:1250},1000);
 
-			return false; 
+			return false;
 
 		  }
 
-		  if (event.keyCode == 38){ 
+		  if (event.keyCode == 38){
 
 			$("html,body").animate({scrollTop:0},1000);
 
-			return false; 
+			return false;
 
 		  }
 
@@ -329,19 +332,19 @@ $(document).keydown(function(event){
 
 		if(t>=1240 & t<=2090){
 
-			if (event.keyCode == 40){ 
+			if (event.keyCode == 40){
 
 			$("html,body").animate({scrollTop:2100},1000);
 
-			return false; 
+			return false;
 
 		  }
 
-		  if (event.keyCode == 38){ 
+		  if (event.keyCode == 38){
 
 			$("html,body").animate({scrollTop:600},1000);
 
-			return false; 
+			return false;
 
 		  }
 
@@ -349,19 +352,19 @@ $(document).keydown(function(event){
 
 		if(t>=2100 & t<=2240){
 
-			if (event.keyCode == 40){ 
+			if (event.keyCode == 40){
 
 			$("html,body").animate({scrollTop:2840},1000);
 
-			return false; 
+			return false;
 
 		  }
 
-		  if (event.keyCode == 38){ 
+		  if (event.keyCode == 38){
 
 			$("html,body").animate({scrollTop:1250},1000);
 
-			return false; 
+			return false;
 
 		  }
 
@@ -369,11 +372,11 @@ $(document).keydown(function(event){
 
 		if(t>=2240){
 
-		  if (event.keyCode == 38){ 
+		  if (event.keyCode == 38){
 
 			$("html,body").animate({scrollTop:2102},1000);
 
-			return false; 
+			return false;
 
 		  }
 
@@ -381,11 +384,11 @@ $(document).keydown(function(event){
 
 		if($(document).scrollTop() >= $(document).height() - $(window).height()){
 
-		  if (event.keyCode == 38){ 
+		  if (event.keyCode == 38){
 
 			$("html,body").animate({scrollTop:2100},1000);
 
-			return false; 
+			return false;
 
 		  }
 
@@ -395,18 +398,18 @@ $(document).keydown(function(event){
 
 </script>
 <body>
-<!--[if lte IE 9]>   
+<!--[if lte IE 9]>
 <div id="ie6-warning">
 <img src="images/cha.png" width="16" height="16" onclick="closeme();" alt="关闭提示" />
-您正在使用 Internet Explorer 低版本的IE浏览器。为更好的浏览本页，建议您将浏览器升级到 
-<a href="http://www.microsoft.com/china/windows/internet-explorer/ie8howto.aspx" target="_blank">IE9</a>  
+您正在使用 Internet Explorer 低版本的IE浏览器。为更好的浏览本页，建议您将浏览器升级到
+<a href="http://www.microsoft.com/china/windows/internet-explorer/ie8howto.aspx" target="_blank">IE9</a>
 或以下浏览器：<a href="http://www.firefox.com.cn/download/">Firefox</a>
  / <a href="http://www.google.cn/chrome"> Chrome</a>
  / <a href="http://www.apple.com.cn/safari/">Safari</a> / <a href="http://www.Opera.com/">Opera</a>   </div>
-<script type="text/javascript">  
-    togo = 0; 
-    function closeme(){    
-        var div = document.getElementById("ie6-warning");    
+<script type="text/javascript">
+    togo = 0;
+    function closeme(){
+        var div = document.getElementById("ie6-warning");
         div.style.display ="none";
     };
     function position_fixed(el, eltop, elleft){
@@ -416,11 +419,11 @@ $(document).keydown(function(event){
                 el.style.top = (document.documentElement.scrollTop + eltop)+"px";
                 el.style.left = (document.documentElement.scrollLeft + elleft)+"px";
             }
-        else 
+        else
             el.style.position = "fixed";
     };
     position_fixed(document.getElementById("ie6-warning"),0, 0);
-</script>   
+</script>
 <![endif]-->
 <div id="wrap">
   <div id="container">
@@ -451,8 +454,6 @@ $(document).keydown(function(event){
                     </li>
                   </ul>
                 </div>
-                <a href="#top1" class="top-ico1"></a> <a href="#section-3" class="top-ico6"></a>
-                <div id="top1"></div>
               </div>
             </div>
           </div>
@@ -463,261 +464,123 @@ $(document).keydown(function(event){
     <div class="section section-2">
       <div class="M-what-top"> <img src="/dedemao/images/what-title.png"> </div>
       <div class="M-bottom-border"></div>
-      <div class="M-what-title">回归自然的探索之旅</br><font size="3px">Back To Nature</font></div>
-      <script>
-$(function(){
-    if($.browser.safari && navigator.userAgent.toLowerCase().match(/chrome/) == null) {
-        $(".M-what").css("height","192px")
-    }
-})
-</script>
-      <div class="M-what clearfix" style=" overflow:hidden !important; height:198px;position:relative"> 
-      <a href="http://shop.dream-gardens.com.cn/user.php?act=register">
-        <div class="Brand fl"> <em class="Brand-ico"></em>
-          <div class="M-design-bottom">
-            <div class="M-design-title"> <span>加入会员</span> <font>Join Member</font> </div>
-            <a href="http://shop.dream-gardens.com.cn/user.php?act=register" target="_blank"><span class="M-btn">查看更多</span></a> </div>
-        </div>
-        </a> <a href="/expertise/">
-        <div class="M-design fl" > <em class="M-design-ico"></em>
-          <div class="M-design-bottom">
-            <div class="M-design-title"> <span>会员服务</span> <font>Membership Service</font> </div>
-            <a href="/expertise/" target="_blank"><span class="M-btn">查看更多</span></a> </div>
-        </div>
-        </a> <a href="/expertise/#expertise-content5">
-        <div class="move fl"> <em class="move-ico"></em>
-          <div class="M-design-bottom">
-            <div class="M-design-title"> <span>企业客户</span> <font>Corporate Clients</font> </div>
-            <a href="/expertise/#expertise-content5" target="_blank"><span class="M-btn M-left">查看更多</span></a> </div>
-        </div>
-        </a> <a href="/#contact">
-        <div class="ui fl"> <em class="ui-ico"></em>
-          <div class="M-design-bottom">
-            <div class="M-design-title"> <span>联系我们</span> <font>Contact Us</font> </div>
-            <a href="/#contact"><span class="M-btn">查看更多</span></a> </div>
-        </div>
-        </a> </div>
-      <a href="#section-3" class="top-ico2"></a> </div>
-    <div id="section-3"></div>
-    <div class="section section-3" style="height:807px;">
-      <div class="M-what-top"> <a href="http://shop.dream-gardens.com.cn/" target="_blank"><img src="/dedemao/images/work.png"></a> </div>
-      <div class="M-bottom-border2" style="margin-bottom:48px;"></div>
-      <div class="slideTxtBox"> 
-        <script>
-
-					$(function(){
-
-						$(".item7").hover(
-
-							function(){
-
-								var that=this;	
-
-								item7Timer=setTimeout(function(){
-
-									$(that).find("div").show();
-
-									$(that).find("h2").fadeOut(1);
-
-									$(that).find("dl").fadeIn(1);
-
-								},100);
-
-							},
-
-							function(){
-
-								var that=this;	
-
-								clearTimeout(item7Timer);			
-
-								$(that).find("dl").fadeOut(1);
-
-								$(that).find("div").hide();
-
-								$(that).find("h2").fadeIn(1);
-
-							}
-
-						)	
-
-					})
-
-				</script>
-        <div class="bd">
-          <ul>
-            <div  class="M-work clearfix"> <a href="#">
-              <div class="M-work-list">
-                <div class="item6"> <img src="/dedemao/images/20140313040933297.png" width="205" height="205" />
-                  <div class="cornerCC"> </div>
-                  <dl>
-                    <dd>田园风光</dd>
-                  </dl>
-                </div>
-              </div>
-              </a> <a href="#">
-              <div class="M-work-list">
-                <div class="item6"> <img src="/dedemao/images/20140313041119231.png" width="205" height="205" />
-                  <div class="cornerCC"> </div>
-                  <dl>
-                    <dd>辛勤耕作</dd>
-                  </dl>
-                </div>
-              </div>
-              </a> <a href="#">
-              <div class="M-work-list">
-                <div class="item6"> <img src="/dedemao/images/20140313040726198.png" width="205" height="205" />
-                  <div class="cornerCC"> </div>
-                  <dl>
-                    <dd>菜园实景</dd>
-                  </dl>
-                </div>
-              </div>
-              </a> <a href="#">
-              <div class="M-work-list">
-                <div class="item6"> <img src="/dedemao/images/20140313040637877.png" width="205" height="205" />
-                  <div class="cornerCC"> </div>
-                  <dl>
-                    <dd>收成时刻</dd>
-                  </dl>
-                </div>
-              </div>
-              </a> <a href="#">
-              <div class="M-work-list">
-                <div class="item6"> <img src="/dedemao/images/20140313035946919.png" width="205" height="205" />
-                  <div class="cornerCC"> </div>
-                  <dl>
-                    <dd>南瓜满地</dd>
-                  </dl>
-                </div>
-              </div>
-              </a> <a href="#">
-              <div class="M-work-list">
-                <div class="item6"> <img src="/dedemao/images/20140313035844595.png" width="205" height="205" />
-                  <div class="cornerCC"> </div>
-                  <dl>
-                    <dd>初出萌芽</dd>
-                  </dl>
-                </div>
-              </div>
-              </a> <a href="#">
-              <div class="M-work-list">
-                <div class="item6"> <img src="/dedemao/images/20140313035743346.png" width="205" height="205" />
-                  <div class="cornerCC"> </div>
-                  <dl>
-                    <dd>君禾风光</dd>
-                  </dl>
-                </div>
-              </div>
-              </a> <a href="/about">
-              <div class="M-work-list">
-                <div class="item6"> <img src="/dedemao/images/20140314102402931.png" width="205" height="205" />
-                  <div class="cornerCC"> </div>
-                  <dl>
-                    <dd>农场故事</dd>
-                  </dl>
-                </div>
-              </div>
-              </a> </div>
-          </ul>
-          <ul>
-            <div  class="M-work clearfix"> 
-    {dede:arclist row=7 titlelen=32 typeid='24' addfields='litpic3' channelid='19'}
-            <a href="#">
-              <div class="M-work-list">
-                <div class="item6"> <img src="[field:litpic3 function='GetOneImgUrl2(@me,1)'/]" width="205" height="205" />
-                  <div class="cornerCC"> </div>
-                  <dl>
-                    <dd><font color="#ECE9E7">[field:title/]</font></dd>
-                  </dl>
-                </div>
-              </div>
-              </a> 
-              {/dede:arclist}
-               <a href="http://shop.dream-gardens.com.cn/">
-              <div class="M-work-list">
-                <div class="item6"> <img src="/dedemao/images/work-btn.png" width="205" height="205" />
-                  <div class="cornerCC"> </div>
-                  <dl>
-                    <dd><img src="/dedemao/images/dingzhi.png" style="margin-top:67px;"></dd>
-                  </dl>
-                </div>
-              </div>
-              </a> </div>
-          </ul>
-		  <!--{dede:type typeid='9'}[field:typelink /]{/dede:type}
-		  -->
-        </div>
-        <div class="hd clearfix">
-          <ul>
-            <li>风光</li>
-            <li>展示</li>
-          </ul>
-        </div>
-      </div>
-      <a href="#section-4" class="top-ico3"></a> 
-      <script>jQuery(".slideTxtBox").slide({trigger:"click"});</script> 
+        <ul class='mb'>
+            <li>
+                <a>
+                    <div class='mbdiv'>
+                        <img src="./dedemao/images/p1.png" alt="">
+                        <div class='mbdiv2'>
+                            <p>新鲜果蔬</p>
+                            <span>时令蔬菜鲜果,<br />随意挑选</span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <div class='mbdiv'>
+                        <img src="./dedemao/images/p2.png" alt="">
+                        <div class='mbdiv2'>
+                            <p>体验活动</p>
+                            <span>农场主题项目,<br />家庭式体验</span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <div class='mbdiv'>
+                        <img src="./dedemao/images/p3.png" alt="">
+                        <div class='mbdiv2'>
+                            <p>孩子成长</p>
+                            <span>热爱自然,学习自然,<br />分享成长体验</span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <div class='mbdiv'>
+                        <img src="./dedemao/images/p4.png" alt="">
+                        <div class='mbdiv2'>
+                            <p>免费分享</p>
+                            <span>幸运会员免费试吃,<br />尝鲜互动</span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <div class='mbdiv'>
+                        <img src="./dedemao/images/p5.png" alt="">
+                        <div class='mbdiv2'>
+                            <p>君禾社区</p>
+                            <span>互动分享,君禾园<br />趣味体验</span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <div class='mbdiv'>
+                        <img src="./dedemao/images/p6.png" alt="">
+                        <div class='mbdiv2'>
+                            <p>加入会员</p>
+                            <span>畅享企业及个人会员<br />的多重权益</span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
     </div>
-    <div id="section-4"></div>
-    <div class="section section-4" style="height:717px;">
-      <div class="M-what-top"> <a href="/life/" target="_blank"><img src="/dedemao/images/new.png"></a> </div>
-      <div class="M-bottom-border" style="margin-bottom:43px;"></div>
-      <div id="ss-container" class="ss-container">
-      
-    {dede:arclist typeid='3' limit='0,1'}
-     
-        <div class="ss-row ss-medium">
-          <div class="ss-left"> <a href="#" class="ss-circle ss-circle-1"><img src="/dedemao/images/new-ico1.png"></a> </div>
-          <div class="ss-right">
-            <h3> <span><a href="[field:arcurl/]">[field:fulltitle/]</a></span> <a href="[field:arcurl/]">[field:description function='cn_substr(@me,100)'/]...</a> </h3>
-          </div>
+    <script type='text/tempalte' id='j_list_tpl'>
+        <%for(var i = 0, len = data.length; i++){%>
+            <%if(i == current){%>
+                <li data-vurl='<%=data.vurl%>' class='current'>
+            <%}else{%>
+                <li data-vurl='<%=data.vurl%>'>
+            <%}%>
+                <img src="<%=data.img%>" alt="">
+                <p><%=data.title%></p>
+                <span><%=data.desc%></span>
+            </li>
+        <%}%>
+    </script>
+
+    <div class="section section-3" id='j_videocontainer'>
+        <div class="M-what-top"> <img src="/dedemao/images/video.jpg"> </div>
+        <div class="M-bottom-border"></div>
+        <div class='mb2' >
+            <div class='cont'>
+                <embed id='j_video' src="http://www.tudou.com/a/qJtXzLi3iaY/&bid=05&iid=132608618&rpid=336977343&resourceId=336977343_05_05_99/v.swf" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" wmode="opaque" width="480" height="400" style='width:837px;height:433px;'></embed>
+                <span class='aup' id='j_up'></span>
+                <ul class='ilist' id='j_list'>
+                    <li>
+                        <img src="" alt="">
+                        <p>视频标题</p>
+                        <span>视频概要视频概要视频概要视频概要视频概要视频概要视频概要视频概要</span>
+                    </li>
+                    <li class='current'>
+                        <img src="" alt="">
+                        <p></p>
+                        <span></span>
+                    </li>
+                    <li>
+                        <img src="" alt="">
+                        <p></p>
+                        <span></span>
+                    </li>
+                    <li>
+                        <img src="" alt="">
+                        <p></p>
+                        <span></span>
+                    </li>
+                </ul>
+                <span class='adown' id='j_down'></span>
+            </div>
         </div>
-        {/dede:arclist}
+    </div>
 
- {dede:arclist typeid='3' limit='1,1'}
-<div class="ss-row ss-large">
-          <div class="ss-left">
-            <h3> <span><a href="[field:arcurl/]">[field:fulltitle/]</a></span> <a href="[field:arcurl/]">[field:description function='cn_substr(@me,100)'/]...</a> </h3>
-          </div>
-          <div class="ss-right"> <a href="#" class="ss-circle ss-circle-2"><img src="/dedemao/images/new-ico1.png"></a> </div>
-        </div>        
-{/dede:arclist} 
-
-    {dede:arclist typeid='3' limit='2,1'}
-     
-        <div class="ss-row ss-medium">
-          <div class="ss-left"> <a href="#" class="ss-circle ss-circle-1"><img src="/dedemao/images/new-ico1.png"></a> </div>
-          <div class="ss-right">
-            <h3> <span><a href="[field:arcurl/]">[field:fulltitle/]</a></span> <a href="[field:arcurl/]">[field:description function='cn_substr(@me,100)'/]...</a> </h3>
-          </div>
-        </div>
-        {/dede:arclist}
-
- {dede:arclist typeid='3' limit='3,1'}
-<div class="ss-row ss-large">
-          <div class="ss-left">
-            <h3> <span><a href="[field:arcurl/]">[field:fulltitle/]</a></span> <a href="[field:arcurl/]">[field:description function='cn_substr(@me,100)'/]...</a> </h3>
-          </div>
-          <div class="ss-right"> <a href="#" class="ss-circle ss-circle-2"><img src="/dedemao/images/new-ico1.png"></a> </div>
-        </div>        
-{/dede:arclist}  
-
-    {dede:arclist typeid='3' limit='4,1'}
-     
-        <div class="ss-row ss-medium">
-          <div class="ss-left"> <a href="#" class="ss-circle ss-circle-1"><img src="/dedemao/images/new-ico1.png"></a> </div>
-          <div class="ss-right">
-            <h3> <span><a href="[field:arcurl/]">[field:fulltitle/]</a></span> <a href="[field:arcurl/]">[field:description function='cn_substr(@me,100)'/]...</a> </h3>
-          </div>
-        </div>
-        {/dede:arclist}
-
-        <!--
-       {dede:type typeid='10'}[field:typelink /]{/dede:type}-->
-        
-        <a href="/life/" class="M-new-btn">查看更多</a> </div>
-      <a href="#section-5" class="top-ico4"></a> </div>
-     
     <div id="section-5"></div>
     <div class="section section-5" style="height:820px; overflow:hidden;" id="contact">
       <div class="M-what-top"> <img src="/dedemao/images/contact.png"> </div>
@@ -730,20 +593,13 @@ $(function(){
         $("#ifrm").remove()
     }
 })
-</script> 
+</script>
       </div>
       {dede:include filename="footer.htm"/}
     </div>
   </div>
 </div>
-<ul id="nav" class="clearfix">
-  <li class="current"><a href="#section-1">顶部<em class="nav-ico fr"></em></a></li>
-  <li><a href="#section-2">会员<em class="nav-ico fr"></em></a></li>
-  <li><a href="#section-3">菜园<em class="nav-ico fr"></em></a></li>
-  <li><a href="#section-4">生活<em class="nav-ico fr"></em></a></li>
-  <li><a href="#section-5">联系<em class="nav-ico fr"></em></a></li>
-</ul>
-<div style="display:none"> 
+
 </div>
 </body>
 </html>
@@ -788,7 +644,7 @@ $(document).ready(function() {
 
 	$(".M-design").hover(function() {	//On hover...
 
-		$(this).find(".M-design-title").stop().animate({ 
+		$(this).find(".M-design-title").stop().animate({
 
 			marginTop: "-43" //Find the span tag and move it up 40 pixels
 
@@ -806,7 +662,7 @@ $(document).ready(function() {
 
 	$(".Brand").hover(function() {	//On hover...
 
-		$(this).find(".M-design-title").stop().animate({ 
+		$(this).find(".M-design-title").stop().animate({
 
 			marginTop: "-43" //Find the span tag and move it up 40 pixels
 
@@ -824,7 +680,7 @@ $(document).ready(function() {
 
 	$(".move").hover(function() {	//On hover...
 
-		$(this).find(".M-design-title").stop().animate({ 
+		$(this).find(".M-design-title").stop().animate({
 
 			marginTop: "-43" //Find the span tag and move it up 40 pixels
 
@@ -842,7 +698,7 @@ $(document).ready(function() {
 
 	$(".ui").hover(function() {	//On hover...
 
-		$(this).find(".M-design-title").stop().animate({ 
+		$(this).find(".M-design-title").stop().animate({
 
 			marginTop: "-43" //Find the span tag and move it up 40 pixels
 
@@ -856,7 +712,7 @@ $(document).ready(function() {
 
 		}, 200);
 
-	});	
+	});
 
 </script>
 
@@ -873,35 +729,36 @@ $(window).load(function(){$('.page_spinner').fadeOut(1000);$('body').css({overfl
 
 	$(function(){
 
-		var browser=navigator.appName 
+		var browser=navigator.appName
 
-		var b_version=navigator.appVersion 
+		var b_version=navigator.appVersion
 
-		var version=b_version.split(";"); 
+		var version=b_version.split(";");
 
-		var trim_Version=version[1].replace(/[ ]/g,""); 
+		var trim_Version=version[1].replace(/[ ]/g,"");
 
-		if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE7.0") 
+		if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE7.0")
 
-		{ 
+		{
 
-		$("#ifrm").hide();	
+		$("#ifrm").hide();
 		$(".M-work").css("width","1180px")
 		$(".M-work").css("margin","0 auto")
 		$(".M-work").css("height","510px")
 		$(".M-work").css("overflow","hidden")
 		$(".M-work").css("padding-left","30px")
-		} 
-		if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE8.0") 
+		}
+		if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE8.0")
 
-		{ 
+		{
 		$(".M-work").css("width","1180px")
 		$(".M-work").css("margin","0 auto")
 		$(".M-work").css("height","510px")
 		$(".M-work").css("overflow","hidden")
 		$(".M-work").css("padding-left","30px")
-		} 
+		}
 
 	})
 
 </script>
+<script type="text/javascript" src="/dedemao/js/index2.js"></script>

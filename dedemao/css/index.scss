@@ -1,0 +1,209 @@
+@charset "utf-8";
+$font: "微软雅黑", "宋体";
+$font2: 'Arial';
+$line-height: 1.5;
+$fz48: 48px;
+$fz30: 30px;
+$fz18: 18px;
+$fz14: 14px;
+$color-bg: #0f0f0f;
+$color2: #fff;
+$color-grey: #928b8b;
+$bgc: #fbf6e3;
+$bgc-green: #99cd4e;
+$bgc-grey: #dcdcdc;
+$br: #b2d12e;
+
+%clearboth {
+    clear: both;
+    overflow: hidden;
+}
+
+%div{
+    width: 368px;
+    height: 277px;
+}
+
+%ab_layout{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+@mixin opacity($opc: 0){
+    opacity: $opc;
+    filter: alpha(opacity=$opc * 100);
+}
+@mixin translateY($tras: 0){
+    -webkit-transform: translateY($tras);
+    -ms-transform: translateY($tras);
+    -o-transform: translateY($tras);
+    transform: translateY($tras);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+.mb.hide{
+    display: none ;
+}
+.mb{
+    width: 1254px;
+    margin: 0 auto;
+    padding: 0;
+    @extend %clearboth;
+    font-family: $font;
+    line-height: $line-height;
+}
+.mb img{
+    display: block;
+}
+.mb li{
+    float: left;
+    margin: 45px 25px 0 25px;
+}
+.mb .mbdiv{
+    @extend %div;
+    background-color: #fff;
+    position: relative;
+}
+.mb .mbdiv2{
+    @extend %div;
+    background: url(../images/mask.png) no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+    visibility: hidden;
+    @include opacity;
+    -webkit-transition: opacity .3s;
+    transition: opacity .3s;
+}
+.mb a:hover .mbdiv2{
+    visibility: visible;
+    @include opacity(1);
+}
+.mb a:hover .mbdiv2 p,
+.mb a:hover .mbdiv2 span{
+    @include translateY;
+    @include opacity(1);
+}
+.mbdiv2 p{
+    font-size: $fz30;
+    font-weight: bold;
+    @extend %ab_layout;
+    color: $color2;
+    margin: -30px 0 0 -60px;
+    @include opacity;
+    @include translateY(-100%);
+    -webkit-transition: transform, opacity .3s;
+    transition: transform, opacity .3s;
+}
+.mbdiv2 span{
+    font-size: $fz14;
+    display: inline-block;
+    color: $color2;
+    width: 130px;
+    height: 38px;
+    text-align: center;
+    @extend %ab_layout;
+    margin: 10px 0 0 -65px;
+    @include opacity;
+    @include translateY(100%);
+    -webkit-transition: transform, opacity .3s;
+    transition: transform, opacity .3s;
+}
+
+/*下部的视频列表*/
+.mb2{
+    width: 1200px;
+    margin: 0 auto;
+    font-family: $font;
+    line-height: $line-height;
+}
+.mb2 .tab-v{
+    width: 412px;
+    height: 64px;
+    font-family: $font2;
+    background-color: $bgc-green;
+    text-align: center;
+    color: $color2;
+    display: block;
+    font-size: $fz48;
+    margin: 34px auto;
+    border-radius: 0 0 10px 10px;
+}
+.mb2 .b{
+    background-color: $bgc-grey;
+    height: 1px;
+    width: 100%;
+    position: relative;
+}
+.mb2 .b span{
+    display: inline-block;
+    width: 111px;
+    height: 1px;
+    border: 1px solid $bgc-green;
+    position: absolute;
+    left: 50%;
+    margin-left: -55px;
+    top: -1px;
+}
+.mb2 .cont{
+    padding: 43px 0;
+    position: relative;
+}
+.ilist{
+    position: absolute;
+    right: 0;
+    top: 43px;
+}
+.ilist li{
+    text-align: left;
+    width: 195px;
+    height: 91px;
+    margin-bottom: 6px;
+    background-color: #fff;
+    border: 1px solid #fff;
+    position: relative;
+    padding: 6px 8px 7px 150px;
+    position: relative;
+    color: $color-grey;
+    line-height: $line-height;
+}
+.ilist li img{
+    width: 124px;
+    height: 93px;
+    position: absolute;
+    left: 8px;
+    top: 6px;
+}
+.ilist li p{
+    font-size: $fz18;
+}
+.ilist li span{
+    font-size: $fz14;
+}
+.ilist li.current{
+    border: 1px solid $br;
+    left: -2px;
+}
+.aup, .adown{
+    display: block;
+    width: 32px;
+    height: 16px;
+    position: absolute;
+    right: 160px;
+}
+.aup{
+    top: 15px;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAQBAMAAACFLmBqAAAALVBMVEUAAACZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU5ddAvEAAAADnRSTlMARLvuIhHdzJl3M2aqVVHjmV0AAAB8SURBVBjTY4AClpkBDCjA7V0pCp8l793zAFQF794poCpof/cIRcELoBhCCZfduwYG53dv4AKLgcrBonAFYNVy714gFIAo3nfvJiAUgMC+dy/BtDDMQk6IEsZ37wqgevvevQaZhXA0z7t3G0AKEN7Se/eWgVFQEOGrQEFBAFZ/NvaM0e3TAAAAAElFTkSuQmCC");
+}
+.adown{
+    top: 500px;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAQBAMAAACFLmBqAAAALVBMVEUAAACZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU5ddAvEAAAADnRSTlMARLvuIhHdzJl3M2aqVVHjmV0AAACGSURBVBjTYxAUFGWAAVZBQQEGuXfPA2ACTO/eXWBgfPeuFCZw7t1rIAlUAuVzvHu3AUgx2r1TgAjMe/cSTC9+9whMc797NwHM4IIquQdSgFACMr0BSMGUgIRfQPkQNovduwNwAZa8dw1uQH0I4PbuRR1IG7ISiAKEEpgHEEogXkQAz6lQBgCa2TiLh9cGRQAAAABJRU5ErkJggg==");
+}

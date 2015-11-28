@@ -1,0 +1,188 @@
+@charset "UTF-8";
+.mb {
+  clear: both;
+  overflow: hidden; }
+
+.mb .mbdiv, .mb .mbdiv2 {
+  width: 368px;
+  height: 277px; }
+
+.mbdiv2 p, .mbdiv2 span {
+  position: absolute;
+  left: 50%;
+  top: 50%; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style: none; }
+
+.mb.hide {
+  display: none; }
+
+.mb {
+  width: 1254px;
+  margin: 0 auto;
+  padding: 0;
+  font-family: "微软雅黑", "宋体";
+  line-height: 1.5; }
+
+.mb img {
+  display: block; }
+
+.mb li {
+  float: left;
+  margin: 45px 25px 0 25px; }
+
+.mb .mbdiv {
+  background-color: #fff;
+  position: relative; }
+
+.mb .mbdiv2 {
+  background: url(../images/mask.png) no-repeat;
+  position: absolute;
+  left: 0;
+  top: 0;
+  visibility: hidden;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s; }
+
+.mb a:hover .mbdiv2 {
+  visibility: visible;
+  opacity: 1;
+  filter: alpha(opacity=100); }
+
+.mb a:hover .mbdiv2 p,
+.mb a:hover .mbdiv2 span {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+  filter: alpha(opacity=100); }
+
+.mbdiv2 p {
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  margin: -30px 0 0 -60px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-transition: transform, opacity .3s;
+  transition: transform, opacity .3s; }
+
+.mbdiv2 span {
+  font-size: 14px;
+  display: inline-block;
+  color: #fff;
+  width: 130px;
+  height: 38px;
+  text-align: center;
+  margin: 10px 0 0 -65px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -o-transform: translateY(100%);
+  transform: translateY(100%);
+  -webkit-transition: transform, opacity .3s;
+  transition: transform, opacity .3s; }
+
+/*下部的视频列表*/
+.mb2 {
+  width: 1200px;
+  margin: 0 auto;
+  font-family: "微软雅黑", "宋体";
+  line-height: 1.5; }
+
+.mb2 .tab-v {
+  width: 412px;
+  height: 64px;
+  font-family: "Arial";
+  background-color: #99cd4e;
+  text-align: center;
+  color: #fff;
+  display: block;
+  font-size: 48px;
+  margin: 34px auto;
+  border-radius: 0 0 10px 10px; }
+
+.mb2 .b {
+  background-color: #dcdcdc;
+  height: 1px;
+  width: 100%;
+  position: relative; }
+
+.mb2 .b span {
+  display: inline-block;
+  width: 111px;
+  height: 1px;
+  border: 1px solid #99cd4e;
+  position: absolute;
+  left: 50%;
+  margin-left: -55px;
+  top: -1px; }
+
+.mb2 .cont {
+  padding: 43px 0;
+  position: relative; }
+
+.ilist {
+  position: absolute;
+  right: 0;
+  top: 43px; }
+
+.ilist li {
+  text-align: left;
+  width: 195px;
+  height: 91px;
+  margin-bottom: 6px;
+  background-color: #fff;
+  border: 1px solid #fff;
+  position: relative;
+  padding: 6px 8px 7px 150px;
+  position: relative;
+  color: #928b8b;
+  line-height: 1.5; }
+
+.ilist li img {
+  width: 124px;
+  height: 93px;
+  position: absolute;
+  left: 8px;
+  top: 6px; }
+
+.ilist li p {
+  font-size: 18px; }
+
+.ilist li span {
+  font-size: 14px; }
+
+.ilist li.current {
+  border: 1px solid #b2d12e;
+  left: -2px; }
+
+.aup, .adown {
+  display: block;
+  width: 32px;
+  height: 16px;
+  position: absolute;
+  right: 160px; }
+
+.aup {
+  top: 15px;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAQBAMAAACFLmBqAAAALVBMVEUAAACZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU5ddAvEAAAADnRSTlMARLvuIhHdzJl3M2aqVVHjmV0AAAB8SURBVBjTY4AClpkBDCjA7V0pCp8l793zAFQF794poCpof/cIRcELoBhCCZfduwYG53dv4AKLgcrBonAFYNVy714gFIAo3nfvJiAUgMC+dy/BtDDMQk6IEsZ37wqgevvevQaZhXA0z7t3G0AKEN7Se/eWgVFQEOGrQEFBAFZ/NvaM0e3TAAAAAElFTkSuQmCC"); }
+
+.adown {
+  top: 500px;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAQBAMAAACFLmBqAAAALVBMVEUAAACZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU5ddAvEAAAADnRSTlMARLvuIhHdzJl3M2aqVVHjmV0AAACGSURBVBjTYxAUFGWAAVZBQQEGuXfPA2ACTO/eXWBgfPeuFCZw7t1rIAlUAuVzvHu3AUgx2r1TgAjMe/cSTC9+9whMc797NwHM4IIquQdSgFACMr0BSMGUgIRfQPkQNovduwNwAZa8dw1uQH0I4PbuRR1IG7ISiAKEEpgHEEogXkQAz6lQBgCa2TiLh9cGRQAAAABJRU5ErkJggg=="); }
+
+/*# sourceMappingURL=index.css.map */
