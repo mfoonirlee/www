@@ -1,9 +1,9 @@
 <?php
 //数据库连接信息
 $cfg_dbhost = 'localhost';
-$cfg_dbname = 'jhgarden';
-$cfg_dbuser = 'JH';
-$cfg_dbpwd = '';
+$cfg_dbname = 'yhc';
+$cfg_dbuser = 'root';
+$cfg_dbpwd = 'dream@sh123data';
 $cfg_dbprefix = 'dede_';
 $cfg_db_language = 'gbk';
 
