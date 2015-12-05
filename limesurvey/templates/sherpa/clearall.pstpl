@@ -1,0 +1,8 @@
+
+<br />
+<div class="survey-cleared">
+    <span class="warning-text">{ANSWERSCLEARED}</span>
+	<br /><br />
+	{RESTART}
+</div>
+<br />
