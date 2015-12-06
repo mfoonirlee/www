@@ -429,7 +429,7 @@ $(document).keydown(function(event){
 <div id="wrap">
 {dede:include filename="head.htm"/}
 <div class="news">
-  <div class="news-nav"> <a href="{dede:type typeid='10'}[field:typelink /]{/dede:type}" class={dede:field name=typeid runphp='yes'}(@me=='10')? @me='on':@me='';{/dede:field}>È«²¿</a> {dede:channel type='son' currentstyle="<a href='~typelink~' class='on'>~typename~</a>"} <a href='[field:typeurl/]'>[field:typename/]</a>
+  <div class="news-nav"> <a href="{dede:type typeid='10'}[field:typelink /]{/dede:type}" class={dede:field name=typeid runphp='yes'}(@me=='10')? @me='on':@me='';{/dede:field}></a> {dede:channel type='son' currentstyle="<a href='~typelink~' class='on'>~typename~</a>"} <a href='[field:typeurl/]'>[field:typename/]</a>
 
     {/dede:channel} </div>
   <div id="wrapp" class="wrap active">
@@ -458,7 +458,7 @@ $(document).keydown(function(event){
 
             </script>
     <div id="aaa1" style="display:none;position: fixed;width:400px;height:200px;background:#000;color:#fff;top:30%;left:50%"></div>
-    <div id="ArtPLink" class="page-Article-QQ" bosszone="artPage"> {dede:pagelist listitem="info,index,end,pre,next,pageno" listsize="5"/} </div>
+    <div id="ArtPLink" class="page-Article-QQ" bosszone="artPage">  </div>
   </div>
   {dede:include filename="footer2.htm"/}
 </div>

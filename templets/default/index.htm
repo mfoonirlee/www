@@ -534,15 +534,15 @@ $(document).keydown(function(event){
         </ul>
     </div>
     <script type='text/tempalte' id='j_list_tpl'>
-        <%for(var i = 0, len = data.length; i++){%>
+        <%for(var i = 0, len = data.length; i < len; i++){%>
             <%if(i == current){%>
-                <li data-vurl='<%=data.vurl%>' class='current'>
+                <li data-vurl='<%=data[i].vurl%>' class='current'>
             <%}else{%>
-                <li data-vurl='<%=data.vurl%>'>
+                <li data-vurl='<%=data[i].vurl%>'>
             <%}%>
-                <img src="<%=data.img%>" alt="">
-                <p><%=data.title%></p>
-                <span><%=data.desc%></span>
+                <img src="<%=data[i].img%>" alt="">
+                <p><%=data[i].title%></p>
+                <span><%=data[i].desc%></span>
             </li>
         <%}%>
     </script>
@@ -552,7 +552,7 @@ $(document).keydown(function(event){
         <div class="M-bottom-border"></div>
         <div class='mb2' >
             <div class='cont'>
-                <embed id='j_video' src="http://www.tudou.com/a/qJtXzLi3iaY/&bid=05&iid=132608618&rpid=336977343&resourceId=336977343_05_05_99/v.swf" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" wmode="opaque" width="480" height="400" style='width:837px;height:433px;'></embed>
+                <div id='j_video' style='width:837px;height:433px;'></div>
                 <span class='aup' id='j_up'></span>
                 <ul class='ilist' id='j_list'>
                     <li>

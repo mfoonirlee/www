@@ -1,0 +1,44 @@
+{dede:php}
+
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+
+class item {
+    public $title = ''; // 视频标题
+    public $desc = ''; // 视频概要
+    public $img = ''; // 视频缩略图
+    public $vurl = ''; // 视频链接
+};
+class result {
+    public $list = array();
+};
+
+$result = new result();
+
+$sql = "SELECT * FROM `dede_archives` WHERE 1 = 1 AND typeid = 25;";
+$query = mysql_query($sql);
+while($row=mysql_fetch_array($query)){
+
+    $fields = array( 'title' => $row['title'] );
+    //print_r($fields);
+    //echo $fields['title'];
+
+    $item = new item();
+    //echo $row['title'];
+    //$item->title = "123";
+    //$title = $row['title'];
+    //echo iconv("gb2312","utf-8", $row['title']);
+    //print_r($title);
+    $item->title = iconv("gb2312","utf-8", $row['title']);
+    $item->desc = iconv("gb2312","utf-8",$row["shorttitle"]);
+    $item->img = apache_lookup_uri( $row["litpic"] )->uri;
+    $item->vurl = $row["description"];
+    $result->list[] = $item;
+    //print_r($result);
+}
+
+echo json_encode($result);
+
+header('Content-Type: text/json; charset=utf-8');
+
+{/dede:php}

@@ -1,1 +1,0 @@
-{dede:img text='' width='1920' height='747'} /uploads/allimg/140323/1_0323105S4AL.jpg {/dede:img}

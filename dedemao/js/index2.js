@@ -12,7 +12,7 @@
 
     $.ajax({
         type: 'GET',
-        url: Config.url['index'],
+        url: Config.getUrl('index'),
         contentType: 'application/json;charset=utf-8',
         dataType: 'json',
         success: function (data) {
@@ -43,7 +43,7 @@
         }
         $target.addClass('current').siblings().removeClass('current');
         currentIndex = $target.index();
-        $('#j_video').attr('arc', $target.data('vurl'));
+        $('#j_video').html($target.data('vurl'));
     }
     //点击翻页
     function turnNext(){
@@ -63,13 +63,19 @@
         turnPage();
     }
     function turnPage(){
-        var rdata = totalData.slice(currentPage * 4, (currentPage + 1) * 4);
+        var rdata;
+        if(totalData.length > 4){
+            rdata = totalData.slice(currentPage * 4, (currentPage + 1) * 4);
+        }else{
+            rdata = totalData;
+        }
+
         //提取模板进行渲染
         var template = $('#j_list_tpl').html(),
             html = _.template(template);
-        $('#j_list').html(html({data: rdata, current: currentIndex}));
+        $('#j_list').html(html({data: rdata.list, current: currentIndex}));
         //标志视频的默认值
-        $('#j_video').attr('arc', rdata[0].vurl);
+        $('#j_video').html(rdata.list[0].vurl);
         currentIndex = currentPage * 4;
         //绑定事件
         $('#j_list').on('click', function(e) {
