@@ -46,3 +46,5 @@ tplcache
 /data/sessions
 /data/mysql_error_trace.inc
 /data/common.inc.php
+
+/uploads
