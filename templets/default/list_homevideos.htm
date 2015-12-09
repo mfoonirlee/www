@@ -31,7 +31,7 @@ while($row=mysql_fetch_array($query)){
 	//print_r($title);
 	$item->title = iconv("gb2312","utf-8", $row['title']);
 	$item->desc = iconv("gb2312","utf-8",$row["shorttitle"]);
-	$item->img = $row["litpic"];
+	$item->img = apache_lookup_uri( substr( $row["litpic"], 1 ) )->uri;
 	$item->vurl = $row["description"];
 	$result->list[] = $item;
 	//print_r($result);
