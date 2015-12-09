@@ -44,6 +44,5 @@ Temporary Items
 cache
 tplcache
 /data/sessions
-/data/tplcache
-
 /data/mysql_error_trace.inc
+/data/common.inc.php
