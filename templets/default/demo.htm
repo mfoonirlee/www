@@ -1,0 +1,470 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<link rel="shortcut icon" href="/dedemao/images/logo-ico.png" type="image/x-icon">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<link rel="icon" href="/dedemao/images/logo-ico.png" type="/dedemao/images/png"/>
+<link rel="shortcut icon" href="/favicon.ico" />
+<title>¾ýºÌÔ°</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+
+<!--³£ÓÃCSS-->
+
+<link rel="stylesheet" type="text/css" href="/dedemao/css/basic.css">
+<link rel="stylesheet" type="text/css" href="/dedemao/css/style.css">
+<link rel="stylesheet" type="text/css" href="/dedemao/css/index.css">
+
+<!--³£ÓÃCSS end-->
+<style type="text/css">
+
+#ie6-warning{background:#FF0; position:absolute; left:150px; top:10px;font-size:12px; line-height:24px; color:#F00; padding:0 10px;}
+#ie6-warning a{text-decoration:none;}
+#ie6-warning img{float:right; cursor:pointer; margin-top:4px; margin-left:10px;}
+
+</style>
+<!--ÂÖ²¥CSS-->
+
+<link rel="stylesheet" type="text/css" href="/dedemao/css/slide/settings.css">
+<link rel="stylesheet" type="text/css" href="/dedemao/css/slide/styles.css">
+
+<!--ÂÖ²¥CSS end-->
+
+<!--tel CSS-->
+
+<link rel="stylesheet" type="text/css" href="/dedemao/css/tel/borrar.css">
+<link rel="stylesheet" type="text/css" href="/dedemao/css/tel/estilos.css">
+
+<!--tel CSS end-->
+
+<!--ÂÖ²¥JS-->
+
+<script src="/dedemao/js/slide/jquery.js"></script>
+<script src="/dedemao/js/slide/jquery.themepunch.plugins.min.js"></script>
+<script src="/dedemao/js/slide/jquery.themepunch.revolution.min.js"></script>
+<script src="/dedemao/js/slide/jquery.themepunch.showbizpro.min.js"></script>
+<script src="/dedemao/js/slide/jquery.fancybox.pack.js"></script>
+<script src="/dedemao/js/slide/jquery.isotope.min.js"></script>
+<script src="/dedemao/js/slide/scripts.js"></script>
+<script src="/dedemao/js/config.js"></script>
+<script src="/dedemao/js/underscore.js"></script>
+
+<!--ÂÖ²¥JS end-->
+
+<!--tel JS-->
+
+<script type="text/javascript" src="/dedemao/js/tel.js"></script>
+
+<!--tel JS end-->
+
+<!--Ê×Ò³¹ö¶¯JS-->
+
+<script type="text/javascript" src="/dedemao/js/index.js"></script>
+
+<!--Ê×Ò³¹ö¶¯JS end-->
+
+<!--[if lt IE 9]>
+
+<link rel="stylesheet" type="text/css" href="/dedemao/css/slide/ie8.css" media="all" />
+
+<![endif]-->
+
+<!--[if lt IE 9]>
+
+<script src="/dedemao/js/slide/html5shiv.js"></script>
+
+<![endif]-->
+
+<!--workJS-->
+
+<script type="text/javascript" src="/dedemao/js/work.js"></script>
+<script type="text/javascript">
+
+    $(function(){
+
+        var H=$(window).width()/2-80
+
+        if(H)
+
+        {
+
+            $(".ss-left").css("width",H)
+
+            $(".ss-right").css("width",H)
+
+        }
+
+    })
+
+</script>
+<script>
+
+$(window).resize(function(){
+
+    var resolutionList="320,400,640,800,1024,1280,1400,1440,1600,1680,1920,2048,2560,3200,3840,";
+
+    var resolutionListt="1280,";
+
+    var nowwidth=window.screen.width;
+
+    var H=$(window).width()/2-80
+
+    if(resolutionList.indexOf(nowwidth + ",")==-1 ){
+
+        if(H)
+
+        {
+
+            $(".ss-left").css("width",H)
+
+            $(".ss-right").css("width",H)
+
+        }
+
+    }
+
+    else{
+
+            if(H)
+
+            {
+
+                $(".ss-left").css("width",H)
+
+                $(".ss-right").css("width",H)
+
+            }
+
+        }
+
+});
+
+</script>
+
+<!--workJS end-->
+
+<script type="text/javascript" src="/dedemao/js/jquery.SuperSlide.2.1.1.js"></script>
+</head>
+
+<!--µ¼º½JS-->
+
+<script>
+$(document).ready(function() {
+    $("#menu1 a").each(function() { //For each list item...
+        var linkText = $(this).find("div").html(); //Find the text inside of the a tag
+    });
+
+    $("#menu1 a").hover(function() {    //On hover...
+        $(this).find("p").stop().animate({
+            marginTop: "-20" //Find the span tag and move it up 40 pixels
+        }, 200);
+    } , function() { //On hover out...
+        $(this).find("p").stop().animate({
+            marginTop: "0" //Move the span back to its original state (0px)
+        }, 200);
+    });
+});
+</script>
+<script type="text/javascript" src="/dedemao/js/right-nav.js"></script>
+<script>
+
+    $(window).bind("scroll", function(){
+
+    //µ±¹ö¶¯Ìõ¹ö¶¯Ê±
+
+        var scroll_top = $(document).scrollTop();
+
+        if(scroll_top == 0)
+
+        {
+
+            $(".M-top").removeClass("M-top-show");
+
+            $(".M-top").animate({top:'0px'},"slow");
+
+            $(".M-top").css("left","0px");
+
+        }
+
+        if(scroll_top > 0)
+
+        {
+
+            $(".M-top").addClass("M-top-show");
+
+            $(".M-top").css("left","0px");
+
+            $(".M-top").css("top","-165px");
+
+        }
+
+        if(scroll_top <500)
+
+        {
+
+            $("#nav").hide();
+
+
+        }
+
+        if(scroll_top >=400)
+
+        {
+
+            $("#nav").show();
+
+        }
+
+    });
+
+    $(function(){
+
+        $(".M-menu2").click(function(){
+
+            $(".M-top").addClass("M-top-show");
+
+            $(".M-top").animate({top:'0px'},"slow");
+
+            $("#topcontrol").animate({right:'-122px'},"slow");
+
+        })
+
+    })
+
+</script>
+
+<!--µ¼º½JS end-->
+
+<!--new-->
+<link rel="stylesheet" type="text/css" href="/dedemao/css/new/new.css">
+<link rel="stylesheet" type="text/css" href="/dedemao/css/new/reset.css">
+<link rel="stylesheet" type="text/css" href="/dedemao/css/new/style.css">
+
+<!--[if lt IE 9]>
+
+<link rel="stylesheet" type="text/css" href="new/css/styleIE.css" />
+
+<![endif]-->
+
+<script type="text/javascript" src="/dedemao/js/new/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="/dedemao/js/new/modernizr.custom.11333.js"></script>
+
+<!--new end-->
+<script type="text/javascript">
+
+$(document).ready(
+
+function () {
+
+var m_st, m_po = 230; //¹ö¶¯µ½600ÏñËØÊ±ÏÔÊ¾
+
+$(window).scroll(function(){
+
+    m_st = Math.max(document.body.scrollTop || document.documentElement.scrollTop);
+
+    if (m_st > m_po)
+
+    {
+
+    $(".M-design").animate({top:'0px'},1000);
+
+    $(".Brand").animate({top:'0px'},1500);
+
+    $(".move").animate({top:'0px'},2000);
+
+    $(".ui").animate({top:'0px'},2500);
+
+    }
+
+});
+
+
+
+});
+
+</script>
+<script>
+
+$(document).keydown(function(event){
+
+        var t=$(document).scrollTop();
+
+        if(t>=0 & t<=586){
+
+            if (event.keyCode == 40){
+
+            $("html,body").animate({scrollTop:600},1000);
+
+            return false;
+
+          }
+
+          if (event.keyCode == 38){
+
+            $("html,body").animate({scrollTop:0},1000);
+
+            return false;
+
+          }
+
+        }
+
+        if(t>=600 & t<=1240){
+
+            if (event.keyCode == 40){
+
+            $("html,body").animate({scrollTop:1250},1000);
+
+            return false;
+
+          }
+
+          if (event.keyCode == 38){
+
+            $("html,body").animate({scrollTop:0},1000);
+
+            return false;
+
+          }
+
+        }
+
+        if(t>=1240 & t<=2090){
+
+            if (event.keyCode == 40){
+
+            $("html,body").animate({scrollTop:2100},1000);
+
+            return false;
+
+          }
+
+          if (event.keyCode == 38){
+
+            $("html,body").animate({scrollTop:600},1000);
+
+            return false;
+
+          }
+
+        }
+
+        if(t>=2100 & t<=2240){
+
+            if (event.keyCode == 40){
+
+            $("html,body").animate({scrollTop:2840},1000);
+
+            return false;
+
+          }
+
+          if (event.keyCode == 38){
+
+            $("html,body").animate({scrollTop:1250},1000);
+
+            return false;
+
+          }
+
+        }
+
+        if(t>=2240){
+
+          if (event.keyCode == 38){
+
+            $("html,body").animate({scrollTop:2102},1000);
+
+            return false;
+
+          }
+
+        }
+
+        if($(document).scrollTop() >= $(document).height() - $(window).height()){
+
+          if (event.keyCode == 38){
+
+            $("html,body").animate({scrollTop:2100},1000);
+
+            return false;
+
+          }
+
+        }
+
+})
+
+</script>
+<body>
+<!--[if lte IE 9]>
+<div id="ie6-warning">
+<img src="images/cha.png" width="16" height="16" onclick="closeme();" alt="¹Ø±ÕÌáÊ¾" />
+ÄúÕýÔÚÊ¹ÓÃ Internet Explorer µÍ°æ±¾µÄIEä¯ÀÀÆ÷¡£Îª¸üºÃµÄä¯ÀÀ±¾Ò³£¬½¨ÒéÄú½«ä¯ÀÀÆ÷Éý¼¶µ½
+<a href="http://www.microsoft.com/china/windows/internet-explorer/ie8howto.aspx" target="_blank">IE9</a>
+»òÒÔÏÂä¯ÀÀÆ÷£º<a href="http://www.firefox.com.cn/download/">Firefox</a>
+ / <a href="http://www.google.cn/chrome"> Chrome</a>
+ / <a href="http://www.apple.com.cn/safari/">Safari</a> / <a href="http://www.Opera.com/">Opera</a>   </div>
+<script type="text/javascript">
+    togo = 0;
+    function closeme(){
+        var div = document.getElementById("ie6-warning");
+        div.style.display ="none";
+    };
+    function position_fixed(el, eltop, elleft){
+        // check if this is IE6
+        if(!window.XMLHttpRequest)
+            window.onscroll = function(){
+                el.style.top = (document.documentElement.scrollTop + eltop)+"px";
+                el.style.left = (document.documentElement.scrollLeft + elleft)+"px";
+            }
+        else
+            el.style.position = "fixed";
+    };
+    position_fixed(document.getElementById("ie6-warning"),0, 0);
+</script>
+<![endif]-->
+<div id="wrap">
+  <div id="container">
+    <div class="section" id="section-1">
+      {dede:include filename="head.htm"/}
+       <div class="body-wrapper">
+        <div class="box box-border">
+          <div class="light-wrapper">
+            <div class="container inner">
+              <div class="wide-bannercontainer revolution">
+                <div class="wide-banner">
+                  <ul>
+                    <li data-transition="fade"><img src="/dedemao/images/banner-bj.png" alt="" />
+                      <div class="caption sfl" data-x="center" data-y="42" data-speed="600" data-start="600" data-easing="easeOutSine" style="margin-left:50px;" ><img src="/dedemao/images/banner-logo.png" alt="" /></div>
+                      <div class="caption lfb" data-x="center" data-y="242" data-speed="700" data-start="1000" data-easing="easeOutExpo"><img src="/dedemao/images/banner-text1.png" alt="" /></div>
+                      <div class="caption lfb" data-x="center" data-y="318" data-speed="700" data-start="1200" data-easing="easeOutExpo"><img src="/dedemao/images/banner-text2.png" alt="" /></div>
+                      <div class="caption lfb" data-x="center" data-y="375" data-speed="700" data-start="1300" data-easing="easeOutExpo"><img src="/dedemao/images/banner-text3.png" alt="" /></div>
+                    </li>
+                    <li data-transition="fade"> <img src="/dedemao/images/banner-bj2.jpg" alt="" />
+                      <div class="caption sfl" data-x="610" data-y="255" data-speed="800" data-start="1200" data-easing="easeOutExpo" style="z-index:9000" ><img src="/dedemao/images/phone.png" alt="" /></div>
+                      <div class="caption sfb" data-x="center" data-y="125" data-speed="800" data-start="100" data-easing="easeOutExpo"><img src="/dedemao/images/women.png" alt="" /></div>
+                      <div class="caption sfl" data-x="270" data-y="310" data-spee/cdn.hi-honor.com/d="800" data-start="800" data-easing="easeOutExpo"><img src="/dedemao/images/glb.png" alt="" /></div>
+                      <div class="caption lfr big white" data-x="center" data-y="33" data-speed="600" data-start="1400" data-easing="easeOutExpo"><img src="/dedemao/images/banner-text4.png"></div>
+                    </li>
+                    <li data-transition="fade"> <img src="/dedemao/images/banner-bj3.jpg" alt="" />
+                      <div class="caption sfl" data-x="center" data-y="145" data-spee/cdn.hi-honor.com/d="800" data-start="800" data-easing="easeOutExpo"><img src="/dedemao/images/2-2.png" alt="" /></div>
+                      <div class="caption lfr big white" data-x="center" data-y="33" data-speed="600" data-start="1400" data-easing="easeOutExpo"><img src="/dedemao/images/banner-text5.png"></div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {dede:include filename="footer.htm"/}
+    </div>
+  </div>
+</div>
+
+</div>
+</body>
+</html>

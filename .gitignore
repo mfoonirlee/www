@@ -41,8 +41,8 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
-
-/data/cache
+cache
+tplcache
 /data/sessions
 /data/tplcache
 
