@@ -7,7 +7,7 @@ var Config = {
         }
     },
     scheme: {
-        'dev': 'http://localhost:82',
+        'dev': 'http://' + location.host,
         'prd': ''
     },
     url: {
