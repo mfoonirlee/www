@@ -1,0 +1,28 @@
+{dede:php}
+
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+
+class item {
+};
+
+$result = array();
+
+$sql = "SELECT `id`, `title`, `description`, `litpic`, `isnew`, `isactive` FROM `dede_archives` INNER JOIN `dede_addonactivity` ON `dede_archives`.`id` = `dede_addonactivity`.`aid` WHERE 1 = 1 AND `dede_archives`.`typeid` = 26;";
+$query = mysql_query($sql);
+while($row=mysql_fetch_array($query)){
+    $item = new item();
+    $item->title = iconv("gb2312","utf-8", $row['title']);
+    $item->desc = iconv("gb2312","utf-8",$row["description"]);
+    $item->img = apache_lookup_uri( $row["litpic"] )->uri;
+    $item->isnew = iconv("gb2312","utf-8", $row["isnew"]);
+	$item->issoldout = iconv("gb2312","utf-8", $row["isactive"]);
+    $item->id = $row["id"];
+    $result[] = $item;
+}
+
+echo json_encode($result);
+
+header('Content-Type: text/json; charset=utf-8');
+
+{/dede:php}

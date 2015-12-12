@@ -1,0 +1,28 @@
+{dede:php}
+
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+
+$result = array();
+
+$sql = "SELECT `id`, `title`, `description`, `litpic`, `datestart`, `dateend`, `isnew`, `isactive`, `content`, `coupondescription`, `contentimage`, `headimage` FROM `dede_archives` INNER JOIN `dede_addonactivity` ON `dede_archives`.`id` = `dede_addonactivity`.`aid` WHERE 1 = 1 AND `dede_archives`.`id` = ".$_GET["aid"].";";
+$query = mysql_query($sql);
+while($row=mysql_fetch_array($query)){
+	$result["title"] = iconv("gb2312","utf-8", $row['title']);
+    $result["desc"] = iconv("gb2312","utf-8",$row["content"]);
+    $result["img"] = apache_lookup_uri( $row["litpic"] )->uri;
+    $result["isnew"] = iconv("gb2312","utf-8", $row["isnew"]);
+	$result["issoldout"] = iconv("gb2312","utf-8", $row["isactive"]);
+	$result["stime"] = iconv("gb2312","utf-8", $row["datestart"]);
+	$result["etime"] = iconv("gb2312","utf-8", $row["dateend"]);
+	$result["cdesc"] = iconv("gb2312","utf-8", $row["coupondescription"]);
+	$result["cimg"] = iconv("gb2312","utf-8", $row["contentimage"]);
+	$result["himg"] = iconv("gb2312","utf-8", $row["headimage"]);
+	$result["id"] = $row["id"];
+}
+
+echo json_encode($result);
+
+header('Content-Type: text/json; charset=utf-8');
+
+{/dede:php}

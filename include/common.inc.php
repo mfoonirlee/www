@@ -350,3 +350,9 @@ if(file_exists(DEDEDATA.'/helper.inc.php'))
     // 初始化小助手
     helper($cfg_helper_autoload);
 }
+
+session_start();
+if( true == $_SESSION['_islogin'] ) {
+	//echo $_SESSION['_id'];
+}
+

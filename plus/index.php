@@ -45,10 +45,8 @@ if($tinfos['issystem']==-1)
     if(!empty($infotype)) $cArr['infotype'] = $infotype;
     if(!empty($keyword)) $cArr['keyword'] = $keyword;
     include(DEDEINC."/arc.sglistview.class.php");
-    $lv = new SgListView($tid,$cArr);    
+    $lv = new SgListView($tid,$cArr);
 } else {
-	echo 123;
-	
     include(DEDEINC."/arc.indexview.class.php");
     //echo DEDEINC."/arc.listview.class.php";
     $lv = new ListView($tid);
@@ -59,7 +57,6 @@ if($tinfos['issystem']==-1)
         $cfg_ml = new MemberLogin();
         if( $cfg_ml->M_Rank < $lv->Fields['corank'] )
         {
-        	
             $dsql->Execute('me' , "SELECT * FROM `#@__arcrank` ");
             while($row = $dsql->GetObject('me'))
             {
