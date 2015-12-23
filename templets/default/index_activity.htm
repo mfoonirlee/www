@@ -8,7 +8,7 @@ class item {
 
 $result = array();
 
-$sql = "SELECT `id`, `title`, `description`, `litpic`, `isnew`, `isactive` FROM `dede_archives` INNER JOIN `dede_addonactivity` ON `dede_archives`.`id` = `dede_addonactivity`.`aid` WHERE 1 = 1 AND `dede_archives`.`typeid` = 26;";
+$sql = "SELECT `id`, `title`, `description`, `litpic`, `isnew`, `isactive` FROM `dede_archives` INNER JOIN `dede_addonactivity` ON `dede_archives`.`id` = `dede_addonactivity`.`aid` WHERE 1 = 1 AND `dede_archives`.`typeid` = 31;";
 $query = mysql_query($sql);
 while($row=mysql_fetch_array($query)){
     $item = new item();

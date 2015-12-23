@@ -20,8 +20,8 @@
 <style type="text/css">
 
 #ie6-warning{background:#FF0; position:absolute; left:150px; top:10px;font-size:12px; line-height:24px; color:#F00; padding:0 10px;}
-#ie6-warning a{text-decoration:none;}  
-#ie6-warning img{float:right; cursor:pointer; margin-top:4px; margin-left:10px;} 
+#ie6-warning a{text-decoration:none;}
+#ie6-warning img{float:right; cursor:pointer; margin-top:4px; margin-left:10px;}
 
 </style>
 <!--轮播CSS-->
@@ -77,9 +77,9 @@
 <!--workJS-->
 
 <script type="text/javascript" src="/dedemao/js/work.js"></script>
-<script type="text/javascript"> 
+<script type="text/javascript">
 
-	$(function(){ 
+	$(function(){
 
 		var H=$(window).width()/2-80
 
@@ -87,13 +87,13 @@
 
 		{
 
-			$(".ss-left").css("width",H)	
+			$(".ss-left").css("width",H)
 
-			$(".ss-right").css("width",H)	
+			$(".ss-right").css("width",H)
 
-		} 
+		}
 
-	}) 
+	})
 
 </script>
 <script>
@@ -114,9 +114,9 @@ $(window).resize(function(){
 
 		{
 
-			$(".ss-left").css("width",H)	
+			$(".ss-left").css("width",H)
 
-			$(".ss-right").css("width",H)	
+			$(".ss-right").css("width",H)
 
 		}
 
@@ -128,9 +128,9 @@ $(window).resize(function(){
 
 			{
 
-				$(".ss-left").css("width",H)	
+				$(".ss-left").css("width",H)
 
-				$(".ss-right").css("width",H)	
+				$(".ss-right").css("width",H)
 
 			}
 
@@ -148,26 +148,26 @@ $(window).resize(function(){
 <!--导航JS-->
 
 <script>
-$(document).ready(function() {	
+$(document).ready(function() {
 	$("#menu1 a").each(function() { //For each list item...
 		var linkText = $(this).find("div").html(); //Find the text inside of the a tag
-	}); 
-	
+	});
+
 	$("#menu1 a").hover(function() {	//On hover...
-		$(this).find("p").stop().animate({ 
+		$(this).find("p").stop().animate({
 			marginTop: "-20" //Find the span tag and move it up 40 pixels
 		}, 200);
 	} , function() { //On hover out...
 		$(this).find("p").stop().animate({
 			marginTop: "0" //Move the span back to its original state (0px)
 		}, 200);
-	});	
+	});
 });
 </script>
 <script type="text/javascript" src="/dedemao/js/right-nav.js"></script>
 <script>
 
-	$(window).bind("scroll", function(){ 
+	$(window).bind("scroll", function(){
 
 	//当滚动条滚动时
 
@@ -202,7 +202,7 @@ $(document).ready(function() {
 		{
 
 			$("#nav").hide();
-	
+
 
 		}
 
@@ -261,7 +261,7 @@ $(window).scroll(function(){
 
 	m_st = Math.max(document.body.scrollTop || document.documentElement.scrollTop);
 
-	if (m_st > m_po) 
+	if (m_st > m_po)
 
 	{
 
@@ -273,7 +273,7 @@ $(window).scroll(function(){
 
 	$(".ui").animate({top:'0px'},2500);
 
-	}	
+	}
 
 });
 
@@ -290,19 +290,19 @@ $(document).keydown(function(event){
 
 		if(t>=0 & t<=586){
 
-			if (event.keyCode == 40){ 
+			if (event.keyCode == 40){
 
 			$("html,body").animate({scrollTop:600},1000);
 
-			return false; 
+			return false;
 
 		  }
 
-		  if (event.keyCode == 38){ 
+		  if (event.keyCode == 38){
 
 			$("html,body").animate({scrollTop:0},1000);
 
-			return false; 
+			return false;
 
 		  }
 
@@ -310,19 +310,19 @@ $(document).keydown(function(event){
 
 		if(t>=600 & t<=1240){
 
-			if (event.keyCode == 40){ 
+			if (event.keyCode == 40){
 
 			$("html,body").animate({scrollTop:1250},1000);
 
-			return false; 
+			return false;
 
 		  }
 
-		  if (event.keyCode == 38){ 
+		  if (event.keyCode == 38){
 
 			$("html,body").animate({scrollTop:0},1000);
 
-			return false; 
+			return false;
 
 		  }
 
@@ -330,19 +330,19 @@ $(document).keydown(function(event){
 
 		if(t>=1240 & t<=2090){
 
-			if (event.keyCode == 40){ 
+			if (event.keyCode == 40){
 
 			$("html,body").animate({scrollTop:2100},1000);
 
-			return false; 
+			return false;
 
 		  }
 
-		  if (event.keyCode == 38){ 
+		  if (event.keyCode == 38){
 
 			$("html,body").animate({scrollTop:600},1000);
 
-			return false; 
+			return false;
 
 		  }
 
@@ -350,19 +350,19 @@ $(document).keydown(function(event){
 
 		if(t>=2100 & t<=2240){
 
-			if (event.keyCode == 40){ 
+			if (event.keyCode == 40){
 
 			$("html,body").animate({scrollTop:2840},1000);
 
-			return false; 
+			return false;
 
 		  }
 
-		  if (event.keyCode == 38){ 
+		  if (event.keyCode == 38){
 
 			$("html,body").animate({scrollTop:1250},1000);
 
-			return false; 
+			return false;
 
 		  }
 
@@ -370,11 +370,11 @@ $(document).keydown(function(event){
 
 		if(t>=2240){
 
-		  if (event.keyCode == 38){ 
+		  if (event.keyCode == 38){
 
 			$("html,body").animate({scrollTop:2102},1000);
 
-			return false; 
+			return false;
 
 		  }
 
@@ -382,11 +382,11 @@ $(document).keydown(function(event){
 
 		if($(document).scrollTop() >= $(document).height() - $(window).height()){
 
-		  if (event.keyCode == 38){ 
+		  if (event.keyCode == 38){
 
 			$("html,body").animate({scrollTop:2100},1000);
 
-			return false; 
+			return false;
 
 		  }
 
@@ -396,18 +396,18 @@ $(document).keydown(function(event){
 
 </script>
 <body>
-<!--[if lte IE 9]>   
+<!--[if lte IE 9]>
 <div id="ie6-warning">
 <img src="images/cha.png" width="16" height="16" onclick="closeme();" alt="关闭提示" />
-您正在使用 Internet Explorer 低版本的IE浏览器。为更好的浏览本页，建议您将浏览器升级到 
-<a href="http://www.microsoft.com/china/windows/internet-explorer/ie8howto.aspx" target="_blank">IE9</a>  
+您正在使用 Internet Explorer 低版本的IE浏览器。为更好的浏览本页，建议您将浏览器升级到
+<a href="http://www.microsoft.com/china/windows/internet-explorer/ie8howto.aspx" target="_blank">IE9</a>
 或以下浏览器：<a href="http://www.firefox.com.cn/download/">Firefox</a>
  / <a href="http://www.google.cn/chrome"> Chrome</a>
  / <a href="http://www.apple.com.cn/safari/">Safari</a> / <a href="http://www.Opera.com/">Opera</a>   </div>
-<script type="text/javascript">  
-    togo = 0; 
-    function closeme(){    
-        var div = document.getElementById("ie6-warning");    
+<script type="text/javascript">
+    togo = 0;
+    function closeme(){
+        var div = document.getElementById("ie6-warning");
         div.style.display ="none";
     };
     function position_fixed(el, eltop, elleft){
@@ -417,11 +417,11 @@ $(document).keydown(function(event){
                 el.style.top = (document.documentElement.scrollTop + eltop)+"px";
                 el.style.left = (document.documentElement.scrollLeft + elleft)+"px";
             }
-        else 
+        else
             el.style.position = "fixed";
     };
     position_fixed(document.getElementById("ie6-warning"),0, 0);
-</script>   
+</script>
 <![endif]-->
 <div id="wrap">
   <div id="container">
@@ -437,39 +437,39 @@ $(document).keydown(function(event){
                   <p><span>首页</span><font>首页</font></p>
                 </div>
                 </a></li>
-      	     
+
               <li><a href="/expertise/">
                 <div style="margin-top: 0px;">
                   <p><span>我的服务</span>SERVICE</p>
                 </div>
                 </a></li>
-		     
+
               <li><a href="http://shop.dream-gardens.com.cn">
                 <div style="margin-top: 0px;">
                   <p><span>我的菜园</span>GARDEN</p>
                 </div>
                 </a></li>
-		     
+
               <li><a href="/about/">
                 <div style="margin-top: 0px;">
                   <p><span>农场故事</span>STORY</p>
                 </div>
                 </a></li>
-		     
+
               <li><a href="/life/">
                 <div style="margin-top: 0px;">
                   <p><span>慢生活</span>LIFE-OF-EASE</p>
                 </div>
                 </a></li>
-		     
+
               <li><a href="/news/">
                 <div style="margin-top: 0px;">
                   <p><span>君禾动态</span>NEWS</p>
                 </div>
                 </a></li>
-		 
-        <li><a href="/#contact"><div style="margin-top: 0px;"><p><span>联系我们</span></p><font>CONTACT</font></div></a></li>               
-            
+
+        <li><a href="/#contact"><div style="margin-top: 0px;"><p><span>联系我们</span></p><font>CONTACT</font></div></a></li>
+
             </ul>
           </div>
           <ul id="iconbar" class="fl">
@@ -591,7 +591,7 @@ $(function(){
     }
 })
 </script>
-      <div class="M-what clearfix" style=" overflow:hidden !important; height:198px;position:relative"> 
+      <div class="M-what clearfix" style=" overflow:hidden !important; height:198px;position:relative">
       <a href="http://shop.dream-gardens.com.cn/user.php?act=register">
         <div class="Brand fl"> <em class="Brand-ico"></em>
           <div class="M-design-bottom">
@@ -622,7 +622,7 @@ $(function(){
     <div class="section section-3" style="height:807px;">
       <div class="M-what-top"> <a href="http://shop.dream-gardens.com.cn/" target="_blank"><img src="/dedemao/images/work.png"></a> </div>
       <div class="M-bottom-border2" style="margin-bottom:48px;"></div>
-      <div class="slideTxtBox"> 
+      <div class="slideTxtBox">
         <script>
 
 					$(function(){
@@ -631,7 +631,7 @@ $(function(){
 
 							function(){
 
-								var that=this;	
+								var that=this;
 
 								item7Timer=setTimeout(function(){
 
@@ -647,9 +647,9 @@ $(function(){
 
 							function(){
 
-								var that=this;	
+								var that=this;
 
-								clearTimeout(item7Timer);			
+								clearTimeout(item7Timer);
 
 								$(that).find("dl").fadeOut(1);
 
@@ -659,7 +659,7 @@ $(function(){
 
 							}
 
-						)	
+						)
 
 					})
 
@@ -741,7 +741,7 @@ $(function(){
               </a> </div>
           </ul>
           <ul>
-            <div  class="M-work clearfix"> 
+            <div  class="M-work clearfix">
     <a href="#">
               <div class="M-work-list">
                 <div class="item6"> <img src="/uploads/140323/1-1403231240554Y.png" width="205" height="205" />
@@ -834,15 +834,15 @@ $(function(){
           </ul>
         </div>
       </div>
-      <a href="#section-4" class="top-ico3"></a> 
-      <script>jQuery(".slideTxtBox").slide({trigger:"click"});</script> 
+      <a href="#section-4" class="top-ico3"></a>
+      <script>jQuery(".slideTxtBox").slide({trigger:"click"});</script>
     </div>
     <div id="section-4"></div>
     <div class="section section-4" style="height:717px;">
       <div class="M-what-top"> <a href="/life/" target="_blank"><img src="/dedemao/images/new.png"></a> </div>
       <div class="M-bottom-border" style="margin-bottom:43px;"></div>
       <div id="ss-container" class="ss-container">
-      
+
     <div class="ss-row ss-medium">
           <div class="ss-left"> <a href="#" class="ss-circle ss-circle-1"><img src="/dedemao/images/new-ico1.png"></a> </div>
           <div class="ss-right">
@@ -857,7 +857,7 @@ $(function(){
           </div>
           <div class="ss-right"> <a href="#" class="ss-circle ss-circle-2"><img src="/dedemao/images/new-ico1.png"></a> </div>
         </div>
- 
+
 
     <div class="ss-row ss-medium">
           <div class="ss-left"> <a href="#" class="ss-circle ss-circle-1"><img src="/dedemao/images/new-ico1.png"></a> </div>
@@ -873,7 +873,7 @@ $(function(){
           </div>
           <div class="ss-right"> <a href="#" class="ss-circle ss-circle-2"><img src="/dedemao/images/new-ico1.png"></a> </div>
         </div>
-  
+
 
     <div class="ss-row ss-medium">
           <div class="ss-left"> <a href="#" class="ss-circle ss-circle-1"><img src="/dedemao/images/new-ico1.png"></a> </div>
@@ -885,10 +885,10 @@ $(function(){
 
         <!--
        /news/-->
-        
+
         <a href="/life/" class="M-new-btn">查看更多</a> </div>
       <a href="#section-5" class="top-ico4"></a> </div>
-     
+
     <div id="section-5"></div>
     <div class="section section-5" style="height:820px; overflow:hidden;" id="contact">
       <div class="M-what-top"> <img src="/dedemao/images/contact.png"> </div>
@@ -901,11 +901,11 @@ $(function(){
         $("#ifrm").remove()
     }
 })
-</script> 
+</script>
       </div>
       <div class="foot">
         <div class="foot-content clearfix"> <span class="fl"><font color="#90">乐享君禾，体验自然</font></span>
-          <div class="fl clearfix" style="margin-left:47px;"> 
+          <div class="fl clearfix" style="margin-left:47px;">
           <a href="javascript:void(0);" class="WX-ico"></a>
           <a target="blank" class="QQ-ico" href="/" title="上海君禾园艺有限公司"></a>
           <a href="http://weibo.com/dreamgardens" target="_blank" class="WB-ico"></a> </div>
@@ -914,15 +914,15 @@ $(function(){
           <style>
 .tempWrap{ margin-top:40px;}
 </style>
-          </span> 
+          </span>
           <script type="text/javascript">
 
                     jQuery(".m_wnews").slide({ mainCell:"#miniNewsRegion", effect:"topLoop", autoPlay:true});
 
-                    </script> 
+                    </script>
         </div>
-      <span class="foot-font2">上海君禾园艺有限公司版权所有   沪ICP备11031278号</span> 
-    
+      <span class="foot-font2">上海君禾园艺有限公司版权所有   沪ICP备11031278号</span>
+
       <span class="foot-font2"><SCRIPT LANGUAGE="JavaScript" >
 			document.writeln("<a href='https://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&entyId=dov73ne26zbqq0ili51qzup34d4fmuekgo'><img src='/images/icon.gif' border=0></a>")
 	</SCRIPT>
@@ -940,7 +940,7 @@ $(function(){
   <li><a href="#section-4">生活<em class="nav-ico fr"></em></a></li>
   <li><a href="#section-5">联系<em class="nav-ico fr"></em></a></li>
 </ul>
-<div style="display:none"> 
+<div style="display:none">
 </div>
 </body>
 </html>
@@ -985,7 +985,7 @@ $(document).ready(function() {
 
 	$(".M-design").hover(function() {	//On hover...
 
-		$(this).find(".M-design-title").stop().animate({ 
+		$(this).find(".M-design-title").stop().animate({
 
 			marginTop: "-43" //Find the span tag and move it up 40 pixels
 
@@ -1003,7 +1003,7 @@ $(document).ready(function() {
 
 	$(".Brand").hover(function() {	//On hover...
 
-		$(this).find(".M-design-title").stop().animate({ 
+		$(this).find(".M-design-title").stop().animate({
 
 			marginTop: "-43" //Find the span tag and move it up 40 pixels
 
@@ -1021,7 +1021,7 @@ $(document).ready(function() {
 
 	$(".move").hover(function() {	//On hover...
 
-		$(this).find(".M-design-title").stop().animate({ 
+		$(this).find(".M-design-title").stop().animate({
 
 			marginTop: "-43" //Find the span tag and move it up 40 pixels
 
@@ -1039,7 +1039,7 @@ $(document).ready(function() {
 
 	$(".ui").hover(function() {	//On hover...
 
-		$(this).find(".M-design-title").stop().animate({ 
+		$(this).find(".M-design-title").stop().animate({
 
 			marginTop: "-43" //Find the span tag and move it up 40 pixels
 
@@ -1053,7 +1053,7 @@ $(document).ready(function() {
 
 		}, 200);
 
-	});	
+	});
 
 </script>
 
@@ -1070,34 +1070,34 @@ $(window).load(function(){$('.page_spinner').fadeOut(1000);$('body').css({overfl
 
 	$(function(){
 
-		var browser=navigator.appName 
+		var browser=navigator.appName
 
-		var b_version=navigator.appVersion 
+		var b_version=navigator.appVersion
 
-		var version=b_version.split(";"); 
+		var version=b_version.split(";");
 
-		var trim_Version=version[1].replace(/[ ]/g,""); 
+		var trim_Version=version[1].replace(/[ ]/g,"");
 
-		if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE7.0") 
+		if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE7.0")
 
-		{ 
+		{
 
-		$("#ifrm").hide();	
+		$("#ifrm").hide();
 		$(".M-work").css("width","1180px")
 		$(".M-work").css("margin","0 auto")
 		$(".M-work").css("height","510px")
 		$(".M-work").css("overflow","hidden")
 		$(".M-work").css("padding-left","30px")
-		} 
-		if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE8.0") 
+		}
+		if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE8.0")
 
-		{ 
+		{
 		$(".M-work").css("width","1180px")
 		$(".M-work").css("margin","0 auto")
 		$(".M-work").css("height","510px")
 		$(".M-work").css("overflow","hidden")
 		$(".M-work").css("padding-left","30px")
-		} 
+		}
 
 	})
 
