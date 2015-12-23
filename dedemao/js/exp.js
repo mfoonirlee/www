@@ -19,7 +19,7 @@ $(function(){
         dataType: 'json',
         success: function (data) {
             Config.log(data);
-            data = data.concat(data).concat(data).concat(data).concat(data);
+            // data = data.concat(data).concat(data).concat(data).concat(data);
             ajaxCallBack(data);
         },
         error: function () {
