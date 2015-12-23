@@ -3,10 +3,12 @@
     * @description: 新首页逻辑
     * @auther: mf...
     */
-    var currentIndex = 0;
-    var currentPage = 0;
-    var totalPage = -1;
-    var totalData = [];
+    var deltaY = 0,
+        CONST_HEIGHT = 91 + 6,
+        CONST_CONATINER_HEIGHT = 436,
+        totalHeight = 0,
+        OFFSETY = 0;
+
     $('#j_videocontainer').hide();
 
 
@@ -17,6 +19,7 @@
         dataType: 'json',
         success: function (data) {
             Config.log(data);
+            // data.list = data.list.concat(data.list).concat(data.list).concat(data.list).concat(data.list).concat(data.list).concat(data.list);
             ajaxCallBack(data);
         },
         error: function () {
@@ -31,56 +34,51 @@
         if(!data){
             return;
         }
-        totalPage = Math.ceil(data.length / 4);
-        totalData = data;
-        turnPage();
+        var template = $('#j_list_tpl').html(),
+            html = _.template(template);
+
+        $('#j_list').html(html({data: data.list, current: 0})).children().on('click', function(e){
+            onClickItem(e);
+        })
+        $('#j_up').on('click', function(){
+            turnPrev();
+        });
+        $('#j_down').on('click', function(){
+            turnNext();
+        });
+        //设置默认的video
+        $('#j_video').html(data.list[0].vurl);
+
+        totalHeight = data.list.length * CONST_HEIGHT;
     }
     //点击了某个item
     function onClickItem(e){
         var $target = $(e.target || e.srcElement);
-        if($target[0].tagName != 'li'){
+        if($target[0].tagName.toLowerCase() != 'li'){
             $target = $target.parents('li');
         }
         $target.addClass('current').siblings().removeClass('current');
-        currentIndex = $target.index();
         $('#j_video').html($target.data('vurl'));
+
     }
     //点击翻页
     function turnNext(){
-        if(currentPage >= totalPage){
-            return;
+        if(Math.abs(deltaY) < totalHeight - CONST_CONATINER_HEIGHT){
+            deltaY -= CONST_CONATINER_HEIGHT;
         }
-        currentPage++;
         turnPage();
 
     }
     //点击上翻页
     function turnPrev(){
-        if(currentPage <= 0){
-            return;
+        if(deltaY < 0){
+            deltaY += CONST_CONATINER_HEIGHT;
         }
-        currentPage--;
         turnPage();
     }
-    function turnPage(){
-        var rdata;
-        if(totalData.length > 4){
-            rdata = totalData.slice(currentPage * 4, (currentPage + 1) * 4);
-        }else{
-            rdata = totalData;
-        }
 
-        //提取模板进行渲染
-        var template = $('#j_list_tpl').html(),
-            html = _.template(template);
-        $('#j_list').html(html({data: rdata.list, current: currentIndex}));
-        //标志视频的默认值
-        $('#j_video').html(rdata.list[0].vurl);
-        currentIndex = currentPage * 4;
-        //绑定事件
-        $('#j_list').on('click', function(e) {
-            onClickItem(e);
-        });
+    function turnPage(){
+        $('#j_list').animate({top: deltaY + OFFSETY});
     }
 
     //在调试模式下，将内置函数外露

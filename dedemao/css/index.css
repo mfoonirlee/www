@@ -106,7 +106,8 @@ li {
   width: 1200px;
   margin: 0 auto;
   font-family: "Microsoft YaHei", "宋体", Regular, "黑体", Arial, "Lucida Grande", Verdana;
-  line-height: 1.5; }
+  line-height: 1.5;
+  position: relative; }
 
 .mb2 .tab-v {
   width: 412px;
@@ -137,19 +138,21 @@ li {
   top: -1px; }
 
 .mb2 .cont {
-  padding: 43px 0;
-  position: relative; }
+  margin: 43px 0;
+  position: relative;
+  overflow: hidden; }
 
 .ilist {
   position: absolute;
   right: 0;
-  top: 43px; }
+  top: 0;
+  height: 9999px; }
 
 .ilist li {
   text-align: left;
   width: 195px;
   height: 91px;
-  margin-bottom: 6px;
+  margin-bottom: 3px;
   background-color: #fff;
   border: 1px solid #fff;
   position: relative;
@@ -183,11 +186,11 @@ li {
   right: 160px; }
 
 .aup {
-  top: 15px;
+  top: -25px;
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAQBAMAAACFLmBqAAAALVBMVEUAAACZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU5ddAvEAAAADnRSTlMARLvuIhHdzJl3M2aqVVHjmV0AAAB8SURBVBjTY4AClpkBDCjA7V0pCp8l793zAFQF794poCpof/cIRcELoBhCCZfduwYG53dv4AKLgcrBonAFYNVy714gFIAo3nfvJiAUgMC+dy/BtDDMQk6IEsZ37wqgevvevQaZhXA0z7t3G0AKEN7Se/eWgVFQEOGrQEFBAFZ/NvaM0e3TAAAAAElFTkSuQmCC"); }
 
 .adown {
-  top: 500px;
+  top: 445px;
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAQBAMAAACFLmBqAAAALVBMVEUAAACZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU6ZzU5ddAvEAAAADnRSTlMARLvuIhHdzJl3M2aqVVHjmV0AAACGSURBVBjTYxAUFGWAAVZBQQEGuXfPA2ACTO/eXWBgfPeuFCZw7t1rIAlUAuVzvHu3AUgx2r1TgAjMe/cSTC9+9whMc797NwHM4IIquQdSgFACMr0BSMGUgIRfQPkQNovduwNwAZa8dw1uQH0I4PbuRR1IG7ISiAKEEpgHEEogXkQAz6lQBgCa2TiLh9cGRQAAAABJRU5ErkJggg=="); }
 
 /*体验活动*/
