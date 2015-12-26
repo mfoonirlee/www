@@ -257,34 +257,39 @@ $(document).keydown(function(event){
         <div class="M-top-right fr clearfix">
           <div class="M-nav clearfix fl" id="menu1">
             <ul>
-
-              <li><a href="/" class=>
+              <li><a href="/" class="cur">
                 <div style="margin-top: 0px;">
-                  <p><span>首页</span><font>首页</font></p>
+                  <p style="margin-top: 0px;"><span>首页</span><font>首页</font></p>
+                </div>
+                </a>
+      	     
+              <li><a href="/expertise/" class="cur">
+                <div style="margin-top: 0px;">
+                  <p style="margin-top: 0px;"><span>我的服务</span>SERVICE</p>
                 </div>
                 </a></li>
-      	<li><a href='/expertise/' class='cur'><div style='margin-top: 0px;'><p><span>我的服务</span>SERVICE</p></div></a></li>     
+		     
               <li><a href="http://shop.dream-gardens.com.cn">
                 <div style="margin-top: 0px;">
-                  <p><span>我的菜园</span>GARDEN</p>
+                  <p style="margin-top: 0px;"><span>我的菜园</span>GARDEN</p>
                 </div>
                 </a></li>
 		     
               <li><a href="/about/">
                 <div style="margin-top: 0px;">
-                  <p><span>农场故事</span>STORY</p>
+                  <p style="margin-top: 0px;"><span>农场故事</span>STORY</p>
                 </div>
                 </a></li>
 		     
               <li><a href="/life/">
                 <div style="margin-top: 0px;">
-                  <p><span>慢生活</span>LIFE-OF-EASE</p>
+                  <p style="margin-top: 0px;"><span>体验活动</span>体验活动</p>
                 </div>
                 </a></li>
 		     
               <li><a href="/news/">
                 <div style="margin-top: 0px;">
-                  <p><span>君禾动态</span>NEWS</p>
+                  <p><span>君禾社区</span>君禾社区</p>
                 </div>
                 </a></li>
 		 
@@ -439,17 +444,6 @@ $(function(){
 <script type="text/javascript" src="/dedemao/js/left-nav/jquery.scrollTo.js"></script>
 <script>
 $(document).ready(function() {
-  $('#nav').onePageNav({
-    begin: function() {
-	  console.log('start');
-    },
-    end: function() {
-	  console.log('stop');
-    },
-	scrollOffset: 30
-  });
-});
-$(document).ready(function() {
   $('#nav2').onePageNav({
     begin: function() {
 	  console.log('start');
@@ -458,6 +452,9 @@ $(document).ready(function() {
 	  console.log('stop');
     },
 	scrollOffset: 30
+  });
+  jQuery.get("/plus/user.php", function(data) {
+    jQuery("#menu1 ul li:eq(0)").after(data);
   });
 });
 </script>
