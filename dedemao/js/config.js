@@ -20,7 +20,7 @@ var Config = {
         //免费分享列表
         sharelist: '/plus/index.php?tid=27',
         //免费分享详情
-        sharedetail: ''
+        sharedetail: '/plus/view_data.php?aid={aid}'
     },
     getPageURL: function(pageName){
         if(this.isDebug){
@@ -32,7 +32,7 @@ var Config = {
     //页面相对的地址
     pageurl:{
         //体验活动详情
-        expdetial: '/plus/list.php?tid=28'
+        expdetial: '/plus/view.php?1=1'
     },
     log: function (msg) {
         try{
