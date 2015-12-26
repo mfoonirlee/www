@@ -5,9 +5,7 @@ ini_set('display_errors', '1');
 
 $result = array();
 
-$sql = "SELECT title,activityaddr,activityimg,activitystartdate,activityenddate,activitynum,activityintroduce,activitycontent FROM 
-dede_archives INNER JOIN dede_addonshare ON dede_archives.id = dede_addonshare.aid INNER JOIN dede_sys_enum ON dede_addonshare.freesharetype=dede_sys_enum.evalue WHERE 1 = 1 
-AND dede_sys_enum.egroup='freesharetype' AND dede_archives.id=".$_GET["aid"].";";
+$sql = "select title,activityaddr,activityimg,activitystartdate,activityenddate,activitynum,activityintroduce,activityillustrate from dede_archives INNER JOIN dede_addonshare on dede_archives.id=dede_addonshare.aid WHERE aid=".$_GET["aid"].";";
 
 $query = mysql_query($sql);
 
@@ -19,7 +17,7 @@ while($row=mysql_fetch_array($query)){
 	$result["activityenddate"] = iconv("gb2312","utf-8", $row['activityenddate']);
     $result["qnum"] = iconv("gb2312","utf-8", $row['activitynum']);
 	$result["aabs"] = iconv("gb2312","utf-8", $row['activityintroduce']);
-    $result["ainfo"] = iconv("gb2312","utf-8", $row['activitycontent']);
+    $result["ainfo"] = iconv("gb2312","utf-8", $row['activityillustrate']);
 }
 
 $result["imglist"] =array("{dede:img text='' width='1800' height='3300'} /uploads/140820/1-140R0134134H5.jpg {/dede:img}","{dede:img text='' width='1800' height='3300'} /uploads/140820/1-140R0134134H5.jpg {/dede:img}");

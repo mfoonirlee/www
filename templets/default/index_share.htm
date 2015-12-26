@@ -3,34 +3,35 @@
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
-//class item {
-//};
+class item {
+};
+class dateitem {
+};
 
 $result = array();
 
-//$sql = "SELECT `id`, `title`, `description`, `litpic`, `isnew`, `isactive` FROM `dede_archives` INNER JOIN `dede_addonactivity` ON `dede_archives`.`id` = `dede_addonactivity`.`aid` WHERE 1 = 1 AND `dede_archives`.`typeid` = 26;";
-//$query = mysql_query($sql);
-//while($row=mysql_fetch_array($query)){
-  //  $item = new item();
-    //$item->title = iconv("gb2312","utf-8", $row['title']);
-    //$item->desc = iconv("gb2312","utf-8",$row["description"]);
-    //$item->img = apache_lookup_uri( $row["litpic"] )->uri;
-    //$item->isnew = iconv("gb2312","utf-8", $row["isnew"])=="是"? 1:0;
-	//$item->issoldout = iconv("gb2312","utf-8", $row["isactive"]);
-    //$item->id = $row["id"];
-    //$result[] = $item;
-//}
-
-
-
+$sql = "select freesharetype,ename,tagname, aid, activityimg, title, activitycondition,activitychangedate,activitycontent,isactive from dede_archives INNER JOIN dede_addonshare on dede_archives.id=dede_addonshare.aid INNER JOIN dede_sys_enum on dede_addonshare.freesharetype=dede_sys_enum.evalue where dede_sys_enum.egroup='freesharetype'";
+$query = mysql_query($sql);
 $result["tlist"] =array();
-$result["tlist"][0] = array( "type" => "500", "name" => "免费试吃");
-$result["tlist"][1] = array( "type" => "1000", "name" => "分享活动");
-
 $result["plist"]=array();
-$result["plist"][0]=array( "tag" => "免费试吃", "type" => "500","id" => "135","img" => "/uploads/140820/1-140R0134134H5.jpg","name"=>"免费是吃名称","cond"=>"会员","date"=>"2015-12-20","rank"=>"1", "cont"=>"免费试吃内容免费试吃内容免费试吃内容免费试吃内容","issoldout"=>"1");
-$result["plist"][1] = array( "tag" => "分享活动", "type" => "1000","id" => "134","img" => "/uploads/140820/1-140R0134134H5.jpg","name"=>"分享活动名称","cond"=>"所有人","date"=>"2016-01-10","rank"=>"1","cont"=>"分享活动内容分享活动内容分享活动内容分享活动内容","issoldout"=>"0");
-
+while($row=mysql_fetch_array($query)){
+    $item = new item();
+    $item->type = iconv("gb2312","utf-8", $row['freesharetype']);
+    $item->name = iconv("gb2312","utf-8",$row["ename"]);
+    $result["tlist"][] = $item;
+	$dateitem=new dateitem();
+	$dateitem->tag=iconv("gb2312","utf-8", $row['tagname']);
+	$dateitem->type = iconv("gb2312","utf-8", $row['freesharetype']);
+	$dateitem->id=iconv("gb2312","utf-8", $row['aid']);
+	$dateitem->img=iconv("gb2312","utf-8", $row['activityimg']);
+	$dateitem->name=iconv("gb2312","utf-8", $row['title']);
+	$dateitem->cond=iconv("gb2312","utf-8", $row['activitycondition']);
+	$dateitem->date=date('Y-m-d',iconv("gb2312","utf-8", $row['activitychangedate']));
+	$dateitem->rank="1";
+	$dateitem->cont=iconv("gb2312","utf-8", $row['activitycontent']);
+	$dateitem->issoldout=iconv("gb2312","utf-8", $row['isactive'])=="是"?1:0;
+	$result["plist"][]=$dateitem;
+}
 echo json_encode($result);
 
 header('Content-Type: text/json; charset=utf-8');
