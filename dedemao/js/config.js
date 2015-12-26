@@ -14,7 +14,7 @@ var Config = {
         //首页幻灯片服务
         index: '/plus/list.php?tid=25',
         //体验活动列表
-        explist: '/plus/index.php?tid=31',
+        explist: '/plus/index.php?tid=26',
         //体验活动详情
         expdetial: '/plus/view_data.php?aid={aid}'
     },
