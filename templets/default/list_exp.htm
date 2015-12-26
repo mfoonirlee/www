@@ -653,6 +653,8 @@ function resize(){
 
 }
 
-
+jQuery.get("/plus/user.php", function (data) {
+    jQuery("#menu1 ul li:eq(0)").after(data);
+});
 
 </script>
