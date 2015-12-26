@@ -13,7 +13,6 @@ $(function () {
         replaceUrlParam: function(str, val){
             return str && str.replace(/{\w+}/, val);
         },
-
         parseTimeStr: function(timeStr, form){
             var d = new Date(timeStr),
                 dateObj = {

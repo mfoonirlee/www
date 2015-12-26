@@ -1,4 +1,3 @@
-
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -7,22 +6,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut icon" href="/dedemao/images/logo-ico.png" type="image/x-icon">
 <link rel="icon" href="/dedemao/images/logo-ico.png" type="/dedemao/images/png"/>
-<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
-<meta name="keywords" content="{dede:field.keywords/}" />
-<meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
-<!--Â∏∏Áî®CSS-->
+<title>{dede:field.seotitle /}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<style>
+#wrapp{
+min-height:900px;
+}
+</style>
+<!--≥£”√CSS-->
 <link rel="stylesheet" type="text/css" href="/dedemao/css/basic.css">
 <link rel="stylesheet" type="text/css" href="/dedemao/css/style.css">
-<!--Â∏∏Áî®CSS end-->
-<!--ËΩÆÊí≠CSS-->
+<!--≥£”√CSS end-->
+<!--¬÷≤•CSS-->
 <link rel="stylesheet" type="text/css" href="/dedemao/css/slide/settings.css">
 <link rel="stylesheet" type="text/css" href="/dedemao/css/slide/styles.css">
-<!--ËΩÆÊí≠CSS end-->
+<!--¬÷≤•CSS end-->
 <!--tel CSS-->
 <link rel="stylesheet" type="text/css" href="/dedemao/css/tel/borrar.css">
 <link rel="stylesheet" type="text/css" href="/dedemao/css/tel/estilos.css">
 <!--tel CSS end-->
-<!--ËΩÆÊí≠JS-->
+<!--¬÷≤•JS-->
 <script src="/dedemao/js/slide/jquery.js"></script>
 <script src="/dedemao/js/slide/jquery.themepunch.plugins.min.js"></script>
 <script src="/dedemao/js/slide/jquery.themepunch.revolution.min.js"></script>
@@ -30,13 +34,14 @@
 <script src="/dedemao/js/slide/jquery.fancybox.pack.js"></script>
 <script src="/dedemao/js/slide/jquery.isotope.min.js"></script>
 <script src="/dedemao/js/slide/scripts.js"></script>
-<!--ËΩÆÊí≠JS end-->
+<!--¬÷≤•JS end-->
 <!--tel JS-->
 <script type="text/javascript" src="/dedemao/js/tel.js"></script>
 <!--tel JS end-->
-<!--È¶ñÈ°µÊªöÂä®JS-->
+<!-- ◊“≥πˆ∂ØJS-->
 <script type="text/javascript" src="/dedemao/js/index.js"></script>
-<!--È¶ñÈ°µÊªöÂä®JS end-->
+<!-- ◊“≥πˆ∂ØJS end-->
+<link rel="stylesheet" type="text/css" href="/dedemao/css/index.css">
 <!--[if lt IE 9]>
 <link rel="stylesheet" type="text/css" href="/dedemao/css/slide/ie8.css" media="all" />
 <![endif]-->
@@ -47,107 +52,106 @@
 <script type="text/javascript" src="/dedemao/js/work.js"></script>
 <script type="text/javascript">
 
-    $(function(){
+	$(function(){
 
-        var H=$(window).width()/2-10
+		var H=$(window).width()/2-10
 
-        if(H)
+		if(H)
 
-        {
+		{
 
-            $(".ss-left").css("width",H)
+			$(".ss-left").css("width",H)
 
-            $(".ss-right").css("width",H)
+			$(".ss-right").css("width",H)
 
-        }
+		}
 
-    })
+	})
 
-    $(function(){
+	$(function(){
 
-        var T=$(window).width()
+		var T=$(window).width()
 
-        if(T<=3840 & T>=1890 ){
+		if(T<=3840 & T>=1890 ){
 
-            $("#brand").css("width","1820px")
+			$("#brand").css("width","1820px")
 
-        }else{
+		}else{
 
-            $("#brand").css("width","1090px")
+			$("#brand").css("width","1090px")
 
-        }
+		}
 
-    })
+	})
 
 </script>
-
 <script>
 
 $(window).resize(function(){
 
-    var resolutionList="320,400,640,800,1024,1280,1400,1440,1600,1680,1920,2048,2560,3200,3840,";
+	var resolutionList="320,400,640,800,1024,1280,1400,1440,1600,1680,1920,2048,2560,3200,3840,";
 
-    var nowwidth=window.screen.width;
+	var nowwidth=window.screen.width;
 
-    var H=$(window).width()/2-10
+	var H=$(window).width()/2-10
 
-    var T=$(window).width()
+	var T=$(window).width()
 
-    if(resolutionList.indexOf(nowwidth + ",")==-1 ){
+	if(resolutionList.indexOf(nowwidth + ",")==-1 ){
 
-        if(H)
+		if(H)
 
-        {
+		{
 
-            $(".ss-left").css("width",H)
+			$(".ss-left").css("width",H)
 
-            $(".ss-right").css("width",H)
+			$(".ss-right").css("width",H)
 
-        }
+		}
 
-    }
+	}
 
-    else{
+	else{
 
-            if(H)
+			if(H)
 
-            {
+			{
 
-                $(".ss-left").css("width",H)
+				$(".ss-left").css("width",H)
 
-                $(".ss-right").css("width",H)
+				$(".ss-right").css("width",H)
 
-            }
+			}
 
-        }
+		}
 
-    if(resolutionList.indexOf(nowwidth + ",")==-1 ){
+	if(resolutionList.indexOf(nowwidth + ",")==-1 ){
 
-                if(T<=3840 & T>=1890 ){
+				if(T<=3840 & T>=1890 ){
 
-                    $("#brand").css("width","1820px")
+					$("#brand").css("width","1820px")
 
-                }else{
+				}else{
 
-                    $("#brand").css("width","1090px")
+					$("#brand").css("width","1090px")
 
-                }
+				}
 
-    }
+	}
 
-    else{
+	else{
 
-            if(T<=3840 & T>=1890 ){
+			if(T<=3840 & T>=1890 ){
 
-                $("#brand").css("width","1820px")
+				$("#brand").css("width","1820px")
 
-            }else{
+			}else{
 
-                $("#brand").css("width","1090px")
+				$("#brand").css("width","1090px")
 
-            }
+			}
 
-        }
+		}
 
 
 
@@ -159,121 +163,108 @@ $(window).resize(function(){
 
 <script type="text/javascript" src="/dedemao/js/jquery.SuperSlide.2.1.1.js"></script>
 
-
-
-<!--ÂØºËà™JS-->
+<!--µº∫ΩJS-->
 
 <script>
 $(document).ready(function() {
-    $("#menu1 a").each(function() { //For each list item...
-        var linkText = $(this).find("div").html(); //Find the text inside of the a tag
-    });
+	$("#menu1 a").each(function() { //For each list item...
+		var linkText = $(this).find("div").html(); //Find the text inside of the a tag
+	});
 
-    $("#menu1 a").hover(function() {    //On hover...
-        $(this).find("p").stop().animate({
-            marginTop: "-20" //Find the span tag and move it up 40 pixels
-        }, 200);
-    } , function() { //On hover out...
-        $(this).find("p").stop().animate({
-            marginTop: "0" //Move the span back to its original state (0px)
-        }, 200);
-    });
+	$("#menu1 a").hover(function() {	//On hover...
+		$(this).find("p").stop().animate({
+			marginTop: "-20" //Find the span tag and move it up 40 pixels
+		}, 200);
+	} , function() { //On hover out...
+		$(this).find("p").stop().animate({
+			marginTop: "0" //Move the span back to its original state (0px)
+		}, 200);
+	});
 });
 </script>
-
-
 <script type="text/javascript" src="/dedemao/js/right-nav.js"></script>
-
 <script>
 
-    $(window).bind("scroll", function(){
+	$(window).bind("scroll", function(){
 
-    //ÂΩìÊªöÂä®Êù°ÊªöÂä®Êó∂
+	//µ±πˆ∂ØÃıπˆ∂Ø ±
 
-        var scroll_top = $(document).scrollTop();
+		var scroll_top = $(document).scrollTop();
 
-        if(scroll_top == 0)
+		if(scroll_top == 0)
 
-        {
+		{
 
-            $(".M-top").removeClass("M-top-show");
+			$(".M-top").removeClass("M-top-show");
 
-            $(".M-top").animate({top:'0px'},"slow");
+			$(".M-top").animate({top:'0px'},"slow");
 
-            $(".M-top").css("left","0px");
+			$(".M-top").css("left","0px");
 
-        }
+		}
 
-        if(scroll_top > 0)
+		if(scroll_top > 0)
 
-        {
+		{
 
-            $(".M-top").addClass("M-top-show");
+			$(".M-top").addClass("M-top-show");
 
-            $(".M-top").css("left","0px");
+			$(".M-top").css("left","0px");
 
-            $(".M-top").css("top","-165px");
-
-
-
-        }
-
-        if(scroll_top <500)
-
-        {
-
-            $("#nav").hide();
+			$(".M-top").css("top","-165px");
 
 
 
-        }
+		}
 
-        if(scroll_top >=400)
+		if(scroll_top <500)
 
-        {
+		{
 
-            $("#nav").show();
-
-
-
-        }
-
-    });
+			$("#nav").hide();
 
 
 
-    $(function(){
+		}
 
-        $(".M-menu2").click(function(){
+		if(scroll_top >=400)
 
-            $(".M-top").addClass("M-top-show");
+		{
 
-            $(".M-top").animate({top:'0px'},"slow");
-
-            $("#topcontrol").animate({right:'-122px'},"slow");
-
-        })
+			$("#nav").show();
 
 
 
-    })
+		}
+
+	});
+
+
+
+	$(function(){
+
+		$(".M-menu2").click(function(){
+
+			$(".M-top").addClass("M-top-show");
+
+			$(".M-top").animate({top:'0px'},"slow");
+
+			$("#topcontrol").animate({right:'-122px'},"slow");
+
+		})
+
+
+
+	})
 
 </script>
 
-<!--ÂØºËà™JS end-->
-
-
+<!--µº∫ΩJS end-->
 
 <!--new-->
 
 <link rel="stylesheet" type="text/css" href="/dedemao/css/new/new.css">
-
-
-
 <link rel="stylesheet" type="text/css" href="/dedemao/css/new/reset.css">
-
-
-
 <link rel="stylesheet" type="text/css" href="/dedemao/css/new/style.css">
 
 <!--[if lt IE 9]>
@@ -282,15 +273,10 @@ $(document).ready(function() {
 
 <![endif]-->
 
-
-
 <script type="text/javascript" src="/dedemao/js/new/jquery.easing.1.3.js"></script>
-
 <script type="text/javascript" src="/dedemao/js/new/modernizr.custom.11333.js"></script>
 
 <!--new end-->
-
-
 
 <script type="text/javascript">
 
@@ -298,25 +284,25 @@ $(document).ready(
 
 function () {
 
-var m_st, m_po = 230; //ÊªöÂä®Âà∞600ÂÉèÁ¥†Êó∂ÊòæÁ§∫
+var m_st, m_po = 230; //πˆ∂ØµΩ600œÒÀÿ ±œ‘ æ
 
 $(window).scroll(function(){
 
-    m_st = Math.max(document.body.scrollTop || document.documentElement.scrollTop);
+	m_st = Math.max(document.body.scrollTop || document.documentElement.scrollTop);
 
-    if (m_st > m_po)
+	if (m_st > m_po)
 
-    {
+	{
 
-    $(".M-design").animate({top:'0px'},1000);
+	$(".M-design").animate({top:'0px'},1000);
 
-    $(".Brand").animate({top:'0px'},1500);
+	$(".Brand").animate({top:'0px'},1500);
 
-    $(".move").animate({top:'0px'},2000);
+	$(".move").animate({top:'0px'},2000);
 
-    $(".ui").animate({top:'0px'},2500);
+	$(".ui").animate({top:'0px'},2500);
 
-    }
+	}
 
 });
 
@@ -325,230 +311,326 @@ $(window).scroll(function(){
 });
 
 </script>
-
 <script>
 
 $(document).keydown(function(event){
 
-        var t=$(document).scrollTop();
+		var t=$(document).scrollTop();
 
-        if(t>=0 & t<=586){
+		if(t>=0 & t<=586){
 
-            if (event.keyCode == 40){
+			if (event.keyCode == 40){
 
-            $("html,body").animate({scrollTop:600},1000);
+			$("html,body").animate({scrollTop:600},1000);
 
-            return false;
+			return false;
 
-          }
+		  }
 
-          if (event.keyCode == 38){
+		  if (event.keyCode == 38){
 
-            $("html,body").animate({scrollTop:0},1000);
+			$("html,body").animate({scrollTop:0},1000);
 
-            return false;
+			return false;
 
-          }
+		  }
 
-        }
+		}
 
-        if(t>=600 & t<=1240){
+		if(t>=600 & t<=1240){
 
-            if (event.keyCode == 40){
+			if (event.keyCode == 40){
 
-            $("html,body").animate({scrollTop:1250},1000);
+			$("html,body").animate({scrollTop:1250},1000);
 
-            return false;
+			return false;
 
-          }
+		  }
 
-          if (event.keyCode == 38){
+		  if (event.keyCode == 38){
 
-            $("html,body").animate({scrollTop:0},1000);
+			$("html,body").animate({scrollTop:0},1000);
 
-            return false;
+			return false;
 
-          }
+		  }
 
-        }
+		}
 
-        if(t>=1240 & t<=2090){
+		if(t>=1240 & t<=2090){
 
-            if (event.keyCode == 40){
+			if (event.keyCode == 40){
 
-            $("html,body").animate({scrollTop:2100},1000);
+			$("html,body").animate({scrollTop:2100},1000);
 
-            return false;
+			return false;
 
-          }
+		  }
 
-          if (event.keyCode == 38){
+		  if (event.keyCode == 38){
 
-            $("html,body").animate({scrollTop:600},1000);
+			$("html,body").animate({scrollTop:600},1000);
 
-            return false;
+			return false;
 
-          }
+		  }
 
-        }
+		}
 
-        if(t>=2100 & t<=2240){
+		if(t>=2100 & t<=2240){
 
-            if (event.keyCode == 40){
+			if (event.keyCode == 40){
 
-            $("html,body").animate({scrollTop:2840},1000);
+			$("html,body").animate({scrollTop:2840},1000);
 
-            return false;
+			return false;
 
-          }
+		  }
 
-          if (event.keyCode == 38){
+		  if (event.keyCode == 38){
 
-            $("html,body").animate({scrollTop:1250},1000);
+			$("html,body").animate({scrollTop:1250},1000);
 
-            return false;
+			return false;
 
-          }
+		  }
 
-        }
+		}
 
-        if(t>=2240){
+		if(t>=2240){
 
-          if (event.keyCode == 38){
+		  if (event.keyCode == 38){
 
-            $("html,body").animate({scrollTop:2102},1000);
+			$("html,body").animate({scrollTop:2102},1000);
 
-            return false;
+			return false;
 
-          }
+		  }
 
-        }
+		}
 
-        if($(document).scrollTop() >= $(document).height() - $(window).height()){
+		if($(document).scrollTop() >= $(document).height() - $(window).height()){
 
-          if (event.keyCode == 38){
+		  if (event.keyCode == 38){
 
-            $("html,body").animate({scrollTop:2100},1000);
+			$("html,body").animate({scrollTop:2100},1000);
 
-            return false;
+			return false;
 
-          }
+		  }
 
-        }
+		}
 
 })
 
 </script>
-
 </head>
+
 <body style="background:#e5e5e5 !important;">
 <div id="wrap">
-    {dede:include filename="head.htm"/}    <div class="news">
-
-            <div class="page-new-title">
-                <span>{dede:field.title/}</span>
-                <font>{dede:field.pubdate function="MyDate('Y-m-d H:i',@me)"/}</font>
-            </div>
-        <div class="new-page">
-            <div class="new-page-main">
-                <div>{dede:field.body/}</div>
-<br />
-            </div>
-        </div>
-        <a href="javascript:history.go(-1);" class="new-btn">ËøîÂõû</a>
-    </div>
-    {dede:include filename="footer2.htm"/}
+{dede:include filename="head.htm"/}
 </div>
+<script type="text/javascript" src="/dedemao/js/underscore.js"></script>
+<script type="text/javascript" src="/dedemao/js/config.js"></script>
+<script type="text/javascript" src="/dedemao/js/util.js"></script>
+<script type="text/javascript" src="/dedemao/js/sharedetail.js"></script>
+<script type="text/template" id="j_tpl">
+    <h3>√‚∑—∑÷œÌ >> <%=data.name%><span>&nbsp;&nbsp;<%=data.tag%></span></h3>
+    <div class="ban">
+        <img src="/dedemao/img/dish.jpg" alt="" />
+        <div>
+            <h5><%=data.name%></h5>
+            <p>ªÓ∂Ø ±º‰: <%=data.date%></p>
+            <p>ªÓ∂Øµÿ÷∑£∫<%=data.addr%></p>
+            <p>ªÓ∂Ø√˚∂Ó£∫<%=data.qnum%></p>
+            <p><%=data.snum%>»À±®√˚</p>
+        </div>
+    </div>
+    <div class="cont">
+        <p class="title">ªÓ∂ØºÚΩÈ:</p>
+        <p class="desc">
+            <%=data.aabs%>
+        </p>
+        <p class="title">ªÓ∂ØÀµ√˜:</p>
+        <p class="desc">
+            <%=data.ainfo%>
+        </p>
+        <div class="img">
+            <%for(var i = 0, len = data.imglist.length; i < len; i++){%>
+                <img src="<%=data.imglist[i]%>" alt="" />    
+            <%}%>
+        </div>
+        <div class="tdiv">
+            <p class="title">◊Ó–¬±®√˚”√ªß:</p>
+            <span class="hide">≤Èø¥»´≤ø>></span>
+        </div>
+
+        <ul class="att">
+            <%for(var i = 0, len = data.slist.length; i < len; i++){%>
+                <li>
+                    <img src="<%=data.slist[i].img%>" alt="" />
+                    <p><%=data.slist[i].name%></p>
+                </li>
+            <%}%>
+        </ul>
+        <div class="tdiv">
+            <p class="title">◊Ó–¬∆¿¬€:</p>
+            <span class="hide">≤Èø¥»´≤ø>></span>
+        </div>
+        <ul class="com">
+            <%for(var i = 0, len = data.clist.length; i < len; i++){%>
+                <li>
+                    <img src="<%=data.clist[i].img%>" />
+                    <div>
+                        <p class="t"><%=data.clist[i].name%></p>
+                        <p><%=data.clist[i].info%></p>
+                        <span><%=data.clist[i].time%> <%=i+1%>¬•</span>
+                    </div>
+                </li>
+            <%}%>
+        </ul>
+        <p class="title">Œ““™∆¿¬€:</p>
+        <textarea></textarea>
+        <a class="b">∑¢±Ì∆¿¬€</a>
+    </div>
+</script>
+<div class="sd" id="j_container">
+    
+</div>
+{dede:include filename="footer2.htm"/}
 <div style="display:none">
-<script type="text/javascript"> var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fc64c3fae8bee0db7167e50b03190f8af' type='text/javascript'%3E%3C/script%3E")) </script>
-<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1470047'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "v1.cnzz.com/stat.php%3Fid%3D1470047' type='text/javascript'%3E%3C/script%3E"));</script>
-</div></body>
+{dede:global.tongji/}
+</div>
+</body>
 </html>
-<!--Â∑¶‰æßÂØºËà™JS-->
+
+<!--◊Û≤‡µº∫ΩJS-->
+
 <script type="text/javascript" href="/dedemao/js/left-nav/jquery.nav.js"></script>
 <script type="text/javascript" href="/dedemao/js/left-nav/jquery.scrollTo.js"></script>
-<script>
-$(document).ready(function() {
-  $('#nav').onePageNav({
-    begin: function() {
-      console.log('start');
-    },
-    end: function() {
-      console.log('stop');
-    },
-    scrollOffset: 30
-  });
-});
-</script>
-<!--Â∑¶‰æßÂØºËà™JS-->
+
+<!--◊Û≤‡µº∫ΩJS-->
+
 <!--login-->
+
 <!-- =========================== END FOOTER ======================== -->
+
 <script>
+
 $(window).load(function(){$('.page_spinner').fadeOut(1000);$('body').css({overflow:'visible'})})
+
 </script>
-
-
 
 <!--new-->
+
 <script type="text/javascript">
-var warpWidth = 297; //Ê†ºÂ≠êÂÆΩÂ∫¶
-var margin = 50; //Ê†ºÂ≠êÈó¥Ë∑ù
+
+var warpWidth = 297; //∏Ò◊”øÌ∂»
+
+var margin = 50; //∏Ò◊”º‰æ‡
+
 function postPosition(el,childTagName){
-    var h = []; //ËÆ∞ÂΩïÊØèÂàóÁöÑÈ´òÂ∫¶
-    var box = el.getElementsByTagName(childTagName);
-    var minH = box[0].offsetHeight,
-    boxW = box[0].offsetWidth+margin;
-    n = document.documentElement.offsetWidth / boxW | 0;
-    //ËÆ°ÁÆóÈ°µÈù¢ËÉΩÊéí‰∏ãÂ§öÂ∞ëPin
-    el.style.width = n * boxW - margin + "px";
-    el.style.visibility = "visible";
-    for(var i = 0; i < box.length; i++) {//ÊéíÂ∫èÁÆóÊ≥ïÔºåÊúâÂæÖÂÆåÂñÑ
-        boxh = box[i].offsetHeight; //Ëé∑ÂèñÊØè‰∏™PinÁöÑÈ´òÂ∫¶
-        if(i < n) { //Á¨¨‰∏ÄË°åÁâπÊÆäÂ§ÑÁêÜ
-                h[i] = boxh;
-                box[i].style.top = 0 + 'px';
-                box[i].style.left = (i * boxW) + 'px';
-        }
-        else {
-                minH = Array.min(h); //ÂèñÂæóÂêÑÂàóÁ¥ØËÆ°È´òÂ∫¶ÊúÄ‰ΩéÁöÑ‰∏ÄÂàó
-                minKey = getarraykey(h, minH);
-                h[minKey] += boxh+margin ; //Âä†‰∏äÊñ∞È´òÂ∫¶ÂêéÊõ¥Êñ∞È´òÂ∫¶ÂÄº
-                el.style.height = h[minKey] +"px";
-                box[i].style.top = minH+margin + 'px';
-                box[i].style.left = (minKey * boxW) + 'px';
-        }
-    }
-    for(var i = 0; i < box.length; i++) {
-        box[i].style.visibility = "visible"; //ÂÆö‰ΩçÂÆåÊØïÂêéÊòæÁ§∫Êñ∞Â¢ûËäÇÁÇπ
-    }
-}
-Array.min=function(array)
-{
-    return Math.min.apply(Math,array);
-}
-/* ËøîÂõûÊï∞ÁªÑ‰∏≠Êüê‰∏ÄÂÄºÁöÑÂØπÂ∫îÈ°πÊï∞ */
-function getarraykey(s, v) {
-        for(k in s) {
-                if(s[k] == v) {
-                        return k;
-                }
-        }
+
+	var h = []; //º«¬º√ø¡–µƒ∏ﬂ∂»
+
+	var box = el.getElementsByTagName(childTagName);
+
+	var minH = box[0].offsetHeight,
+
+	boxW = box[0].offsetWidth+margin;
+
+	n = document.documentElement.offsetWidth / boxW | 0;
+
+	//º∆À„“≥√Êƒ‹≈≈œ¬∂‡…ŸPin
+
+	el.style.width = n * boxW - margin + "px";
+
+	el.style.visibility = "visible";
+
+	for(var i = 0; i < box.length; i++) {//≈≈–ÚÀ„∑®£¨”–¥˝ÕÍ…∆
+
+		boxh = box[i].offsetHeight; //ªÒ»°√ø∏ˆPinµƒ∏ﬂ∂»
+
+		if(i < n) { //µ⁄“ª––Ãÿ ‚¥¶¿Ì
+
+				h[i] = boxh;
+
+				box[i].style.top = 0 + 'px';
+
+				box[i].style.left = (i * boxW) + 'px';
+
+		}
+
+		else {
+
+				minH = Array.min(h); //»°µ√∏˜¡–¿€º∆∏ﬂ∂»◊ÓµÕµƒ“ª¡–
+
+				minKey = getarraykey(h, minH);
+
+				h[minKey] += boxh+margin ; //º”…œ–¬∏ﬂ∂»∫Û∏¸–¬∏ﬂ∂»÷µ
+
+				el.style.height = h[minKey] +"px";
+
+				box[i].style.top = minH+margin + 'px';
+
+				box[i].style.left = (minKey * boxW) + 'px';
+
+		}
+
+	}
+
+	for(var i = 0; i < box.length; i++) {
+
+		box[i].style.visibility = "visible"; //∂®ŒªÕÍ±œ∫Ûœ‘ æ–¬‘ˆΩ⁄µ„
+
+	}
+
 }
 
-window.onload = function() {
-    postPosition($id("wrapp"),"div");
-};
+Array.min=function(array)
+
+{
+
+    return Math.min.apply(Math,array);
+
+}
+
+/* ∑µªÿ ˝◊È÷–ƒ≥“ª÷µµƒ∂‘”¶œÓ ˝ */
+
+function getarraykey(s, v) {
+
+        for(k in s) {
+
+                if(s[k] == v) {
+
+                        return k;
+
+                }
+
+        }
+
+}
 
 var re;
+
 window.onresize = function() {
-    clearTimeout(re);
-    re = setTimeout(resize,10);
+
+	clearTimeout(re);
+
+	re = setTimeout(resize,10);
+
 };
 
+
+
 function resize(){
-    $id("wrapp").className = "wrap active";
-    postPosition($id("wrapp"),"div");
+
+	$id("wrapp").className = "wrap active";
+
+	postPosition($id("wrapp"),"div");
+
 }
 
+
+
 </script>
-<script language="JavaScript" src="/api.php?op=count&id=16&modelid=1"></script>
