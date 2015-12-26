@@ -15,7 +15,7 @@ while($row=mysql_fetch_array($query)){
     $item->title = iconv("gb2312","utf-8", $row['title']);
     $item->desc = iconv("gb2312","utf-8",$row["description"]);
     $item->img = apache_lookup_uri( $row["litpic"] )->uri;
-    $item->isnew = iconv("gb2312","utf-8", $row["isnew"]);
+    $item->isnew = iconv("gb2312","utf-8", $row["isnew"])=="是"? 1:0;
 	$item->issoldout = iconv("gb2312","utf-8", $row["isactive"]);
     $item->id = $row["id"];
     $result[] = $item;

@@ -7,12 +7,13 @@ $result = array();
 
 $sql = "SELECT `id`, `title`, `description`, `litpic`, `datestart`, `dateend`, `isnew`, `isactive`, `content`, `coupondescription`, `contentimage`, `headimage` FROM `dede_archives` INNER JOIN `dede_addonactivity` ON `dede_archives`.`id` = `dede_addonactivity`.`aid` WHERE 1 = 1 AND `dede_archives`.`id` = ".$_GET["aid"].";";
 $query = mysql_query($sql);
+
 while($row=mysql_fetch_array($query)){
 	$result["title"] = iconv("gb2312","utf-8", $row['title']);
     $result["desc"] = iconv("gb2312","utf-8",$row["content"]);
     $result["img"] = apache_lookup_uri( $row["litpic"] )->uri;
-    $result["isnew"] = iconv("gb2312","utf-8", $row["isnew"]);
-	$result["issoldout"] = iconv("gb2312","utf-8", $row["isactive"]);
+    $result["isnew"] = iconv("gb2312","utf-8", $row["isnew"])=="是"?1:0;
+	$result["issoldout"] = iconv("gb2312","utf-8", $row["isactive"])=="是"?1:0;
 	$result["stime"] = iconv("gb2312","utf-8", $row["datestart"]);
 	$result["etime"] = iconv("gb2312","utf-8", $row["dateend"]);
 	$result["cdesc"] = iconv("gb2312","utf-8", $row["coupondescription"]);
