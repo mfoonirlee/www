@@ -1,0 +1,42 @@
+{dede:php}
+
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+
+$result = array();
+
+$sql = "SELECT title,activityaddr,activityimg,activitystartdate,activityenddate,activitynum,activityintroduce,activitycontent FROM 
+dede_archives INNER JOIN dede_addonshare ON dede_archives.id = dede_addonshare.aid INNER JOIN dede_sys_enum ON dede_addonshare.freesharetype=dede_sys_enum.evalue WHERE 1 = 1 
+AND dede_sys_enum.egroup='freesharetype' AND dede_archives.id=".$_GET["aid"].";";
+
+$query = mysql_query($sql);
+
+while($row=mysql_fetch_array($query)){
+	$result["name"] = iconv("gb2312","utf-8", $row['title']);
+    $result["addr"] = iconv("gb2312","utf-8", $row['activityaddr']);
+	$result["img"] = iconv("gb2312","utf-8", $row['activityimg']);
+    $result["activitystartdate"] = iconv("gb2312","utf-8", $row['activitystartdate']);
+	$result["activityenddate"] = iconv("gb2312","utf-8", $row['activityenddate']);
+    $result["qnum"] = iconv("gb2312","utf-8", $row['activitynum']);
+	$result["aabs"] = iconv("gb2312","utf-8", $row['activityintroduce']);
+    $result["ainfo"] = iconv("gb2312","utf-8", $row['activitycontent']);
+}
+
+$result["imglist"] =array("{dede:img text='' width='1800' height='3300'} /uploads/140820/1-140R0134134H5.jpg {/dede:img}","{dede:img text='' width='1800' height='3300'} /uploads/140820/1-140R0134134H5.jpg {/dede:img}");
+
+
+$result["slist"] =array();
+$result["slist"][0] = array( "img" => "/uploads/140820/1-140R0134134H5.jpg ", "name" => "fasffasd");
+$result["slist"][1] = array( "img" => "/uploads/140820/1-140R0134134H5.jpg ", "name" => "fdasger");
+
+
+$result["clist"] =array();
+$result["clist"][0]= array( "img" => "/uploads/140820/1-140R0134134H5.jpg", "name" => "abdcd","info"=>"Contentdetail,good","time"=>"2015-12-28","lv"=>"5");
+$result["clist"][1]= array( "img" => "/uploads/140820/1-140R0134134H5.jpg", "name" => "efghigk","info"=>"Contentdetail,Very,good","time"=>"2016-01-12","lv"=>"3");
+
+
+echo json_encode($result);
+
+header('Content-Type: text/json; charset=utf-8');
+
+{/dede:php}	
