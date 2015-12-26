@@ -14,8 +14,8 @@ while($row=mysql_fetch_array($query)){
     $result["img"] = apache_lookup_uri( $row["litpic"] )->uri;
     $result["isnew"] = iconv("gb2312","utf-8", $row["isnew"])=="是"?1:0;
 	$result["issoldout"] = iconv("gb2312","utf-8", $row["isactive"])=="是"?1:0;
-	$result["stime"] = iconv("gb2312","utf-8", $row["datestart"]);
-	$result["etime"] = iconv("gb2312","utf-8", $row["dateend"]);
+	$result["stime"] = date( "Y年m月d日", $row["datestart"] );
+    $result["etime"] = date( "Y年m月d日", $row["dateend"] );
 	$result["cdesc"] = iconv("gb2312","utf-8", $row["coupondescription"]);
 	$result["cimg"] = iconv("gb2312","utf-8", $row["contentimage"]);
 	$result["himg"] = iconv("gb2312","utf-8", $row["headimage"]);
