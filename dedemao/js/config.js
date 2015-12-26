@@ -16,7 +16,11 @@ var Config = {
         //体验活动列表
         explist: '/plus/index.php?tid=26',
         //体验活动详情
-        expdetial: '/plus/view_data.php?aid={aid}'
+        expdetial: '/plus/view_data.php?aid={aid}',
+        //免费分享列表
+        sharelist: '/plus/index.php?tid=27',
+        //免费分享详情
+        sharedetail: ''
     },
     getPageURL: function(pageName){
         if(this.isDebug){
