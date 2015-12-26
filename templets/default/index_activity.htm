@@ -8,15 +8,15 @@ class item {
 
 $result = array();
 
-$sql = "SELECT `id`, `title`, `description`, `litpic`, `isnew`, `isactive` FROM `dede_archives` INNER JOIN `dede_addonactivity` ON `dede_archives`.`id` = `dede_addonactivity`.`aid` WHERE 1 = 1 AND `dede_archives`.`typeid` = 31;";
+$sql = "SELECT `id`, `title`, `description`, `litpic`, `isnew`, `isactive` FROM `dede_archives` INNER JOIN `dede_addonactivity` ON `dede_archives`.`id` = `dede_addonactivity`.`aid` WHERE 1 = 1 AND `dede_archives`.`typeid` = 26;";
 $query = mysql_query($sql);
 while($row=mysql_fetch_array($query)){
     $item = new item();
     $item->title = iconv("gb2312","utf-8", $row['title']);
     $item->desc = iconv("gb2312","utf-8",$row["description"]);
     $item->img = apache_lookup_uri( $row["litpic"] )->uri;
-    $item->isnew = iconv("gb2312","utf-8", $row["isnew"])=="是"? 1:0;
-	$item->issoldout = iconv("gb2312","utf-8", $row["isactive"]);
+    $item->isnew = iconv("gb2312","utf-8", $row["isnew"])=="是" ? 1 : 0;
+	$item->issoldout = iconv("gb2312","utf-8", $row["isactive"])=="是" ? 1 : 0;
     $item->id = $row["id"];
     $result[] = $item;
 }
