@@ -462,13 +462,13 @@ $(document).keydown(function(event){
 		<li><a href='/about/' class='cur'><div style='margin-top: 0px;'><p><span>农场故事</span>STORY</p></div></a></li>     
               <li><a href="/life/">
                 <div style="margin-top: 0px;">
-                  <p><span>慢生活</span>LIFE-OF-EASE</p>
+                  <p><span>体验活动</span>体验活动</p>
                 </div>
                 </a></li>
 		     
               <li><a href="/news/">
                 <div style="margin-top: 0px;">
-                  <p><span>君禾动态</span>NEWS</p>
+                  <p><span>君禾社区</span>君禾社区</p>
                 </div>
                 </a></li>
 		 
@@ -711,7 +711,9 @@ $(document).ready(function() {
 	scrollOffset: 30
 
   });
-
+  jQuery.get("/plus/user.php", function(data) {
+    jQuery("#menu1 ul li:eq(0)").after(data);
+  });
 });
 
 </script>
