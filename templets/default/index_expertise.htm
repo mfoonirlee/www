@@ -387,16 +387,9 @@ $(document).ready(function() {
 	scrollOffset: 30
   });
 });
-$(document).ready(function() {
-  $('#nav2').onePageNav({
-    begin: function() {
-	  console.log('start');
-    },
-    end: function() {
-	  console.log('stop');
-    },
-	scrollOffset: 30
-  });
+
+jQuery.get("/plus/user.php", function(data) {
+  jQuery("#menu1 ul li:eq(0)").after(data);
 });
 </script>
 <!--×ó²àµ¼º½JS-->
