@@ -35,7 +35,7 @@ $(function(){
 
         totalWidth = CONST_WIDTH * data.length;
 
-        var newActivityList = _.groupBy(data, function(n){return n.isnew != '1'})['true'];
+        var newActivityList = _.groupBy(data, function(n){return n.isnew != '0'})['true'];
         if(newActivityList){
             newActivityList = newActivityList.slice(0, 6);
         }else{
