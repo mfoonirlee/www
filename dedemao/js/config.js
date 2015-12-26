@@ -12,7 +12,23 @@ var Config = {
     },
     url: {
         //首页幻灯片服务
-        index: '/plus/list.php?tid=25'
+        index: '/plus/list.php?tid=25',
+        //体验活动列表
+        explist: '/plus/index.php?tid=31',
+        //体验活动详情
+        expdetial: '/plus/view_data.php?aid={aid}'
+    },
+    getPageURL: function(pageName){
+        if(this.isDebug){
+            return this.scheme['dev'] + this.pageurl[pageName];
+        }else{
+            return this.scheme['prd'] + this.pageurl[pageName];
+        }
+    },
+    //页面相对的地址
+    pageurl:{
+        //体验活动详情
+        expdetial: '/plus/list.php?tid=28'
     },
     log: function (msg) {
         try{
