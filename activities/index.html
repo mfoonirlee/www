@@ -6,9 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut icon" href="/dedemao/images/logo-ico.png" type="image/x-icon">
 <link rel="icon" href="/dedemao/images/logo-ico.png" type="/dedemao/images/png"/>
-<title>{dede:field.seotitle /}_{dede:global.cfg_webname/}</title>
-<meta name="keywords" content="{dede:field name='keywords'/}" />
-<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<title>_君禾园</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
 <style>
 #wrapp{
 min-height:900px;
@@ -428,7 +428,56 @@ $(document).keydown(function(event){
 
 <body style="background:#e5e5e5 !important;">
 <div id="wrap">
-{dede:include filename="head.htm"/}
+<div class="M-top clearfix">
+        <div class="M-logo fl"> <a href="/"><img src="/dedemao/images/logo.png"></a> </div>
+        <div class="M-top-right fr clearfix">
+          <div class="M-nav clearfix fl" id="menu1">
+            <ul>
+              <li><a href="/" class=''>
+                <div style="margin-top: 0px;">
+                  <p><span>首页</span><font>首页</font></p>
+                </div>
+                </a></li>
+              <li><a href="/expertise/">
+                <div style="margin-top: 0px;">
+                  <p style="margin-top: 0px;"><span>我的服务</span>SERVICE</p>
+                </div>
+                </a></li>
+		     
+              <li><a href="http://shop.dream-gardens.com.cn">
+                <div style="margin-top: 0px;">
+                  <p style="margin-top: 0px;"><span>我的菜园</span>GARDEN</p>
+                </div>
+                </a></li>
+		     
+              <li><a href="/about/">
+                <div style="margin-top: 0px;">
+                  <p><span>农场故事</span>STORY</p>
+                </div>
+                </a></li>
+		     
+              <li><a href="/activities/">
+                    <div style="margin-top: 0px;">
+                        <p><span>体验活动</span>体验活动</p>
+                    </div>
+                </a></li>
+		     
+              <li><a href="/news/">
+                <div style="margin-top: 0px;">
+                  <p><span>君禾社区</span>君禾社区</p>
+                </div>
+                </a></li>
+		 
+        <li><a href="/#contact"><div style="margin-top: 0px;"><p><span>联系我们</span></p><font>CONTACT</font></div></a></li>               
+            
+            </ul>
+          </div>
+          <ul id="iconbar" class="fl">
+            <li> <a href="/#section-5"> <img src="/dedemao/images/tel-icoo.png" alt="" /> <span style="color:white">请拨打:400 821 3860</span></a></li>
+            <li> <a href="/#section-5"> <img src="/dedemao/images/tel-ico3o.png" alt="" /><span style="color:white">微信搜索：君禾</span></a> </li>
+          </ul>
+        </div>
+      </div>
       <div class="body-wrapper">
         <div class="box box-border">
           <div class="light-wrapper">
@@ -515,10 +564,29 @@ $(document).keydown(function(event){
             <span id="j_right" class='right-arr'><i></i></span>
         </div>
     </div>
-  {dede:include filename="footer2.htm"/}
+  <div class="work-foot" style="margin-top:0px;">
+        <div class="foot-content2 clearfix"> <span class="fl"><font color="#90">乐享君禾，体验自然</font></span>
+          <div class="fl clearfix" style="margin-left:47px;"> 
+          <a href="javascript:void(0);" class="WX-ico"></a>
+          <a target="blank" class="QQ-ico" href="/" title="上海君禾园艺有限公司"></a>
+          <a href="http://weibo.com/dreamgardens" target="_blank" class="WB-ico"></a> </div>
+          <span class="fr m_wnews clearfix"> <span class="fl"><font color="#90">欢迎拨打: <font color="#aed208">400 821 3860</font></font></span> <span id="miniNewsRegion" class="fl" style="line-height:20px; margin-top:40px;">
+          </span>
+          <style>
+.tempWrap{ margin-top:40px;}
+</style>
+          </span> 
+          <script type="text/javascript">
+
+                        jQuery(".m_wnews").slide({ mainCell:"#miniNewsRegion", effect:"topLoop", autoPlay:true});
+
+                        </script> 
+        </div>
+        <span class="foot-font2">上海君禾园艺有限公司版权所有   沪ICP备11031278号</span> </div>
+        
 </div>
 <div style="display:none">
-{dede:global.tongji/}
+
 </div>
 </body>
 </html>
@@ -656,6 +724,10 @@ function resize(){
 jQuery.get("/plus/user.php", function (data) {
     jQuery("#menu1 ul li:eq(0)").after(data);
 });
-{dede:channel type='top' row='10' currentstyle="jQuery('a:[href=\'~typelink~\']').addClass('cur');"}
-{/dede:channel}
+
+
+
+
+
+jQuery('a:[href=\'/activities/\']').addClass('cur');
 </script>

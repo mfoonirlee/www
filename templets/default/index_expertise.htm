@@ -398,6 +398,11 @@ $(document).ready(function() {
 	scrollOffset: 30
   });
 });
+jQuery.get("/plus/user.php", function(data) {
+  jQuery("#menu1 ul li:eq(0)").after(data);
+});
+{dede:channel type='top' row='10' currentstyle="jQuery('a:[href=\'~typelink~\']').addClass('cur');"}
+{/dede:channel}
 </script>
 <!--×ó²àµ¼º½JS-->
 <!--login-->

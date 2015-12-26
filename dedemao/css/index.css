@@ -533,7 +533,8 @@ li {
   font-size: 18px;
   color: #313131;
   position: relative;
-  padding: 0 23px 10px 8px; }
+  padding: 0 23px 10px 8px;
+  cursor: pointer; }
 
 .share .tit li i {
   position: absolute;
@@ -621,12 +622,12 @@ li {
     border-bottom: 1px solid #dcdcdc; }
   .share .rank ul {
     overflow: hidden;
-    padding: 15px 8px;
+    padding: 5px 8px 15px 8px;
     width: 310px; }
     .share .rank ul li {
       border-bottom: 1px dotted #dcdcdc;
       overflow: hidden;
-      padding-bottom: 10px; }
+      padding: 10px 0; }
       .share .rank ul li img {
         width: 83px;
         height: 65px;
@@ -638,7 +639,8 @@ li {
         .share .rank ul li div p {
           margin-bottom: 10px; }
         .share .rank ul li div span {
-          color: #ff3c00; }
+          color: #ff3c00;
+          cursor: pointer; }
 
 .sd {
   background-color: #fbf6e3;

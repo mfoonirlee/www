@@ -429,120 +429,65 @@ $(document).keydown(function(event){
 <body style="background:#e5e5e5 !important;">
 <div id="wrap">
 {dede:include filename="head.htm"/}
+<script type="text/javascript" src="/dedemao/js/underscore.js"></script>
+<script type="text/javascript" src="/dedemao/js/config.js"></script>
+<script type="text/javascript" src="/dedemao/js/util.js"></script>
+<script type="text/javascript" src="/dedemao/js/sharelist.js"></script>
+<script type="text/template" id="j_tab_tpl">
+    <%for(var i = 0, len = data.tlist.length; i < len; i++){%>
+        <%if(i == 0){%>
+            <li data-type="<%=data.tlist[i].type%>" class="current"><%=data.tlist[i].name%>（<%=data.tlist[i].num%>）<i></i></li>
+        <%}else{%>
+            <li data-type="<%=data.tlist[i].type%>"><%=data.tlist[i].name%>（<%=data.tlist[i].num%>）<i></i></li>
+        <%}%>
+    <%}%>
+</script>
+<script type='text/template' id='j_itemlist_tpl'>
+    <%for(var i = 0, len = data.cplist.length; i < len; i++){%>
+        <li data-id='<%=data.cplist[i].id%>'>
+            <%if(data.cplist[i].tag){%>
+                <i><%=data.cplist[i].tag%></i>
+            <%}%>
+           <img src="<%=data.cplist[i].img%>" alt="" />
+           <div>
+               <h5><%=data.cplist[i].name%></h5>
+               <p class="desc"><%=data.cplist[i].cond%></p>
+               <p class="con-t">【试吃内容】</p>
+               <p class="desc"><%=data.cplist[i].cont%></p>
+               <p class="bline"><a class="j_book" href="javascript:void(0)">我要试吃</a> <a class="j_detail" href="javascript:void(0)">了解详情</a></p>
+           </div>
+       </li>
+    <%}%>
+</script>
+<script type='text/template' id='j_itemlist2_tpl'>
+    <%for(var i = 0, len = data.rlist.length; i < len; i++){%>
+        <li data-id="<%=data.rlist[i].id%>">
+            <img src="<%=data.rlist[i].img%>" alt="" />
+            <div>
+                <p><%=i+1%>)<%=data.rlist[i].name%></p>
+                <p><span>【立即申请】</span>更新：<%=data.rlist[i].date%></p>
+            </div>
+        </li>
+    <%}%>
+</script>
 <div class='share'>
 	<h3>免费分享</h3>
 	<img class='ban' src="/dedemao/img/topbanner2.jpg" alt="">
     <div class="cont">
         <div class="con">
            <p class="navi">产品分享/试吃 <span>>&nbsp;&nbsp;<a>今日活动</a></span><i></i></p>
-           <div class="bdiv">
-               <ul class="tit">
-                   <li class="current">全部（42）<i></i></li>
-                   <li>新品试吃（20）<i></i></li>
-               </ul>
-               <ul class="ul-cont">
-                   <li>
-                       <i>最新分享</i>
-                       <img src="/dedemao/img/item.jpg" alt="" />
-                       <div>
-                           <h5>金色大便</h5>
-                           <p class="desc">报名门槛</p>
-                           <p class="con-t">【试吃内容】</p>
-                           <p class="desc">特色大便便特色大便便特色大便便特色大便便特色大便便特色大便便特色大便便特色大便便特色大便便特色大便便特色大便便特色大便便</p>
-                           <p class="bline"><a href="#">我要试吃</a> <a href="#">了解详情</a></p>
-                       </div>
-                   </li>
-                   <li>
-                       <i>最新分享</i>
-                       <img src="/dedemao/img/item.jpg" alt="" />
-                       <div>
-                           <h5>金色大便</h5>
-                           <p class="desc">报名门槛</p>
-                           <p class="con-t">【试吃内容】</p>
-                           <p class="desc">特色大便便特色大便便特色大便便特色大便便特色大便便特色大便便特色大便便特色大便便特色大便便特色大便便特色大便便特色大便便</p>
-                           <p class="bline"><a href="#">我要试吃</a> <a href="#">了解详情</a></p>
-                       </div>
-                   </li>
-                   <li>
-                       <i>最新分享</i>
-                       <img src="/dedemao/img/item.jpg" alt="" />
-                       <div>
-                           <h5>金色大便</h5>
-                           <p class="desc">报名门槛</p>
-                           <p class="con-t">【试吃内容】</p>
-                           <p class="desc">特色大便便特色大便便特色大便便特色大便便特色大便便特色大便便特色大便便特色大便便特色大便便特色大便便特色大便便特色大便便</p>
-                           <p class="bline"><a href="#">我要试吃</a> <a href="#">了解详情</a></p>
-                       </div>
-                   </li>
-                   <li>
-                       <i>最新分享</i>
-                       <img src="/dedemao/img/item.jpg" alt="" />
-                       <div>
-                           <h5>金色大便</h5>
-                           <p class="desc">报名门槛</p>
-                           <p class="con-t">【试吃内容】</p>
-                           <p class="desc">特色大便便特色大便便特色大便便特色大便便特色大便便特色大便便特色大便便特色大便便特色大便便特色大便便特色大便便特色大便便</p>
-                           <p class="bline"><a href="#">我要试吃</a> <a href="#">了解详情</a></p>
-                       </div>
-                   </li>
-               </ul>
-           </div>
-            <div class="tab">
+            <div class="bdiv hide" id="j_main">
+                <ul class="tit" id="j_tlist_container"></ul>
+                <ul class="ul-cont" id="j_plist_container"></ul>
+            </div>
+            <div class="tab hide">
                 <div><span>第1页</span><i></i><span>下一页</span></div>
             </div>
         </div>
         <div class="rank">
             <h5>人气排行</h5>
-            <ul>
-                <li>
-                    <img src="/dedemao/img/item.jpg" alt="" />
-                    <div>
-                        <p>1)大菠萝</p>
-                        <p><span>【立即申请】</span>更新：it`s time bomb</p>
-                    </div>
-                </li>
-                <li>
-                    <img src="/dedemao/img/item.jpg" alt="" />
-                    <div>
-                        <p>1)大菠萝</p>
-                        <p><span>【立即申请】</span>更新：it`s time bomb</p>
-                    </div>
-                </li>
-                <li>
-                    <img src="/dedemao/img/item.jpg" alt="" />
-                    <div>
-                        <p>1)大菠萝</p>
-                        <p><span>【立即申请】</span>更新：it`s time bomb</p>
-                    </div>
-                </li>
-                <li>
-                    <img src="/dedemao/img/item.jpg" alt="" />
-                    <div>
-                        <p>1)大菠萝</p>
-                        <p><span>【立即申请】</span>更新：it`s time bomb</p>
-                    </div>
-                <li>
-                    <img src="/dedemao/img/item.jpg" alt="" />
-                    <div>
-                        <p>1)大菠萝</p>
-                        <p><span>【立即申请】</span>更新：it`s time bomb</p>
-                    </div>
-                </li>
-                <li>
-                    <img src="/dedemao/img/item.jpg" alt="" />
-                    <div>
-                        <p>1)大菠萝</p>
-                        <p><span>【立即申请】</span>更新：it`s time bomb</p>
-                    </div>
-                <li>
-                    <img src="/dedemao/img/item.jpg" alt="" />
-                    <div>
-                        <p>1)大菠萝</p>
-                        <p><span>【立即申请】</span>更新：it`s time bomb</p>
-                    </div>
-                </li>
-                </li>
-                </li>
+            <ul id="j_rlist_container">
+
             </ul>
         </div>
     </div>
