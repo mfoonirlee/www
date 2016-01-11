@@ -7,6 +7,18 @@ if ( isset($_GET["login"]) ) {
 	session_start();
     $_SESSION['_islogin'] = true;
     $_SESSION['_id'] = $_GET["login"];
+    $_SESSION['_name'] = $_GET["n"];
+    $_SESSION['_img'] = $_GET["img"];
+    $row = $dsql->GetOne("SELECT * FROM `#@__member` WHERE userid='".$_GET["login"]."'");
+    if(is_array($row)){
+        $inquery = "UPDATE `dede_member` SET `userid` = ".$_GET["login"].",`uname` = '".iconv("utf-8", "gb2312",$_GET["n"] )."',,`img` = '".$_GET["img"]."'; ";
+        $dsql->ExecuteNoneQuery($inquery);
+    }
+    else {
+    	$inquery = "INSERT INTO `dede_member`(`userid`,`uname`,`img`) VALUES (".$_GET["login"].", '".iconv("utf-8", "gb2312",$_GET["n"] )."', '".$_GET["img"]."'); ";
+    //echo $inquery;
+        $dsql->ExecuteNoneQuery($inquery);
+    }
     exit;
 }
 
