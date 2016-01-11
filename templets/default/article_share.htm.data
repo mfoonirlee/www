@@ -5,9 +5,12 @@ ini_set('display_errors', '1');
 
 $result = array();
 
-$sql = "select title,activityaddr,activityimg,activitystartdate,activityenddate,activitynum,activityintroduce,activityillustrate from dede_archives INNER JOIN dede_addonshare on dede_archives.id=dede_addonshare.aid WHERE aid=".$_GET["aid"].";";
+$sql = "select title,activityaddr,activityimg,activitystartdate,activityenddate,activitynum,activityintroduce,activityillustrate,activitypicturemore
+from dede_archives INNER JOIN dede_addonshare on dede_archives.id=dede_addonshare.aid WHERE aid=".$_GET["aid"].";";
 
 $query = mysql_query($sql);
+
+$result["imglist"]=array();
 
 while($row=mysql_fetch_array($query)){
 	$result["name"] = iconv("gb2312","utf-8", $row['title']);
@@ -18,23 +21,70 @@ while($row=mysql_fetch_array($query)){
     $result["qnum"] = iconv("gb2312","utf-8", $row['activitynum']);
 	$result["aabs"] = iconv("gb2312","utf-8", $row['activityintroduce']);
     $result["ainfo"] = iconv("gb2312","utf-8", $row['activityillustrate']);
+    preg_match_all('/<img.*\/>/iUs', iconv("gb2312","utf-8", $row['activitypicturemore']), $out);
+    $result["imglist"]= $out[0];
 }
 
-$result["imglist"] =array("{dede:img text='' width='1800' height='3300'} /uploads/140820/1-140R0134134H5.jpg {/dede:img}","{dede:img text='' width='1800' height='3300'} /uploads/140820/1-140R0134134H5.jpg {/dede:img}");
+//$result["imglist"] =array("{dede:img text='' width='1800' height='3300'} /uploads/140820/1-140R0134134H5.jpg {/dede:img}","{dede:img text='' width='1800' height='3300'} /uploads/140820/1-140R0134134H5.jpg {/dede:img}");
 
+
+$sqlsignup = "SELECT userid,user_name,alias,avatar FROM dede_activitysignup WHERE activityid=".$_GET["aid"].";";
+
+$querysignup = mysql_query($sqlsignup);
 
 $result["slist"] =array();
-$result["slist"][0] = array( "img" => "/uploads/140820/1-140R0134134H5.jpg ", "name" => "fasffasd");
-$result["slist"][1] = array( "img" => "/uploads/140820/1-140R0134134H5.jpg ", "name" => "fdasger");
 
+while($rowsignup=mysql_fetch_array($querysignup))
+{
+	$item = array();
+	$item['img'] = iconv("gb2312","utf-8", $row['avatar']);
+	if($row['alias'])
+	{
+		$item['name'] = iconv("gb2312","utf-8", $row['alias']);
+	}
+	else
+	{
+		$item['name']=iconv("gb2312","utf-8", $row['user_name']);
+	}
+	$result["slist"][] = $item;
+}
+
+$result["snum"]= count($result["slist"]);
+
+//$result["slist"] =array();
+//$result["slist"][0] = array( "img" => "/uploads/140820/1-140R0134134H5.jpg ", "name" => "fasffasd");
+//$result["slist"][1] = array( "img" => "/uploads/140820/1-140R0134134H5.jpg ", "name" => "fdasger");
+
+
+$sqlcomment = "SELECT avatar,alias,user_name,msg,dtime,rank_points FROM dede_feedback WHERE aid=".$_GET["aid"].";";
+
+$querycomment = mysql_query($sqlcomment);
 
 $result["clist"] =array();
-$result["clist"][0]= array( "img" => "/uploads/140820/1-140R0134134H5.jpg", "name" => "abdcd","info"=>"Contentdetail,good","time"=>"2015-12-28","lv"=>"5");
-$result["clist"][1]= array( "img" => "/uploads/140820/1-140R0134134H5.jpg", "name" => "efghigk","info"=>"Contentdetail,Very,good","time"=>"2016-01-12","lv"=>"3");
+
+while($rowcomment=mysql_fetch_array($querycomment))
+{
+	$item=array();
+	$item['img']=iconv("gb2312","utf-8", $row['avatar']);
+	if($row['alias'])
+	{
+		$item['name']=iconv("gb2312","utf-8", $row['alias']);
+	}
+	else
+	{
+		$item['name']=iconv("gb2312","utf-8", $row['user_name']);
+	}
+	$item['info']=iconv("gb2312","utf-8", $row['msg']);
+	$item['time']=iconv("gb2312","utf-8", $row['dtime']);
+	$item['lv']=iconv("gb2312","utf-8", $row['rank_points']);
+	$result["clist"][]=$item;
+}
+//$result["clist"][0]= array( "img" => "/uploads/140820/1-140R0134134H5.jpg", "name" => "abdcd","info"=>//"Contentdetail,good","time"=>"2015-12-28","lv"=>"5");
+//$result["clist"][1]= array( "img" => "/uploads/140820/1-140R0134134H5.jpg", "name" => "efghigk","info"=>//"Contentdetail,Very,good","time"=>"2016-01-12","lv"=>"3");
 
 
 echo json_encode($result);
 
 header('Content-Type: text/json; charset=utf-8');
 
-{/dede:php}	
+{/dede:php}
