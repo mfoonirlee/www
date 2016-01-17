@@ -73,8 +73,8 @@ $(function(){
     //点击了某个item
     function onClickItem (e) {
         var $target = $(e.target || e.srcElement);
-        if($target[0].tagName != 'li'){
-            $target = $target.parents('li');
+        if($target[0].tagName.toLowerCase() != 'dd'){
+            $target = $target.parents('dd');
         }
 
         var id = $target.data('id');
