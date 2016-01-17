@@ -32,9 +32,9 @@ var Config = {
     //页面相对的地址
     pageurl:{
         //体验活动详情
-        expdetial: '/plus/view.php?t=1',
+        expdetial: '/plus/view.php',
         //免费分享详情
-        sharedetail: '/plus/view.php?t=1'
+        sharedetail: '/plus/view.php'
     },
     log: function (msg) {
         try{
