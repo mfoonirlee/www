@@ -13,7 +13,17 @@ $query = mysql_query($sql);
 while($row=mysql_fetch_array($query)){
     $item = new item();
     $item->title = iconv("gb2312","utf-8", $row['title']);
-    $item->desc = iconv("gb2312","utf-8",$row["description"]);
+    //$item->desc = iconv("gb2312","utf-8",$row["description"]);
+	$dec= iconv("gb2312","utf-8",$row["description"]);
+	if(strlen($dec)>50)
+	{
+	 $item->desc = mb_substr( $dec, 0, 50, "utf-8" ). " " ."……"; 
+	}
+	else
+	{
+	 $item->desc = $dec;
+	}
+	
     $item->img = apache_lookup_uri( $row["litpic"] )->uri;
     $item->isnew = iconv("gb2312","utf-8", $row["isnew"])=="是" ? 1 : 0;
 	$item->issoldout = iconv("gb2312","utf-8", $row["isactive"])=="是" ? 1 : 0;
