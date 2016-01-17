@@ -64,7 +64,7 @@
         });
         //for detail page
         $('#j_plist_container').delegate('.j_detail', 'click', function(e){
-            var $target = $(e.currentTarget).parnets('li'),
+            var $target = $(e.currentTarget).parents('li'),
                 id = $target.data('id');
 
             forwardDetail(id);
