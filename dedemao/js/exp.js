@@ -43,10 +43,18 @@ $(function(){
         }
 
         $('#j_hot_container').html(hotTplFun({data: newActivityList})).children().on('click', function(e){
-            onClickItem(e);
+                        var $target = $(e.target || e.srcElement);
+            if($target[0].tagName.toLowerCase() != 'li'){
+                $target = $target.parents('li');
+            }
+            onClickItem($target.data('id'));
         });
         $('#j_act_container').html(actTplFun({data: data})).children().on('click', function(e){
-            onClickItem(e);
+            var $target = $(e.target || e.srcElement);
+            if($target[0].tagName.toLowerCase() != 'dd'){
+                $target = $target.parents('dd');
+            }
+            onClickItem($target.data('id'));
         });
 
         $('#j_left').on('click', function(){
@@ -71,14 +79,8 @@ $(function(){
     }
 
     //点击了某个item
-    function onClickItem (e) {
-        var $target = $(e.target || e.srcElement);
-        if($target[0].tagName.toLowerCase() != 'dd'){
-            $target = $target.parents('dd');
-        }
-
-        var id = $target.data('id');
-        location.href = Config.getPageURL('expdetial') + '&aid=' + id;
+    function onClickItem (id) {
+        location.href = Config.getPageURL('expdetial') + '?aid=' + id;
     }
 
     function turnPage () {
