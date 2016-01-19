@@ -40,7 +40,7 @@ $(function(){
                     alert(data.msg);
                 },
                 error: function () {
-
+                    alert("submit failed, please try again.");
                 }
             });
         })
