@@ -30,6 +30,20 @@ $(function(){
         data.timestr = data.stime + '-' + data.etime;
         var htmlFun = _.template($('#j_tpl').html());
         $('#j_container').html(htmlFun({data: data}));
+        $('#j_container').find('.top').click(function(){
+            $.ajax({
+                type: 'GET',
+                url: Util.replaceUrlParam(Config.getUrl('enrollActivity'), aid),
+                contentType: 'application/json;charset=utf-8',
+                dataType: 'json',
+                success: function (data) {
+                    alert(data.msg);
+                },
+                error: function () {
+
+                }
+            });
+        })
     }
 
 }());

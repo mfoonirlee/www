@@ -20,7 +20,10 @@ var Config = {
         //免费分享列表
         sharelist: '/plus/index.php?tid=27',
         //免费分享详情
-        sharedetail: '/plus/view_data.php?aid={aid}'
+        sharedetail: '/plus/view_data.php?aid={aid}',
+        //活动报名url
+        enrollActivity: '/plus/signup.php?aid={aid}'
+
     },
     getPageURL: function(pageName){
         if(this.isDebug){

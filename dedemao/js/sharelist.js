@@ -74,6 +74,18 @@
             var $target = $(e.currentTarget).parents('li'),
                 id = $target.data('id');
 
+            $.ajax({
+                type: 'GET',
+                url: Util.replaceUrlParam(Config.getUrl('enrollActivity'), id),
+                contentType: 'application/json;charset=utf-8',
+                dataType: 'json',
+                success: function (data) {
+                    alert(data.msg);
+                },
+                error: function () {
+
+                }
+            });
             //todo for booking
             console.log(321);
         });

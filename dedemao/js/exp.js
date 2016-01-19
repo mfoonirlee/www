@@ -49,6 +49,7 @@ $(function(){
             }
             onClickItem($target.data('id'));
         });
+
         $('#j_act_container').html(actTplFun({data: data})).children().on('click', function(e){
             var $target = $(e.target || e.srcElement);
             if($target[0].tagName.toLowerCase() != 'dd'){
