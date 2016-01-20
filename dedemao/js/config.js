@@ -22,8 +22,9 @@ var Config = {
         //免费分享详情
         sharedetail: '/plus/view_data.php?aid={aid}',
         //活动报名url
-        enrollActivity: '/plus/signup.php?aid={aid}'
-
+        enrollActivity: '/plus/signup.php?aid={aid}',
+        //评论
+        comment: '/plus/comment.php?aid={aid}'
     },
     getPageURL: function(pageName){
         if(this.isDebug){
