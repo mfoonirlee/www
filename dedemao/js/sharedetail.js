@@ -25,9 +25,11 @@ $(function(){
                     success: function (data) {
                         Config.log(data);
                         alert(data.msg);
-                        setTimeout(function(){
+                        if(data.IsSuccess == '0' && data.url){
+                            location.href = data.url;
+                        }else{
                             location.reload();
-                        }, 3000);
+                        }
                     },
                     error: function () {
                         alert('submit failed, please try again.');
