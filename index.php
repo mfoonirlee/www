@@ -9,6 +9,10 @@ if ( isset($_GET["login"]) ) {
     $_SESSION['_id'] = $_GET["login"];
     $_SESSION['_name'] = $_GET["n"];
     $_SESSION['_img'] = $_GET["img"];
+    $_SESSION['_alias'] = $_GET["alias"];
+    //$_SESSION['_rankname'] = $_GET["rankname"];
+    $_SESSION['_rankid'] = $_GET["rankid"];
+
     $row = $dsql->GetOne("SELECT * FROM `#@__member` WHERE userid='".$_GET["login"]."'");
     if(is_array($row)){
         $inquery = "UPDATE `dede_member` SET `userid` = ".$_GET["login"].",`uname` = '".iconv("utf-8", "gb2312",$_GET["n"] )."',,`img` = '".$_GET["img"]."'; ";
