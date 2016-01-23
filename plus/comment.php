@@ -13,6 +13,8 @@ $uavatar = $_SESSION['_img'];
 $lve=$_SESSION['_rankid'];
 $time=strtotime(date('y-m-d h:i:s',time()));
 
+if (isset($uid))
+{
 $query = "INSERT INTO `dede_feedback`(`aid`,`mid`,`username`,`alias`,`avatar`,`dtime`,`msg`,`userlevel`) VALUES (".$aid.", ".$uid.", 
 	'".$uname."', '".$ualias."', '".$uavatar."',".$time.",'".$info."',".$lve."); ";
  $num= $dsql->ExecuteNoneQuery($query);
@@ -27,6 +29,14 @@ else
 $result["IsSuccess"]=1;
 $result["msg"]="Comment Successfully!";
 }
+}
+else
+{
+$result["IsSuccess"]=0;
+$result["msg"]="Comment Failed!";
+$result["url"]="http://112.124.110.58:8081/user.php";
+}
+
 echo json_encode($result);
 
 
