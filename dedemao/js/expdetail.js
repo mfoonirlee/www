@@ -38,6 +38,9 @@ $(function(){
                 dataType: 'json',
                 success: function (data) {
                     alert(data.msg);
+                    if(data.IsSuccess == '0' && data.url){
+                        location.href = data.url;
+                    }
                 },
                 error: function () {
                     alert("submit failed, please try again.");
