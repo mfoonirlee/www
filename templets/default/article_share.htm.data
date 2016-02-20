@@ -13,16 +13,16 @@ $query = mysql_query($sql);
 $result["imglist"]=array();
 
 while($row=mysql_fetch_array($query)){
-	$result["name"] = iconv("gb2312","utf-8", $row['title']);
-    $result["addr"] = iconv("gb2312","utf-8", $row['activityaddr']);
-	$result["img"] = iconv("gb2312","utf-8", $row['activityimg']);
+	$result["name"] = iconv("gb2312","utf-8//IGNORE", $row['title']);
+    $result["addr"] = iconv("gb2312","utf-8//IGNORE", $row['activityaddr']);
+	$result["img"] = iconv("gb2312","utf-8//IGNORE", $row['activityimg']);
     $starttime=date("Y/m/d h:i:s", $row['activitystartdate']);
     $endtime=date("Y/m/d h:i:s", $row['activityenddate']);
     $result["date"] = $starttime . "-" .$endtime;
-    $result["qnum"] = iconv("gb2312","utf-8", $row['activitynum']);
-	$result["aabs"] = iconv("gb2312","utf-8", $row['activityintroduce']);
-    $result["ainfo"] = iconv("gb2312","utf-8", $row['activityillustrate']);
-    preg_match_all('<img.*?src="(.*?)">', iconv("gb2312","utf-8", $row['activitypicturemore']), $out);
+    $result["qnum"] = iconv("gb2312","utf-8//IGNORE", $row['activitynum']);
+	$result["aabs"] = iconv("gb2312","utf-8//IGNORE", $row['activityintroduce']);
+    $result["ainfo"] = iconv("gb2312","utf-8//IGNORE", $row['activityillustrate']);
+    preg_match_all('<img.*?src="(.*?)">', iconv("gb2312","utf-8//IGNORE", $row['activitypicturemore']), $out);
     $result["imglist"]= $out[1];
 }
 
@@ -34,14 +34,14 @@ $result["slist"] =array();
 while($rowsignup=mysql_fetch_array($querysignup))
 {
 	$item = array();
-	$item['img'] ="http://112.124.110.58:8081/"."".iconv("gb2312","utf-8", $rowsignup['avatar']);
+	$item['img'] ="http://112.124.110.58:8081/"."".iconv("gb2312","utf-8//IGNORE", $rowsignup['avatar']);
 	if($rowsignup['alias'])
 	{
-		$item['name'] = iconv("gb2312","utf-8", $rowsignup['alias']);
+		$item['name'] = iconv("gb2312","utf-8//IGNORE", $rowsignup['alias']);
 	}
 	else
 	{
-		$item['name']=iconv("gb2312","utf-8", $rowsignup['user_name']);
+		$item['name']=iconv("gb2312","utf-8//IGNORE", $rowsignup['user_name']);
 	}
 	$result["slist"][] = $item;
 }
@@ -57,18 +57,18 @@ $result["clist"] =array();
 while($rowcomment=mysql_fetch_array($querycomment))
 {
 	$item=array();
-	$item['img']="http://112.124.110.58:8081/"."".iconv("gb2312","utf-8", $rowcomment['avatar']);
+	$item['img']="http://112.124.110.58:8081/"."".iconv("gb2312","utf-8//IGNORE", $rowcomment['avatar']);
 	if($rowcomment['alias'])
 	{
-		$item['name']=iconv("gb2312","utf-8", $rowcomment['alias']);
+		$item['name']=iconv("gb2312","utf-8//IGNORE", $rowcomment['alias']);
 	}
 	else
 	{
-		$item['name']=iconv("gb2312","utf-8", $rowcomment['username']);
+		$item['name']=iconv("gb2312","utf-8//IGNORE", $rowcomment['username']);
 	}
-	$item['info']=iconv("gb2312","utf-8", $rowcomment['msg']);
+	$item['info']=iconv("gb2312","utf-8//IGNORE", $rowcomment['msg']);
 	$item['time']=date("Y/m/d h:i:s", $rowcomment['dtime']);
-	$item['lv']=iconv("gb2312","utf-8", $rowcomment['userlevel']);
+	$item['lv']=iconv("gb2312","utf-8//IGNORE", $rowcomment['userlevel']);
 	$result["clist"][]=$item;
 }
 //$result["clist"][0]= array( "img" => "/uploads/140820/1-140R0134134H5.jpg", "name" => "abdcd","info"=>//"Contentdetail,good","time"=>"2015-12-28","lv"=>"5");
