@@ -11,7 +11,7 @@
 require_once(dirname(__FILE__)."/config.php");
 require_once(DEDEINC.'/typelink.class.php');
 
-$query = "UPDATE `#@__feedback` SET `ischeck` = 1 WHERE `id` = ".$_GET['id'];
+$query = "UPDATE `#@__activitysignup` SET `success` = 1 WHERE `id` = ".$_GET['id'];
 //echo $query;
 $dsql->ExecuteNoneQuery($query);
 

@@ -39,10 +39,9 @@ height:18px
 function Pass( id )
 {
     console.log(id);
-    jQuery.getJSON("comments_pass.php?id="+id,function(data){
+    jQuery.getJSON("activitysignup_pass.php?id="+id,function(data){
     //console.log(data);
     alert(data.msg);
-    window.location.reload();
     });
 }
 </script>
@@ -57,25 +56,21 @@ function Pass( id )
             </tr>
             <tr align="center" height="25">
                 <td width="5%">用户名</td>
+                <td width="10%">用户等级</td>
                 <td width="25%">活动</td>
-                <td width="15%">点评时间</td>
-                <td width="10%">点评内容</td>
                 <td width="10%">操作</td>
             </tr>
             {dede:datalist}
             <tr align='center' height="26" align="center" >
                 <td nowrap>
-                    {dede:field.username/}
+                    {dede:field.user_name/}
                 
                 </td>
                 <td>
-                    <a href="http://112.124.110.58:8080/plus/view.php?aid={dede:field.aid/}" target="_blank">{dede:field.title/}</a>
+                    {dede:field.user_rank_name/}
                 </td>
                 <td>
-                {dede:field.dtime function='GetDateTimeMk(@me)'/}
-                </td>
-                <td>
-                    {dede:field.msg/}
+                    <a href="http://112.124.110.58:8080/plus/view.php?aid={dede:field.activityid/}" target="_blank">{dede:field.title/}</a>
                 </td>
                 <td>
                 <img src='images/trun.gif' title="通过" alt="通过" onClick="Pass({dede:field.id/}, event, this);" style='cursor:pointer' border='0' width='16' height='16' />

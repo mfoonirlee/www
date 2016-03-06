@@ -5,6 +5,8 @@ session_start();
 $aid = $_GET['aid'];
 $uid = $_SESSION['_id'];
 $uname = $_SESSION['_name'];
+$rank = $_SESSION['_rankid'];
+$rank_name = $_SESSION['_rankname'];
 $unameType = mb_detect_encoding($uname, array('UTF-8','GBK','LATIN1','BIG5')) ;
 if( $unameType != 'GBK')
 {
@@ -31,8 +33,8 @@ $result["msg"]=$data;
 }
 else
 {
-$query = "INSERT INTO `dede_activitysignup`(`activityid`,`userid`,`user_name`,`alias`,`avatar`) VALUES (".$aid.", ".$uid.", 
-	'".$uname."', '".$ualias."', '".$uavatar."'); ";
+$query = "INSERT INTO `dede_activitysignup`(`activityid`,`userid`,`user_name`,`alias`,`avatar`,`user_rank`,`user_rank_name`) VALUES (".$aid.", ".$uid.", 
+	'".$uname."', '".$ualias."', '".$uavatar."',$rank,'$rank_name'); ";
 $num= $dsql->ExecuteNoneQuery($query);
 $result = array();
 if($num)

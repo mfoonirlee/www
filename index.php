@@ -9,9 +9,16 @@ if ( isset($_GET["login"]) ) {
     $_SESSION['_id'] = $_GET["login"];
     $_SESSION['_name'] = $_GET["n"];
     $_SESSION['_img'] = $_GET["img"];
-    $_SESSION['_alias'] = $_GET["alias"];
-    //$_SESSION['_rankname'] = $_GET["rankname"];
+    $_SESSION['_alias'] = $_GET["alias"];    
     $_SESSION['_rankid'] = $_GET["rankid"];
+    
+    $rankname=$_GET["rankname"];
+    $infoType = mb_detect_encoding($rankname, array('UTF-8','GBK','LATIN1','BIG5')) ;
+    if( $infoType != 'GBK')
+    {
+      $rankname = mb_convert_encoding($rankname ,'GBK' , $infoType);
+    }
+    $_SESSION['_rankname'] = $rankname;
 
     $row = $dsql->GetOne("SELECT * FROM `#@__member` WHERE userid='".$_GET["login"]."'");
     if(is_array($row)){
