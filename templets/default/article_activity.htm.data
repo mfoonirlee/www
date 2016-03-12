@@ -6,6 +6,7 @@ ini_set('display_errors', '1');
 $result = array();
 
 $sql = "SELECT `id`, `title`, `description`, `litpic`, `datestart`, `dateend`, `isnew`, `isactive`, `content`, `coupondescription`, `contentimage`, `headimage` FROM `dede_archives` INNER JOIN `dede_addonactivity` ON `dede_archives`.`id` = `dede_addonactivity`.`aid` WHERE 1 = 1 AND `dede_archives`.`id` = ".$_GET["aid"].";";
+
 $query = mysql_query($sql);
 
 while($row=mysql_fetch_array($query)){

@@ -1,14 +1,25 @@
 {dede:php}
-
-error_reporting(E_ALL);
-ini_set('display_errors', '1');
+header('Access-Control-Allow-Origin: *');
+//error_reporting(E_ALL);
+//ini_set('display_errors', '1');
 
 class item {
 };
 
 $result = array();
+$sql="";
+$atype = $_GET["atype"];
+if(true === isset($atype))
+{
+$sql = "SELECT `id`, `title`, `description`, `litpic`, `isnew`,`datestart`, `dateend`, `isactive` FROM `dede_archives` INNER JOIN `dede_addonactivity` ON 
+`dede_archives`.`id` = `dede_addonactivity`.`aid` WHERE 1 = 1 AND `dede_archives`.`typeid` = 26  AND `dede_addonactivity`.`activitytype` = ".$_GET["atype"].";";
+}
+else
+{
+$sql = "SELECT `id`, `title`, `description`, `litpic`, `isnew`,`datestart`, `dateend`, `isactive` FROM `dede_archives` INNER JOIN `dede_addonactivity` ON 
+`dede_archives`.`id` = `dede_addonactivity`.`aid` WHERE 1 = 1 AND `dede_archives`.`typeid` = 26;";
+}
 
-$sql = "SELECT `id`, `title`, `description`, `litpic`, `isnew`, `isactive` FROM `dede_archives` INNER JOIN `dede_addonactivity` ON `dede_archives`.`id` = `dede_addonactivity`.`aid` WHERE 1 = 1 AND `dede_archives`.`typeid` = 26;";
 $query = mysql_query($sql);
 while($row=mysql_fetch_array($query)){
     $item = new item();
@@ -23,7 +34,8 @@ while($row=mysql_fetch_array($query)){
 	{
 	 $item->desc = $dec;
 	}
-	
+	$item->stime = date( "Y-m-d", $row['datestart']);
+	$item->etime = date( "Y-m-d", $row['dateend']);
     $item->img = apache_lookup_uri( $row["litpic"] )->uri;
     $item->isnew = iconv("gb2312","utf-8", $row["isnew"])=="是" ? 1 : 0;
 	$item->issoldout = iconv("gb2312","utf-8", $row["isactive"])=="是" ? 1 : 0;
