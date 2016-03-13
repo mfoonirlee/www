@@ -42,6 +42,7 @@ function Pass( id,aid,num)
     jQuery.getJSON("activitysignup_pass.php?id="+id+"&aid="+aid+"&num="+num,function(data){
     //console.log(data);
     alert(data.msg);
+    window.location.reload();
     });
 }
 </script>
@@ -82,7 +83,12 @@ function Pass( id,aid,num)
                 </script>
                 </td>
                 <td>
-                <img src='images/trun.gif' title="通过" alt="通过" onClick="Pass({dede:field.id/},{dede:field.activityid/},{dede:field.number/}, event, this);" style='cursor:pointer' border='0' width='16' height='16' />
+                <script>
+                if({dede:field.success/}!=1){
+                    document.write('<img src="images/trun.gif" title="通过" alt="通过" onClick="Pass({dede:field.id/},{dede:field.activityid/},{dede:field.number/}, event, this);" style="cursor:pointer" border="0" width="16" height="16" />');
+                }
+                </script>
+                <!--<img src="images/trun.gif" title="通过" alt="通过" onClick="Pass({dede:field.id/},{dede:field.activityid/},{dede:field.number/}, event, this);" style="cursor:pointer" border="0" width="16" height="16" />-->
                 </td>
             </tr>
             {/dede:datalist}
