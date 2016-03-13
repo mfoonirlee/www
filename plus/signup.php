@@ -3,12 +3,20 @@
 require(dirname(__FILE__)."/../include/common.inc.php");
 session_start();
 $aid = $_GET['aid'];
-$activedate=$_GET['activedate'];
+$activedate=strtotime($_GET['activedate']);
 $number=$_GET['number'];
 $address=$_GET['address'];
 $mobile=$_GET['mobile'];
+$name=$_GET['name'];
 $uid = $_SESSION['_id'];
-$uname = $_SESSION['_name'];
+if(isset($name))
+{
+	$uname=$name;
+}
+else
+{
+	$uname = $_SESSION['_name'];
+}
 $rank = $_SESSION['_rankid'];
 $rank_name = $_SESSION['_rankname'];
 $unameType = mb_detect_encoding($uname, array('UTF-8','GBK','LATIN1','BIG5')) ;
@@ -21,12 +29,11 @@ $uavatar = $_SESSION['_img'];
 
 if (isset($uid))
 {
-
 $sql1="SELECT datestart,dateend from dede_addonactivity where aid==".$_GET["aid"].";";
 $row = $dsql->GetOne($sql1);
-if ($activedate<$row['datestart']||$activedate>$row['dateend'])
+if ( isset($activedate) && ($activedate<$row['datestart']||$activedate>$row['dateend']))
 {
-	$result["IsSuccess"]=0;
+$result["IsSuccess"]=0;
 $data="不在活动日期内，请重新选择活动日期";
 $fileType = mb_detect_encoding($data, array('UTF-8','GBK','LATIN1','BIG5')) ;
 if( $fileType != 'UTF-8')
@@ -45,7 +52,7 @@ if($row['signupnum']>=1)
 {
 $result["IsSuccess"]=0;
 $data="该活动您已经报名，不可重复报名";
-$fileType = mb_detect_encoding($data, array('UTF-8','GBK','LATIN1','BIG5')) ;
+$fileType = mb_detect_encoding($data, array('UTF-8','GBK','LATIN1','BIG5'));
 if( $fileType != 'UTF-8')
 {
   $data = mb_convert_encoding($data ,'utf-8' , $fileType);
