@@ -38,8 +38,8 @@ if (isset($uid))
 {
 $sql1="SELECT datestart,dateend from dede_addonactivity where aid==".$_GET["aid"].";";
 $row = $dsql->GetOne($sql1);
-$startdate=strtotime(date("Y-m-d",$row['datestart']))
-$enddate=strtotime(date("Y-m-d",$row['dateend']))
+$startdate=strtotime(date("Y-m-d",$row['datestart']));
+$enddate=strtotime(date("Y-m-d",$row['dateend']));
 if ( isset($activedate) && ($activedate<$startdate||$activedate>$enddate))
 {
 $result["IsSuccess"]=0;
