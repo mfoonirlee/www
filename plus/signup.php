@@ -4,7 +4,14 @@ require(dirname(__FILE__)."/../include/common.inc.php");
 session_start();
 $aid = $_GET['aid'];
 $activedate=strtotime($_GET['activedate']);
-$number=$_GET['number'];
+if(isset($number))
+{
+	$number=$_GET['number'];
+}
+else
+{
+	$number=1;
+}
 $address=$_GET['address'];
 $mobile=$_GET['mobile'];
 $name=$_GET['name'];
@@ -31,7 +38,9 @@ if (isset($uid))
 {
 $sql1="SELECT datestart,dateend from dede_addonactivity where aid==".$_GET["aid"].";";
 $row = $dsql->GetOne($sql1);
-if ( isset($activedate) && ($activedate<$row['datestart']||$activedate>$row['dateend']))
+$startdate=strtotime(date("Y-m-d",$row['datestart']))
+$enddate=strtotime(date("Y-m-d",$row['dateend']))
+if ( isset($activedate) && ($activedate<$startdate||$activedate>$enddate))
 {
 $result["IsSuccess"]=0;
 $data="不在活动日期内，请重新选择活动日期";
