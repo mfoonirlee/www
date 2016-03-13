@@ -59,7 +59,7 @@ $uid = 0;
 //die;
 
 $sqlcomment = "SELECT avatar,alias,username,msg,dtime,userlevel FROM dede_feedback 
-WHERE ( `ischeck` = 1 OR `mid` = ".$uid." ) AND aid=".$_GET["aid"].";";
+WHERE `ischeck` = 0 AND aid=".$_GET["aid"].";";
 
 //echo $sqlcomment;
 //die;

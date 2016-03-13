@@ -36,10 +36,10 @@ height:18px
 .bline2 {border-bottom: 1px solid #d6d6d6; background-color:#F9FCEF; }
 </style>
 <script type="text/javascript">
-function Pass( id )
+function Pass( id,aid,num)
 {
     console.log(id);
-    jQuery.getJSON("activitysignup_pass.php?id="+id,function(data){
+    jQuery.getJSON("activitysignup_pass.php?id="+id+"&aid="+aid+"&num="+num,function(data){
     //console.log(data);
     alert(data.msg);
     });
@@ -58,6 +58,8 @@ function Pass( id )
                 <td width="5%">用户名</td>
                 <td width="10%">用户等级</td>
                 <td width="25%">活动</td>
+                <td width="10%">报名人数</td>
+                <td width="10%">审核状态</td>
                 <td width="10%">操作</td>
             </tr>
             {dede:datalist}
@@ -73,7 +75,14 @@ function Pass( id )
                     <a href="http://112.124.110.58:8080/plus/view.php?aid={dede:field.activityid/}" target="_blank">{dede:field.title/}</a>
                 </td>
                 <td>
-                <img src='images/trun.gif' title="通过" alt="通过" onClick="Pass({dede:field.id/}, event, this);" style='cursor:pointer' border='0' width='16' height='16' />
+                    {dede:field.number/}
+                </td>
+                <td>
+                <script>if({dede:field.success/}==1){document.write("审核通过");}else{document.write("审核未通过");}
+                </script>
+                </td>
+                <td>
+                <img src='images/trun.gif' title="通过" alt="通过" onClick="Pass({dede:field.id/},{dede:field.activityid/},{dede:field.number/}, event, this);" style='cursor:pointer' border='0' width='16' height='16' />
                 </td>
             </tr>
             {/dede:datalist}

@@ -17,7 +17,7 @@ require_once(DEDEADMIN.'/inc/inc_list_functions.php');
 //$activityid = 125;
 //WHERE `activityid` = $activityid 
 
-$query = "SELECT `dede_activitysignup`.`id`,`activityid`,`user_name`,`title`, `user_rank`, `user_rank_name`
+$query = "SELECT `dede_activitysignup`.`id`,`activityid`,`user_name`,`title`, `user_rank`, `user_rank_name`, `number`, `success`
 FROM `#@__activitysignup` INNER JOIN `#@__archives` ON `dede_activitysignup`.`activityid` = `dede_archives`.`id`
 ORDER BY `activityid`, `success` DESC, `user_rank` DESC";
 
