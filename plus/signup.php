@@ -70,8 +70,9 @@ $result["msg"]=$data;
 }
 else
 {
-$query = "INSERT INTO `dede_activitysignup`(`activityid`,`userid`,`user_name`,`alias`,`avatar`,`user_rank`,`user_rank_name`,`mobile`,`address`,`number`,`activedate`) VALUES (".$aid.", ".$uid.", 
-	'".$uname."', '".$ualias."', '".$uavatar."',$rank,'$rank_name','".$mobile."', '".$address."','$number','$activedate'); ";
+$time=strtotime(date('y-m-d h:i:s',time()));
+$query = "INSERT INTO `dede_activitysignup`(`activityid`,`userid`,`user_name`,`alias`,`avatar`,`SignUpDate`,`user_rank`,`user_rank_name`,`mobile`,`address`,`number`,`activedate`) VALUES (".$aid.", ".$uid.", 
+	'".$uname."', '".$ualias."', '".$uavatar."',$rank,".$time.",'$rank_name','".$mobile."', '".$address."','$number','$activedate'); ";
 $num= $dsql->ExecuteNoneQuery($query);
 $result = array();
 if($num)
