@@ -25,8 +25,8 @@ $time=strtotime(date('y-m-d h:i:s',time()));
 
 if (isset($uid))
 {
-$query = "INSERT INTO `dede_feedback`(`aid`,`mid`,`username`,`alias`,`avatar`,`dtime`,`msg`,`userlevel`) VALUES (".$aid.", ".$uid.", 
-	'".$uname."', '".$ualias."', '".$uavatar."',".$time.",'".$info."',".$lve."); ";
+$query = "INSERT INTO `dede_feedback`(`aid`,`mid`,`username`,`alias`,`avatar`,`dtime`,`msg`,`userlevel`,`ischeck`) VALUES (".$aid.", ".$uid.", 
+	'".$uname."', '".$ualias."', '".$uavatar."',".$time.",'".$info."',".$lve.",0); ";
  $num= $dsql->ExecuteNoneQuery($query);
 $result = array();
 if($num)
