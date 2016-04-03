@@ -40,6 +40,11 @@ min-height:900px;
 <!--tel JS end-->
 <!--首页滚动JS-->
 <script type="text/javascript" src="/dedemao/js/index.js"></script>
+<link rel="stylesheet" type="text/css" href="/dedemao/css/index.css">
+<script type="text/javascript" src="/dedemao/js/underscore.js"></script>
+<script type="text/javascript" src="/dedemao/js/config.js"></script>
+<script type="text/javascript" src="/dedemao/js/util.js"></script>
+<script type="text/javascript" src="/dedemao/js/expdetail.js"></script>
 <!--首页滚动JS end-->
 <!--[if lt IE 9]>
 <link rel="stylesheet" type="text/css" href="/dedemao/css/slide/ie8.css" media="all" />
@@ -49,9 +54,9 @@ min-height:900px;
 <![endif]-->
 <!--workJS-->
 <script type="text/javascript" src="/dedemao/js/work.js"></script>
-<script type="text/javascript"> 
+<script type="text/javascript">
 
-	$(function(){ 
+	$(function(){
 
 		var H=$(window).width()/2-10
 
@@ -59,15 +64,15 @@ min-height:900px;
 
 		{
 
-			$(".ss-left").css("width",H)	
+			$(".ss-left").css("width",H)
 
-			$(".ss-right").css("width",H)	
+			$(".ss-right").css("width",H)
 
-		} 
+		}
 
 	})
 
-	$(function(){ 
+	$(function(){
 
 		var T=$(window).width()
 
@@ -81,7 +86,7 @@ min-height:900px;
 
 		}
 
-	}) 
+	})
 
 </script>
 <script>
@@ -102,9 +107,9 @@ $(window).resize(function(){
 
 		{
 
-			$(".ss-left").css("width",H)	
+			$(".ss-left").css("width",H)
 
-			$(".ss-right").css("width",H)	
+			$(".ss-right").css("width",H)
 
 		}
 
@@ -116,9 +121,9 @@ $(window).resize(function(){
 
 			{
 
-				$(".ss-left").css("width",H)	
+				$(".ss-left").css("width",H)
 
-				$(".ss-right").css("width",H)	
+				$(".ss-right").css("width",H)
 
 			}
 
@@ -165,26 +170,26 @@ $(window).resize(function(){
 <!--导航JS-->
 
 <script>
-$(document).ready(function() {	
+$(document).ready(function() {
 	$("#menu1 a").each(function() { //For each list item...
 		var linkText = $(this).find("div").html(); //Find the text inside of the a tag
-	}); 
-	
+	});
+
 	$("#menu1 a").hover(function() {	//On hover...
-		$(this).find("p").stop().animate({ 
+		$(this).find("p").stop().animate({
 			marginTop: "-20" //Find the span tag and move it up 40 pixels
 		}, 200);
 	} , function() { //On hover out...
 		$(this).find("p").stop().animate({
 			marginTop: "0" //Move the span back to its original state (0px)
 		}, 200);
-	});	
+	});
 });
 </script>
 <script type="text/javascript" src="/dedemao/js/right-nav.js"></script>
 <script>
 
-	$(window).bind("scroll", function(){ 
+	$(window).bind("scroll", function(){
 
 	//当滚动条滚动时
 
@@ -212,7 +217,7 @@ $(document).ready(function() {
 
 			$(".M-top").css("top","-165px");
 
-			
+
 
 		}
 
@@ -222,7 +227,7 @@ $(document).ready(function() {
 
 			$("#nav").hide();
 
-			
+
 
 		}
 
@@ -232,13 +237,13 @@ $(document).ready(function() {
 
 			$("#nav").show();
 
-			
+
 
 		}
 
 	});
 
-	
+
 
 	$(function(){
 
@@ -252,7 +257,7 @@ $(document).ready(function() {
 
 		})
 
-		
+
 
 	})
 
@@ -289,7 +294,7 @@ $(window).scroll(function(){
 
 	m_st = Math.max(document.body.scrollTop || document.documentElement.scrollTop);
 
-	if (m_st > m_po) 
+	if (m_st > m_po)
 
 	{
 
@@ -301,7 +306,7 @@ $(window).scroll(function(){
 
 	$(".ui").animate({top:'0px'},2500);
 
-	}	
+	}
 
 });
 
@@ -318,19 +323,19 @@ $(document).keydown(function(event){
 
 		if(t>=0 & t<=586){
 
-			if (event.keyCode == 40){ 
+			if (event.keyCode == 40){
 
 			$("html,body").animate({scrollTop:600},1000);
 
-			return false; 
+			return false;
 
 		  }
 
-		  if (event.keyCode == 38){ 
+		  if (event.keyCode == 38){
 
 			$("html,body").animate({scrollTop:0},1000);
 
-			return false; 
+			return false;
 
 		  }
 
@@ -338,19 +343,19 @@ $(document).keydown(function(event){
 
 		if(t>=600 & t<=1240){
 
-			if (event.keyCode == 40){ 
+			if (event.keyCode == 40){
 
 			$("html,body").animate({scrollTop:1250},1000);
 
-			return false; 
+			return false;
 
 		  }
 
-		  if (event.keyCode == 38){ 
+		  if (event.keyCode == 38){
 
 			$("html,body").animate({scrollTop:0},1000);
 
-			return false; 
+			return false;
 
 		  }
 
@@ -358,19 +363,19 @@ $(document).keydown(function(event){
 
 		if(t>=1240 & t<=2090){
 
-			if (event.keyCode == 40){ 
+			if (event.keyCode == 40){
 
 			$("html,body").animate({scrollTop:2100},1000);
 
-			return false; 
+			return false;
 
 		  }
 
-		  if (event.keyCode == 38){ 
+		  if (event.keyCode == 38){
 
 			$("html,body").animate({scrollTop:600},1000);
 
-			return false; 
+			return false;
 
 		  }
 
@@ -378,19 +383,19 @@ $(document).keydown(function(event){
 
 		if(t>=2100 & t<=2240){
 
-			if (event.keyCode == 40){ 
+			if (event.keyCode == 40){
 
 			$("html,body").animate({scrollTop:2840},1000);
 
-			return false; 
+			return false;
 
 		  }
 
-		  if (event.keyCode == 38){ 
+		  if (event.keyCode == 38){
 
 			$("html,body").animate({scrollTop:1250},1000);
 
-			return false; 
+			return false;
 
 		  }
 
@@ -398,11 +403,11 @@ $(document).keydown(function(event){
 
 		if(t>=2240){
 
-		  if (event.keyCode == 38){ 
+		  if (event.keyCode == 38){
 
 			$("html,body").animate({scrollTop:2102},1000);
 
-			return false; 
+			return false;
 
 		  }
 
@@ -410,11 +415,11 @@ $(document).keydown(function(event){
 
 		if($(document).scrollTop() >= $(document).height() - $(window).height()){
 
-		  if (event.keyCode == 38){ 
+		  if (event.keyCode == 38){
 
 			$("html,body").animate({scrollTop:2100},1000);
 
-			return false; 
+			return false;
 
 		  }
 
@@ -432,38 +437,45 @@ $(document).keydown(function(event){
         <div class="M-top-right fr clearfix">
           <div class="M-nav clearfix fl" id="menu1">
             <ul>
-
-              <li><a href="/" class=>
+              <li><a href="/" class=''>
                 <div style="margin-top: 0px;">
-                  <p><span>首页</span><font>首页</font></p>
+                  <p><span>首页</span>homepage</p>
                 </div>
-                </a></li>
-      	     
+                </a>
+              </li>
+              
               <li><a href="/expertise/">
                 <div style="margin-top: 0px;">
-                  <p><span>我的服务</span>SERVICE</p>
+                  <p style="margin-top: 0px;"><span>君禾服务</span>service</p>
                 </div>
-                </a></li>
+                </a>
+              </li>
 		     
               <li><a href="http://shop.dream-gardens.com.cn">
                 <div style="margin-top: 0px;">
-                  <p><span>我的菜园</span>GARDEN</p>
+                  <p style="margin-top: 0px;"><span>君禾商城</span>store</p>
                 </div>
                 </a></li>
 		     
               <li><a href="/about/">
                 <div style="margin-top: 0px;">
-                  <p><span>农场故事</span>STORY</p>
+                  <p><span>农场介绍</span>Farm introduce</p>
                 </div>
                 </a></li>
 		     
-              <li><a href="/life/">
+              <li><a href="/activities/">
+                    <div style="margin-top: 0px;">
+                        <p><span>农场活动</span>Farm activities</p>
+                    </div>
+                </a></li>
+		     
+              <li><a href="/community/">
                 <div style="margin-top: 0px;">
-                  <p><span>慢生活</span>LIFE-OF-EASE</p>
+                  <p><span>君禾社区</span>Chat community</p>
                 </div>
                 </a></li>
-		<li><a href='/news/' class='cur'><div style='margin-top: 0px;'><p><span>君禾动态</span>NEWS</p></div></a></li> 
-        <li><a href="/#contact"><div style="margin-top: 0px;"><p><span>联系我们</span></p><font>CONTACT</font></div></a></li>               
+		 
+        <li><a href="/#contact"><div style="margin-top: 0px;"><p><span>联系我们</span></p><font>contact</font></div></a></li>               
             
             </ul>
           </div>
@@ -473,124 +485,66 @@ $(document).keydown(function(event){
           </ul>
         </div>
       </div>
-<div class="news">
-  <div class="news-nav"> <a href="/news/" class=on>全部</a>  <a href='/news/company/'>行业</a>
+<script type="text/template" id="j_tpl">
+    <p class='top'>
+        <span><%=data.timestr%></span>
+    </p>
+    <ul class='cont'>
+        <li class='e1'>
+            <h3>活动内容</h3>
+            <div>
+                <p><span>活动时间:&nbsp;&nbsp;</span><%=data.timestr%></p>
+                <%=data.desc%>
+            </div>
+        </li>
+        <li class='e2'>
+            <%if(data.cdesc){%>
+                <h3>优惠与赠礼</h3>
+                <dl>
+                    <%for(var i = 0; i < data.clist && data.clist.length; i++){%>
+                        <dd><a target="_blank" href="<%=data.link%>"><img src="<%=data.imgurl%>" alt=""></a></dd>
+                    <%}%>
+                </dl>
+                <p class="p p2">优惠好礼</p>
+                <p class='p'><%=data.cdesc%></p>
+            <%}else{%>
+                <img class='ad' src="<%=data.cimg%>" alt="">
+            <%}%>
+        </li>
+        <%if(data.cdesc){%>
+            <li class='e3'>
+                <img class='ad' src="<%=data.cimg%>" alt="">
+            </li>
+            <%if( data.qalist && data.qalist.length > 0){%>
+                <li class='e4'>
+                    <div class="scr">
+                        <%for(var i = 0, len = data.qalist && data.qalist.length; i < len; i++){%>
+                        <p class='qa'>
+                            <span><%=data.qalist[i].qdesc%></span><%=data.qalist[i].adesc%>
+                        </p>
+                        <%}%>
+                    </div>
+                </li>
+            <%}%>
+        <%}else{%>
+            <%if( data.qalist && data.qalist.length > 0){%>
+                <li class='e3'>
+                    <div class="scr">
+                        <%for(var i = 0, len = data.qalist && data.qalist.length; i < len; i++){%>
+                        <p class='qa'>
+                            <span><%=data.qalist[i].qdesc%></span><%=data.qalist[i].adesc%>
+                        </p>
+                        <%}%>
+                    </div>
+                </li>
+            <%}%>
+        <%}%>
+    </ul>
+</script>
+<div class="expd" id="j_container">
     
-     <a href='/news/com/'>公司</a>
-    
-     </div>
-  <div id="wrapp" class="wrap active"> 
-    <script language="javascript">
-
-            var $id = function(o){ return document.getElementById(o) || o};
-
-       
-
-                         				
-var div = document.createElement("div");
-
-                div.className = "mode popup_in";
-
-                div.innerHTML =  "<p class='pic'><a href='/news/com/120.html'><img src=/uploads/150717/1-150GF914532U.jpg style='height:"+"auto"+";'/></a></p><font><span class='clearfix news-title'><a href='/news/com/120.html'>夏季采摘时间调整通知！</a><font class='fr'>2015-07-17</font></span></font><font><a href='/news/com/120.html' class='news-content'>尊敬的会员： 小暑节气到来，申城出梅后的气温日渐升高，我们大部分露天种植的蔬菜在高温暴晒下容易流失水分，而且君禾园采摘后的蔬菜是不浸水和不洒水 的，因为表面含水分的菜经冷藏更容易冻坏，而且不能长时间放置</a></font>";
-
-                div.style.top = 0;
-
-                div.style.left = 0;
-
-                document.getElementById("wrapp").appendChild(div);var div = document.createElement("div");
-
-                div.className = "mode popup_in";
-
-                div.innerHTML =  "<p class='pic'><a href='/news/com/119.html'><img src=/uploads/150511/1-150511104145495.jpg style='height:"+"auto"+";'/></a></p><font><span class='clearfix news-title'><a href='/news/com/119.html'>新品尝鲜 手工咸鸭蛋免费分享中！</a><font class='fr'>2015-05-11</font></span></font><font><a href='/news/com/119.html' class='news-content'>君禾园农家传统手工腌制咸鸭蛋即将上市！ 乐享君禾，体验自然！ 新品尝鲜第一波！ 即日起至 5 月 14 日，只要是君禾园的 会员朋友 ，都可来 免费分享 我们的传统手工腌制的咸鸭蛋 2 枚 ，纯天然，不加料噢！同时希望</a></font>";
-
-                div.style.top = 0;
-
-                div.style.left = 0;
-
-                document.getElementById("wrapp").appendChild(div);var div = document.createElement("div");
-
-                div.className = "mode popup_in";
-
-                div.innerHTML =  "<p class='pic'><a href='/news/com/118.html'><img src=/uploads/150423/1-150423103II28.jpg style='height:"+"auto"+";'/></a></p><font><span class='clearfix news-title'><a href='/news/com/118.html'>五一礼包全场任意搭配！</a><font class='fr'>2015-04-23</font></span></font><font><a href='/news/com/118.html' class='news-content'>活动日期：4.23------5.5 注册客户及会员同享 下单后请致电40082136860客服热线告知您的订单号，为你安排配送赠品！ 团体采购享更多优惠，详询50306602 满200 元礼品组合： 免收礼盒包装费，免费赠送君禾园生态鸡蛋</a></font>";
-
-                div.style.top = 0;
-
-                div.style.left = 0;
-
-                document.getElementById("wrapp").appendChild(div);var div = document.createElement("div");
-
-                div.className = "mode popup_in";
-
-                div.innerHTML =  "<p class='pic'><a href='/news/com/117.html'><img src=/uploads/150423/1-150423095ZT02.jpg style='height:"+"auto"+";'/></a></p><font><span class='clearfix news-title'><a href='/news/com/117.html'>会员续卡赠好礼！</a><font class='fr'>2015-04-23</font></span></font><font><a href='/news/com/117.html' class='news-content'>活动日期：4.23------5.5 会员续卡赠好礼！ 无论是君禾园老会员还是新加入健康行列的新会员，续卡或购卡我们都将送精心为您挑选的春天心动好礼！多多外出体验自然，不要错过体会季节变化之美的绝佳机会！ 老会员续卡</a></font>";
-
-                div.style.top = 0;
-
-                div.style.left = 0;
-
-                document.getElementById("wrapp").appendChild(div);var div = document.createElement("div");
-
-                div.className = "mode popup_in";
-
-                div.innerHTML =  "<p class='pic'><a href='/news/com/116.html'><img src=/uploads/150203/1-15020315001IS.jpg style='height:"+"auto"+";'/></a></p><font><span class='clearfix news-title'><a href='/news/com/116.html'>迎新春-购物满额赠礼</a><font class='fr'>2015-02-03</font></span></font><font><a href='/news/com/116.html' class='news-content'>俗话说： 过了腊八就是年 ，在2015年春节来临之际，君禾园特备准备了购物赠礼活动及新年礼包， 零售客户和会员同享 ，大家一起喜气洋洋迎新春！ 购物满额赠礼 即日起 至2月16日 ，在活动期间，在君禾园网站购物满 20</a></font>";
-
-                div.style.top = 0;
-
-                div.style.left = 0;
-
-                document.getElementById("wrapp").appendChild(div);var div = document.createElement("div");
-
-                div.className = "mode popup_in";
-
-                div.innerHTML =  "<p class='pic'><a href='/news/com/115.html'><img src=/uploads/150126/1-15012614255TQ.png style='height:"+"auto"+";'/></a></p><font><span class='clearfix news-title'><a href='/news/com/115.html'>感谢有您-会员年度购买TOP10新年赠礼</a><font class='fr'>2015-01-26</font></span></font><font><a href='/news/com/115.html' class='news-content'>感谢有您！ 感谢所有见证和陪伴君禾园农场成长的朋友，谢谢您们一路陪伴！ 为此我们特别为年度购买 TOP10 的会员朋友们准备了一份新年礼， 以示感谢！ 新年礼内容： 君禾园大米一袋（10斤装）及生态鸡蛋（6只装）二</a></font>";
-
-                div.style.top = 0;
-
-                div.style.left = 0;
-
-                document.getElementById("wrapp").appendChild(div);var div = document.createElement("div");
-
-                div.className = "mode popup_in";
-
-                div.innerHTML =  "<p class='pic'><a href='/news/com/114.html'><img src=/uploads/141229/1-141229142RG15.jpg style='height:"+"auto"+";'/></a></p><font><span class='clearfix news-title'><a href='/news/com/114.html'>元旦假期配送安排</a><font class='fr'>2014-12-29</font></span></font><font><a href='/news/com/114.html' class='news-content'>尊敬的会员朋友们： 元旦假日即将来临，办公室放假时间为1-3日，假期间物流正常配送（周日周一不配送）。您可安排提前预定或如 假期间如有订购需求可拨打客服电话 400-821-3860 为您服务。 预祝大家新年快乐！ 君禾</a></font>";
-
-                div.style.top = 0;
-
-                div.style.left = 0;
-
-                document.getElementById("wrapp").appendChild(div);var div = document.createElement("div");
-
-                div.className = "mode popup_in";
-
-                div.innerHTML =  "<p class='pic'><a href='/news/com/113.html'><img src=/uploads/141215/1-1412151A540194.jpg style='height:"+"auto"+";'/></a></p><font><span class='clearfix news-title'><a href='/news/com/113.html'>迎圣诞 庆元旦 年末感恩回馈季！</a><font class='fr'>2014-12-15</font></span></font><font><a href='/news/com/113.html' class='news-content'>一年一度 年末感恩回馈季！ 活动日期： 2014.12.15-----2015.1.5 新客户专享第一波！ 注册即送好礼！ 活动期间，在君禾园网站注册并首笔零售订单下单成功，即可免费获赠 农场生态干黄花菜 一份！ 君禾园干黄花菜 是</a></font>";
-
-                div.style.top = 0;
-
-                div.style.left = 0;
-
-                document.getElementById("wrapp").appendChild(div);var div = document.createElement("div");
-
-                div.className = "mode popup_in";
-
-                div.innerHTML =  "<p class='pic'><a href='/news/com/112.html'><img src=/uploads/141201/1-141201163643614.jpg style='height:"+"auto"+";'/></a></p><font><span class='clearfix news-title'><a href='/news/com/112.html'>农场冬季生态鱼捕捞火热开始！</a><font class='fr'>2014-12-01</font></span></font><font><a href='/news/com/112.html' class='news-content'>12月7日 ， 农场即将揭开每年一季的生态鱼捕捞大幕！欢迎各位朋友当天前来围观！当天您可以来参观农场繁忙的捕捞景象，一起轧轧闹猛体验收获的乐趣，并可以当场点购当天捕捞活碰乱跳的生态鱼，为您的假日餐桌添一道</a></font>";
-
-                div.style.top = 0;
-
-                div.style.left = 0;
-
-                document.getElementById("wrapp").appendChild(div);
-
-                         
-
-            </script>
-    <div id="aaa1" style="display:none;position: fixed;width:400px;height:200px;background:#000;color:#fff;top:30%;left:50%"></div>
-    <div id="ArtPLink" class="page-Article-QQ" bosszone="artPage"> <li><span>1</span></li>
-<li><a href='list_10_2.html'>2</a></li>
-<li><a href='list_10_3.html'>3</a></li>
-<li><a href='list_10_2.html'>下一页</a></li>
-<li><a href='list_10_3.html'>末页</a></li>
- </div>
-  </div>
-  <div class="work-foot" style="margin-top:0px;">
+</div>
+<div class="work-foot" style="margin-top:0px;">
         <div class="foot-content2 clearfix"> <span class="fl"><font color="#90">乐享君禾，体验自然</font></span>
           <div class="fl clearfix" style="margin-left:47px;"> 
           <a href="javascript:void(0);" class="WX-ico"></a>
@@ -611,7 +565,7 @@ var div = document.createElement("div");
         <span class="foot-font2">上海君禾园艺有限公司版权所有   沪ICP备11031278号</span> </div>
         
 </div>
-<div style="display:none"> 
+<div style="display:none">
 
 </div>
 </body>
@@ -621,31 +575,6 @@ var div = document.createElement("div");
 
 <script type="text/javascript" href="/dedemao/js/left-nav/jquery.nav.js"></script>
 <script type="text/javascript" href="/dedemao/js/left-nav/jquery.scrollTo.js"></script>
-<script>
-
-$(document).ready(function() {
-
-  $('#nav').onePageNav({
-
-    begin: function() {
-
-	  console.log('start');
-
-    },
-
-    end: function() {
-
-	  console.log('stop');
-
-    },
-
-	scrollOffset: 30
-
-  });
-
-});
-
-</script>
 
 <!--左侧导航JS-->
 
@@ -671,13 +600,13 @@ function postPosition(el,childTagName){
 
 	var h = []; //记录每列的高度
 
-	var box = el.getElementsByTagName(childTagName);	
+	var box = el.getElementsByTagName(childTagName);
 
 	var minH = box[0].offsetHeight,
 
 	boxW = box[0].offsetWidth+margin;
 
-	n = document.documentElement.offsetWidth / boxW | 0;  
+	n = document.documentElement.offsetWidth / boxW | 0;
 
 	//计算页面能排下多少Pin
 
@@ -697,7 +626,7 @@ function postPosition(el,childTagName){
 
 				box[i].style.left = (i * boxW) + 'px';
 
-		} 
+		}
 
 		else {
 
@@ -749,23 +678,13 @@ function getarraykey(s, v) {
 
 }
 
-
-
-window.onload = function() {
-
-	postPosition($id("wrapp"),"div");
-
-};
-
-
-
 var re;
 
 window.onresize = function() {
 
 	clearTimeout(re);
 
-	re = setTimeout(resize,10);				
+	re = setTimeout(resize,10);
 
 };
 
