@@ -251,9 +251,9 @@ li{
     @extend %clearboth;
     padding: 60px 0 180px 0;
 }
-.exp ul li{
-    width: 369px;
-    height: 369px;
+.exp ul li div{
+    width: 234px;
+    height: 233px;
     border-radius: 50%;
     border: 1px solid $br2;
     position: relative;
@@ -261,17 +261,12 @@ li{
     margin: 0 15px 50px 14px;
 }
 .exp ul div{
-    margin: 18px;
-    width: 333px;
-    height: 333px;
     overflow: hidden;
     border-radius: 50%;
     color: $color2;
 }
 .exp ul img{
-    width: 371px;
-    height: 248px;
-    margin-left: -18px;
+    margin-top: 10px;
 }
 .exp ul .mask{
     font-size: $fz30;
@@ -309,7 +304,7 @@ li{
     @include opacity;
 }
 .exp ul .b{
-    font-size: $fz48;
+    font-size: $fz28;
     text-shadow: 1px 1px #000;
     width: 360px;
     @extend %ab_layout;
