@@ -23,12 +23,12 @@
 <link rel="stylesheet" type="text/css" href="/dedemao/css/tel/estilos.css">
 <!--tel CSS end-->
 <!--轮播JS-->
-<script src="/dedemao/js/slide/jquery.js"></script>
-<script src="/dedemao/js/slide/jquery.themepunch.plugins.min.js"></script>
-<script src="/dedemao/js/slide/jquery.themepunch.revolution.min.js"></script>
-<script src="/dedemao/js/slide/jquery.themepunch.showbizpro.min.js"></script>
-<script src="/dedemao/js/slide/jquery.fancybox.pack.js"></script>
-<script src="/dedemao/js/slide/jquery.isotope.min.js"></script>
+<script src="/dedemao/js/slide/jquery.js"></script> 
+<script src="/dedemao/js/slide/jquery.themepunch.plugins.min.js"></script> 
+<script src="/dedemao/js/slide/jquery.themepunch.revolution.min.js"></script> 
+<script src="/dedemao/js/slide/jquery.themepunch.showbizpro.min.js"></script> 
+<script src="/dedemao/js/slide/jquery.fancybox.pack.js"></script> 
+<script src="/dedemao/js/slide/jquery.isotope.min.js"></script> 
 <script src="/dedemao/js/slide/scripts.js"></script>
 <!--轮播JS end-->
 <!--tel JS-->
@@ -45,9 +45,9 @@
 <![endif]-->
 <!--workJS-->
 <script type="text/javascript" src="/dedemao/js/work.js"></script>
-<script type="text/javascript">
+<script type="text/javascript"> 
 
-	$(function(){
+	$(function(){ 
 
 		var H=$(window).width()/2-10
 
@@ -55,15 +55,15 @@
 
 		{
 
-			$(".ss-left").css("width",H)
+			$(".ss-left").css("width",H)	
 
-			$(".ss-right").css("width",H)
+			$(".ss-right").css("width",H)	
 
-		}
+		} 
 
 	})
 
-	$(function(){
+	$(function(){ 
 
 		var T=$(window).width()
 
@@ -77,9 +77,9 @@
 
 		}
 
-	})
+	}) 
 
-</script>
+</script> 
 
 <script>
 
@@ -99,9 +99,9 @@ $(window).resize(function(){
 
 		{
 
-			$(".ss-left").css("width",H)
+			$(".ss-left").css("width",H)	
 
-			$(".ss-right").css("width",H)
+			$(".ss-right").css("width",H)	
 
 		}
 
@@ -113,9 +113,9 @@ $(window).resize(function(){
 
 			{
 
-				$(".ss-left").css("width",H)
+				$(".ss-left").css("width",H)	
 
-				$(".ss-right").css("width",H)
+				$(".ss-right").css("width",H)	
 
 			}
 
@@ -164,20 +164,20 @@ $(window).resize(function(){
 <!--导航JS-->
 
 <script>
-$(document).ready(function() {
+$(document).ready(function() {	
 	$("#menu1 a").each(function() { //For each list item...
 		var linkText = $(this).find("div").html(); //Find the text inside of the a tag
-	});
-
+	}); 
+	
 	$("#menu1 a").hover(function() {	//On hover...
-		$(this).find("p").stop().animate({
+		$(this).find("p").stop().animate({ 
 			marginTop: "-20" //Find the span tag and move it up 40 pixels
 		}, 200);
 	} , function() { //On hover out...
 		$(this).find("p").stop().animate({
 			marginTop: "0" //Move the span back to its original state (0px)
 		}, 200);
-	});
+	});	
 });
 </script>
 
@@ -185,7 +185,7 @@ $(document).ready(function() {
 
 <script>
 
-	$(window).bind("scroll", function(){
+	$(window).bind("scroll", function(){ 
 
 	//当滚动条滚动时
 
@@ -213,7 +213,7 @@ $(document).ready(function() {
 
 			$(".M-top").css("top","-165px");
 
-
+			
 
 		}
 
@@ -223,7 +223,7 @@ $(document).ready(function() {
 
 			$("#nav").hide();
 
-
+			
 
 		}
 
@@ -233,13 +233,13 @@ $(document).ready(function() {
 
 			$("#nav").show();
 
-
+			
 
 		}
 
 	});
 
-
+	
 
 	$(function(){
 
@@ -253,7 +253,7 @@ $(document).ready(function() {
 
 		})
 
-
+		
 
 	})
 
@@ -301,7 +301,7 @@ $(window).scroll(function(){
 
 	m_st = Math.max(document.body.scrollTop || document.documentElement.scrollTop);
 
-	if (m_st > m_po)
+	if (m_st > m_po) 
 
 	{
 
@@ -313,7 +313,7 @@ $(window).scroll(function(){
 
 	$(".ui").animate({top:'0px'},2500);
 
-	}
+	}	
 
 });
 
@@ -331,19 +331,19 @@ $(document).keydown(function(event){
 
 		if(t>=0 & t<=586){
 
-			if (event.keyCode == 40){
+			if (event.keyCode == 40){ 
 
 			$("html,body").animate({scrollTop:600},1000);
 
-			return false;
+			return false; 
 
 		  }
 
-		  if (event.keyCode == 38){
+		  if (event.keyCode == 38){ 
 
 			$("html,body").animate({scrollTop:0},1000);
 
-			return false;
+			return false; 
 
 		  }
 
@@ -351,19 +351,19 @@ $(document).keydown(function(event){
 
 		if(t>=600 & t<=1240){
 
-			if (event.keyCode == 40){
+			if (event.keyCode == 40){ 
 
 			$("html,body").animate({scrollTop:1250},1000);
 
-			return false;
+			return false; 
 
 		  }
 
-		  if (event.keyCode == 38){
+		  if (event.keyCode == 38){ 
 
 			$("html,body").animate({scrollTop:0},1000);
 
-			return false;
+			return false; 
 
 		  }
 
@@ -371,19 +371,19 @@ $(document).keydown(function(event){
 
 		if(t>=1240 & t<=2090){
 
-			if (event.keyCode == 40){
+			if (event.keyCode == 40){ 
 
 			$("html,body").animate({scrollTop:2100},1000);
 
-			return false;
+			return false; 
 
 		  }
 
-		  if (event.keyCode == 38){
+		  if (event.keyCode == 38){ 
 
 			$("html,body").animate({scrollTop:600},1000);
 
-			return false;
+			return false; 
 
 		  }
 
@@ -391,19 +391,19 @@ $(document).keydown(function(event){
 
 		if(t>=2100 & t<=2240){
 
-			if (event.keyCode == 40){
+			if (event.keyCode == 40){ 
 
 			$("html,body").animate({scrollTop:2840},1000);
 
-			return false;
+			return false; 
 
 		  }
 
-		  if (event.keyCode == 38){
+		  if (event.keyCode == 38){ 
 
 			$("html,body").animate({scrollTop:1250},1000);
 
-			return false;
+			return false; 
 
 		  }
 
@@ -411,11 +411,11 @@ $(document).keydown(function(event){
 
 		if(t>=2240){
 
-		  if (event.keyCode == 38){
+		  if (event.keyCode == 38){ 
 
 			$("html,body").animate({scrollTop:2102},1000);
 
-			return false;
+			return false; 
 
 		  }
 
@@ -423,11 +423,11 @@ $(document).keydown(function(event){
 
 		if($(document).scrollTop() >= $(document).height() - $(window).height()){
 
-		  if (event.keyCode == 38){
+		  if (event.keyCode == 38){ 
 
 			$("html,body").animate({scrollTop:2100},1000);
 
-			return false;
+			return false; 
 
 		  }
 
@@ -452,39 +452,46 @@ $(document).keydown(function(event){
         <div class="M-top-right fr clearfix">
           <div class="M-nav clearfix fl" id="menu1">
             <ul>
-
-              <li><a href="/" class=>
+              <li><a href="/" class=''>
                 <div style="margin-top: 0px;">
-                  <p><span>首页</span><font>首页</font></p>
+                  <p><span>首页</span>homepage</p>
                 </div>
-                </a></li>
-
+                </a>
+              </li>
+              
               <li><a href="/expertise/">
                 <div style="margin-top: 0px;">
-                  <p><span>我的服务</span>SERVICE</p>
+                  <p style="margin-top: 0px;"><span>君禾服务</span>service</p>
                 </div>
-                </a></li>
-
+                </a>
+              </li>
+		     
               <li><a href="http://shop.dream-gardens.com.cn">
                 <div style="margin-top: 0px;">
-                  <p><span>我的菜园</span>GARDEN</p>
+                  <p style="margin-top: 0px;"><span>君禾商城</span>store</p>
                 </div>
                 </a></li>
-
+		     
               <li><a href="/about/">
                 <div style="margin-top: 0px;">
-                  <p><span>农场故事</span>STORY</p>
+                  <p><span>农场介绍</span>Farm introduce</p>
                 </div>
                 </a></li>
-		<li><a href='/life/' class='cur'><div style='margin-top: 0px;'><p><span>慢生活</span>LIFE-OF-EASE</p></div></a></li>
-              <li><a href="/news/">
+		     
+              <li><a href="/activities/">
+                    <div style="margin-top: 0px;">
+                        <p><span>农场活动</span>Farm activities</p>
+                    </div>
+                </a></li>
+		     
+              <li><a href="/community/">
                 <div style="margin-top: 0px;">
-                  <p><span>君禾动态</span>NEWS</p>
+                  <p><span>君禾社区</span>Chat community</p>
                 </div>
                 </a></li>
-
-        <li><a href="/#contact"><div style="margin-top: 0px;"><p><span>联系我们</span></p><font>CONTACT</font></div></a></li>
-
+		 
+        <li><a href="/#contact"><div style="margin-top: 0px;"><p><span>联系我们</span></p><font>contact</font></div></a></li>               
+            
             </ul>
           </div>
           <ul id="iconbar" class="fl">
@@ -517,12 +524,12 @@ $(document).keydown(function(event){
     <li><a href='/life/c2/'>不时不食</a></li>
     <li><a href='/life/c3/'>玩转活动</a></li>
     <li><a href='/life/xinpinchangxian/'>新品尝鲜</a></li>
+               
 
 
+   
 
-
-
-
+               
 
                 </ul>
 
@@ -538,9 +545,9 @@ $(document).keydown(function(event){
 					.floorMain img{border:0;filter:alpha(opacity:0);opacity:0;}
 					</style>
 
+				 
 
-
-
+                         
 
 
     <li>
@@ -616,16 +623,16 @@ $(document).keydown(function(event){
                         <div class="against"><img _lazysrc="/uploads/140929/1-14092911453A36.jpg"></div>
 
                     </li>
+                                                 
 
 
 
 
+                          
 
 
 
-
-
-
+                    
                     <script language="javascript">
 					function isIE() { //ie?
 						if (window.navigator.userAgent.toLowerCase().indexOf("msie") >= 1) return true;
@@ -723,7 +730,7 @@ $(document).keydown(function(event){
     </div>
         <div class="work-foot" style="margin-top:0px;">
         <div class="foot-content2 clearfix"> <span class="fl"><font color="#90">乐享君禾，体验自然</font></span>
-          <div class="fl clearfix" style="margin-left:47px;">
+          <div class="fl clearfix" style="margin-left:47px;"> 
           <a href="javascript:void(0);" class="WX-ico"></a>
           <a target="blank" class="QQ-ico" href="/" title="上海君禾园艺有限公司"></a>
           <a href="http://weibo.com/dreamgardens" target="_blank" class="WB-ico"></a> </div>
@@ -732,15 +739,15 @@ $(document).keydown(function(event){
           <style>
 .tempWrap{ margin-top:40px;}
 </style>
-          </span>
+          </span> 
           <script type="text/javascript">
 
                         jQuery(".m_wnews").slide({ mainCell:"#miniNewsRegion", effect:"topLoop", autoPlay:true});
 
-                        </script>
+                        </script> 
         </div>
         <span class="foot-font2">上海君禾园艺有限公司版权所有   沪ICP备11031278号</span> </div>
-
+        
 
    </div>
 
@@ -774,21 +781,21 @@ $(window).load(function(){$('.page_spinner').fadeOut(1000);$('body').css({overfl
 
 	$(function(){
 
-		var browser=navigator.appName
+		var browser=navigator.appName 
 
-		var b_version=navigator.appVersion
+		var b_version=navigator.appVersion 
 
-		var version=b_version.split(";");
+		var version=b_version.split(";"); 
 
-		var trim_Version=version[1].replace(/[ ]/g,"");
+		var trim_Version=version[1].replace(/[ ]/g,""); 
 
-		if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE7.0")
+		if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE7.0") 
 
-		{
+		{ 
 
-		$("#ifrm").hide();
+		$("#ifrm").hide();	
 
-		}
+		} 
 
 	})
 
