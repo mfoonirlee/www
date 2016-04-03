@@ -42,13 +42,13 @@ $(function(){
             newActivityList = [];
         }
 
-        $('#j_hot_container').html(hotTplFun({data: newActivityList})).children().on('click', function(e){
+        /*$('#j_hot_container').html(hotTplFun({data: newActivityList})).children().on('click', function(e){
                         var $target = $(e.target || e.srcElement);
             if($target[0].tagName.toLowerCase() != 'li'){
                 $target = $target.parents('li');
             }
             onClickItem($target.data('id'));
-        });
+        });*/
 
         $('#j_act_container').html(actTplFun({data: data})).children().on('click', function(e){
             var $target = $(e.target || e.srcElement);
