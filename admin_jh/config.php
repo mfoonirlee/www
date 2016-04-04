@@ -22,6 +22,11 @@ if(file_exists(DEDEDATA.'/admin/skin.txt'))
 	$cfg_admin_skin = !in_array($skin, array(1,2,3,4))? 1 : $skin;
 }
 
+
+
+
+
+
 //获得当前脚本名称，如果你的系统被禁用了$_SERVER变量，请自行更改这个选项
 $dedeNowurl = $s_scriptName = '';
 $isUrlOpen = @ini_get('allow_url_fopen');
