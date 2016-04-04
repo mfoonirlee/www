@@ -69,3 +69,7 @@ tplcache
 /data/textdata
 
 /activities/*.html
+/news/*.html
+/community/*.html
+/lift/*.html
+/shouyefengguang/*.html
