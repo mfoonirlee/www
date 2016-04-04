@@ -17,6 +17,8 @@ var Config = {
         explist: '/plus/index.php?tid=26',
         //体验活动详情
         expdetial: '/plus/view_data.php?aid={aid}',
+        explist2: '/plus/index.php?tid=26&atype={atype}',
+        expsignup: '/plus/signup.php?aid={aid}&activedate={activedate}&number={number}&mobile={mobile}&name={name}',
         //免费分享列表
         sharelist: '/plus/index.php?tid=27',
         //免费分享详情
