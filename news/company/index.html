@@ -40,6 +40,11 @@ min-height:900px;
 <!--tel JS end-->
 <!--首页滚动JS-->
 <script type="text/javascript" src="/dedemao/js/index.js"></script>
+<link rel="stylesheet" type="text/css" href="/dedemao/css/index.css">
+<script type="text/javascript" src="/dedemao/js/underscore.js"></script>
+<script type="text/javascript" src="/dedemao/js/config.js"></script>
+<script type="text/javascript" src="/dedemao/js/util.js"></script>
+<script type="text/javascript" src="/dedemao/js/expdetail.js"></script>
 <!--首页滚动JS end-->
 <!--[if lt IE 9]>
 <link rel="stylesheet" type="text/css" href="/dedemao/css/slide/ie8.css" media="all" />
@@ -49,9 +54,9 @@ min-height:900px;
 <![endif]-->
 <!--workJS-->
 <script type="text/javascript" src="/dedemao/js/work.js"></script>
-<script type="text/javascript"> 
+<script type="text/javascript">
 
-	$(function(){ 
+	$(function(){
 
 		var H=$(window).width()/2-10
 
@@ -59,15 +64,15 @@ min-height:900px;
 
 		{
 
-			$(".ss-left").css("width",H)	
+			$(".ss-left").css("width",H)
 
-			$(".ss-right").css("width",H)	
+			$(".ss-right").css("width",H)
 
-		} 
+		}
 
 	})
 
-	$(function(){ 
+	$(function(){
 
 		var T=$(window).width()
 
@@ -81,7 +86,7 @@ min-height:900px;
 
 		}
 
-	}) 
+	})
 
 </script>
 <script>
@@ -102,9 +107,9 @@ $(window).resize(function(){
 
 		{
 
-			$(".ss-left").css("width",H)	
+			$(".ss-left").css("width",H)
 
-			$(".ss-right").css("width",H)	
+			$(".ss-right").css("width",H)
 
 		}
 
@@ -116,9 +121,9 @@ $(window).resize(function(){
 
 			{
 
-				$(".ss-left").css("width",H)	
+				$(".ss-left").css("width",H)
 
-				$(".ss-right").css("width",H)	
+				$(".ss-right").css("width",H)
 
 			}
 
@@ -165,26 +170,26 @@ $(window).resize(function(){
 <!--导航JS-->
 
 <script>
-$(document).ready(function() {	
+$(document).ready(function() {
 	$("#menu1 a").each(function() { //For each list item...
 		var linkText = $(this).find("div").html(); //Find the text inside of the a tag
-	}); 
-	
+	});
+
 	$("#menu1 a").hover(function() {	//On hover...
-		$(this).find("p").stop().animate({ 
+		$(this).find("p").stop().animate({
 			marginTop: "-20" //Find the span tag and move it up 40 pixels
 		}, 200);
 	} , function() { //On hover out...
 		$(this).find("p").stop().animate({
 			marginTop: "0" //Move the span back to its original state (0px)
 		}, 200);
-	});	
+	});
 });
 </script>
 <script type="text/javascript" src="/dedemao/js/right-nav.js"></script>
 <script>
 
-	$(window).bind("scroll", function(){ 
+	$(window).bind("scroll", function(){
 
 	//当滚动条滚动时
 
@@ -212,7 +217,7 @@ $(document).ready(function() {
 
 			$(".M-top").css("top","-165px");
 
-			
+
 
 		}
 
@@ -222,7 +227,7 @@ $(document).ready(function() {
 
 			$("#nav").hide();
 
-			
+
 
 		}
 
@@ -232,13 +237,13 @@ $(document).ready(function() {
 
 			$("#nav").show();
 
-			
+
 
 		}
 
 	});
 
-	
+
 
 	$(function(){
 
@@ -252,7 +257,7 @@ $(document).ready(function() {
 
 		})
 
-		
+
 
 	})
 
@@ -289,7 +294,7 @@ $(window).scroll(function(){
 
 	m_st = Math.max(document.body.scrollTop || document.documentElement.scrollTop);
 
-	if (m_st > m_po) 
+	if (m_st > m_po)
 
 	{
 
@@ -301,7 +306,7 @@ $(window).scroll(function(){
 
 	$(".ui").animate({top:'0px'},2500);
 
-	}	
+	}
 
 });
 
@@ -318,19 +323,19 @@ $(document).keydown(function(event){
 
 		if(t>=0 & t<=586){
 
-			if (event.keyCode == 40){ 
+			if (event.keyCode == 40){
 
 			$("html,body").animate({scrollTop:600},1000);
 
-			return false; 
+			return false;
 
 		  }
 
-		  if (event.keyCode == 38){ 
+		  if (event.keyCode == 38){
 
 			$("html,body").animate({scrollTop:0},1000);
 
-			return false; 
+			return false;
 
 		  }
 
@@ -338,19 +343,19 @@ $(document).keydown(function(event){
 
 		if(t>=600 & t<=1240){
 
-			if (event.keyCode == 40){ 
+			if (event.keyCode == 40){
 
 			$("html,body").animate({scrollTop:1250},1000);
 
-			return false; 
+			return false;
 
 		  }
 
-		  if (event.keyCode == 38){ 
+		  if (event.keyCode == 38){
 
 			$("html,body").animate({scrollTop:0},1000);
 
-			return false; 
+			return false;
 
 		  }
 
@@ -358,19 +363,19 @@ $(document).keydown(function(event){
 
 		if(t>=1240 & t<=2090){
 
-			if (event.keyCode == 40){ 
+			if (event.keyCode == 40){
 
 			$("html,body").animate({scrollTop:2100},1000);
 
-			return false; 
+			return false;
 
 		  }
 
-		  if (event.keyCode == 38){ 
+		  if (event.keyCode == 38){
 
 			$("html,body").animate({scrollTop:600},1000);
 
-			return false; 
+			return false;
 
 		  }
 
@@ -378,19 +383,19 @@ $(document).keydown(function(event){
 
 		if(t>=2100 & t<=2240){
 
-			if (event.keyCode == 40){ 
+			if (event.keyCode == 40){
 
 			$("html,body").animate({scrollTop:2840},1000);
 
-			return false; 
+			return false;
 
 		  }
 
-		  if (event.keyCode == 38){ 
+		  if (event.keyCode == 38){
 
 			$("html,body").animate({scrollTop:1250},1000);
 
-			return false; 
+			return false;
 
 		  }
 
@@ -398,11 +403,11 @@ $(document).keydown(function(event){
 
 		if(t>=2240){
 
-		  if (event.keyCode == 38){ 
+		  if (event.keyCode == 38){
 
 			$("html,body").animate({scrollTop:2102},1000);
 
-			return false; 
+			return false;
 
 		  }
 
@@ -410,11 +415,11 @@ $(document).keydown(function(event){
 
 		if($(document).scrollTop() >= $(document).height() - $(window).height()){
 
-		  if (event.keyCode == 38){ 
+		  if (event.keyCode == 38){
 
 			$("html,body").animate({scrollTop:2100},1000);
 
-			return false; 
+			return false;
 
 		  }
 
@@ -432,38 +437,45 @@ $(document).keydown(function(event){
         <div class="M-top-right fr clearfix">
           <div class="M-nav clearfix fl" id="menu1">
             <ul>
-
-              <li><a href="/" class=>
+              <li><a href="/" class=''>
                 <div style="margin-top: 0px;">
-                  <p><span>首页</span><font>首页</font></p>
+                  <p><span>首页</span>homepage</p>
                 </div>
-                </a></li>
-      	     
+                </a>
+              </li>
+              
               <li><a href="/expertise/">
                 <div style="margin-top: 0px;">
-                  <p><span>我的服务</span>SERVICE</p>
+                  <p style="margin-top: 0px;"><span>君禾服务</span>service</p>
                 </div>
-                </a></li>
+                </a>
+              </li>
 		     
               <li><a href="http://shop.dream-gardens.com.cn">
                 <div style="margin-top: 0px;">
-                  <p><span>我的菜园</span>GARDEN</p>
+                  <p style="margin-top: 0px;"><span>君禾商城</span>store</p>
                 </div>
                 </a></li>
 		     
               <li><a href="/about/">
                 <div style="margin-top: 0px;">
-                  <p><span>农场故事</span>STORY</p>
+                  <p><span>农场介绍</span>Farm introduce</p>
                 </div>
                 </a></li>
 		     
-              <li><a href="/life/">
+              <li><a href="/activities/">
+                    <div style="margin-top: 0px;">
+                        <p><span>农场活动</span>Farm activities</p>
+                    </div>
+                </a></li>
+		     
+              <li><a href="/community/">
                 <div style="margin-top: 0px;">
-                  <p><span>慢生活</span>LIFE-OF-EASE</p>
+                  <p><span>君禾社区</span>Chat community</p>
                 </div>
                 </a></li>
-		<li><a href='/news/' class='cur'><div style='margin-top: 0px;'><p><span>君禾动态</span>NEWS</p></div></a></li> 
-        <li><a href="/#contact"><div style="margin-top: 0px;"><p><span>联系我们</span></p><font>CONTACT</font></div></a></li>               
+		 
+        <li><a href="/#contact"><div style="margin-top: 0px;"><p><span>联系我们</span></p><font>contact</font></div></a></li>               
             
             </ul>
           </div>
@@ -473,87 +485,66 @@ $(document).keydown(function(event){
           </ul>
         </div>
       </div>
-<div class="news">
-  <div class="news-nav"> <a href="/news/" class=>全部</a> <a href='/news/company/' class='on'>行业</a> <a href='/news/com/'>公司</a>
+<script type="text/template" id="j_tpl">
+    <p class='top'>
+        <span><%=data.timestr%></span>
+    </p>
+    <ul class='cont'>
+        <li class='e1'>
+            <h3>活动内容</h3>
+            <div>
+                <p><span>活动时间:&nbsp;&nbsp;</span><%=data.timestr%></p>
+                <%=data.desc%>
+            </div>
+        </li>
+        <li class='e2'>
+            <%if(data.cdesc){%>
+                <h3>优惠与赠礼</h3>
+                <dl>
+                    <%for(var i = 0; i < data.clist && data.clist.length; i++){%>
+                        <dd><a target="_blank" href="<%=data.link%>"><img src="<%=data.imgurl%>" alt=""></a></dd>
+                    <%}%>
+                </dl>
+                <p class="p p2">优惠好礼</p>
+                <p class='p'><%=data.cdesc%></p>
+            <%}else{%>
+                <img class='ad' src="<%=data.cimg%>" alt="">
+            <%}%>
+        </li>
+        <%if(data.cdesc){%>
+            <li class='e3'>
+                <img class='ad' src="<%=data.cimg%>" alt="">
+            </li>
+            <%if( data.qalist && data.qalist.length > 0){%>
+                <li class='e4'>
+                    <div class="scr">
+                        <%for(var i = 0, len = data.qalist && data.qalist.length; i < len; i++){%>
+                        <p class='qa'>
+                            <span><%=data.qalist[i].qdesc%></span><%=data.qalist[i].adesc%>
+                        </p>
+                        <%}%>
+                    </div>
+                </li>
+            <%}%>
+        <%}else{%>
+            <%if( data.qalist && data.qalist.length > 0){%>
+                <li class='e3'>
+                    <div class="scr">
+                        <%for(var i = 0, len = data.qalist && data.qalist.length; i < len; i++){%>
+                        <p class='qa'>
+                            <span><%=data.qalist[i].qdesc%></span><%=data.qalist[i].adesc%>
+                        </p>
+                        <%}%>
+                    </div>
+                </li>
+            <%}%>
+        <%}%>
+    </ul>
+</script>
+<div class="expd" id="j_container">
     
-     </div>
-  <div id="wrapp" class="wrap active"> 
-    <script language="javascript">
-
-            var $id = function(o){ return document.getElementById(o) || o};
-
-       
-
-                         				
-var div = document.createElement("div");
-
-                div.className = "mode popup_in";
-
-                div.innerHTML =  "<p class='pic'><a href='/news/company/88.html'><img src=/uploads/140819/1-140Q916212HN.jpg style='height:"+"auto"+";'/></a></p><font><span class='clearfix news-title'><a href='/news/company/88.html'>我国有机农业有10倍发展空间</a><font class='fr'>2014-08-19</font></span></font><font><a href='/news/company/88.html' class='news-content'>农业部统计显示：截至2012年6月底，有机食品认证企业总数798家，产品总数达到4360个。累计公示地理标志农产品1044个。目前，三品一标产品覆盖农产品及加工食品的1000多个品种。尤其是上海、山西、河南等地近年来农业</a></font>";
-
-                div.style.top = 0;
-
-                div.style.left = 0;
-
-                document.getElementById("wrapp").appendChild(div);var div = document.createElement("div");
-
-                div.className = "mode popup_in";
-
-                div.innerHTML =  "<p class='pic'><a href='/news/company/89.html'><img src=/uploads/140819/1-140Q9162304K1.jpg style='height:"+"auto"+";'/></a></p><font><span class='clearfix news-title'><a href='/news/company/89.html'> 14种常见果蔬的农药含量</a><font class='fr'>2014-08-19</font></span></font><font><a href='/news/company/89.html' class='news-content'>很多人愿意买有机食品，因为他们认为有机食品比普通的水果蔬菜更有营养，也更安全，普通的水果蔬菜在生长过程中使用了合成化肥或喷洒过农药。然而有机食品种植的成本代价比普通水果蔬菜增加50%很多人还是消费不起的</a></font>";
-
-                div.style.top = 0;
-
-                div.style.left = 0;
-
-                document.getElementById("wrapp").appendChild(div);var div = document.createElement("div");
-
-                div.className = "mode popup_in";
-
-                div.innerHTML =  "<p class='pic'><a href='/news/company/86.html'><img src=/uploads/140819/1-140Q9161554561.jpg style='height:"+"auto"+";'/></a></p><font><span class='clearfix news-title'><a href='/news/company/86.html'>崇明生态岛-好空气能当“饭”吃</a><font class='fr'>2014-08-19</font></span></font><font><a href='/news/company/86.html' class='news-content'>近日，联合国环境规划署在沪发布报告作出高度评价，认为崇明生态岛是上海大都市圈内的生态示范区。而采访中，崇明的主政者们却坦言，他们更看重的恰恰是百姓的感受度，因为生态要让百姓实实在在得益。 制度设计释放</a></font>";
-
-                div.style.top = 0;
-
-                div.style.left = 0;
-
-                document.getElementById("wrapp").appendChild(div);var div = document.createElement("div");
-
-                div.className = "mode popup_in";
-
-                div.innerHTML =  "<p class='pic'><a href='/news/company/84.html'><img src=/uploads/140819/1-140Q9154201362.jpg style='height:"+"auto"+";'/></a></p><font><span class='clearfix news-title'><a href='/news/company/84.html'>圣女果小黄瓜不是转基因食品</a><font class='fr'>2014-08-19</font></span></font><font><a href='/news/company/84.html' class='news-content'>转基因食品一直备受关注，网上流传的转基因食品名单靠不靠谱？一些所谓鉴别转基因作物方法正确吗？国家正式批准生产或进口的转基因作物有哪些？就这些问题，人民日报记者近日采访了农业部及专家学者。 截至目前，我</a></font>";
-
-                div.style.top = 0;
-
-                div.style.left = 0;
-
-                document.getElementById("wrapp").appendChild(div);var div = document.createElement("div");
-
-                div.className = "mode popup_in";
-
-                div.innerHTML =  "<p class='pic'><a href='/news/company/85.html'><img src=/uploads/140819/1-140Q915560V01.jpg style='height:"+"auto"+";'/></a></p><font><span class='clearfix news-title'><a href='/news/company/85.html'>有机农业快速发展需生产者与消费者的共同努力</a><font class='fr'>2014-08-19</font></span></font><font><a href='/news/company/85.html' class='news-content'>不使用化学农药和化肥，不使用转基因种子，以生态种养为宗旨的有机农业在食品安全上显然比常规农业有诸多优势，在口感和风味上，也能让人吃出小时候的味道。 但在我国有机农业的发展受到诸多因素限制，还需要生产者</a></font>";
-
-                div.style.top = 0;
-
-                div.style.left = 0;
-
-                document.getElementById("wrapp").appendChild(div);var div = document.createElement("div");
-
-                div.className = "mode popup_in";
-
-                div.innerHTML =  "<p class='pic'><a href='/news/company/87.html'><img src=/uploads/140819/1-140Q916192I24.jpg style='height:"+"auto"+";'/></a></p><font><span class='clearfix news-title'><a href='/news/company/87.html'>世界有机农业知多少？</a><font class='fr'>2014-08-19</font></span></font><font><a href='/news/company/87.html' class='news-content'>据统计，每4个美国人当中，就有1个人会购买有机产品，即使有机食品比普通食品要贵得多。为了研究出新的、科学的有机种养方法．有机农场主们投入了大量的金钱、资源和时间，美国大部分的有机农场都投入了很高的科技研</a></font>";
-
-                div.style.top = 0;
-
-                div.style.left = 0;
-
-                document.getElementById("wrapp").appendChild(div);
-
-                         
-
-            </script>
-    <div id="aaa1" style="display:none;position: fixed;width:400px;height:200px;background:#000;color:#fff;top:30%;left:50%"></div>
-    <div id="ArtPLink" class="page-Article-QQ" bosszone="artPage">  </div>
-  </div>
-  <div class="work-foot" style="margin-top:0px;">
+</div>
+<div class="work-foot" style="margin-top:0px;">
         <div class="foot-content2 clearfix"> <span class="fl"><font color="#90">乐享君禾，体验自然</font></span>
           <div class="fl clearfix" style="margin-left:47px;"> 
           <a href="javascript:void(0);" class="WX-ico"></a>
@@ -574,7 +565,7 @@ var div = document.createElement("div");
         <span class="foot-font2">上海君禾园艺有限公司版权所有   沪ICP备11031278号</span> </div>
         
 </div>
-<div style="display:none"> 
+<div style="display:none">
 
 </div>
 </body>
@@ -584,31 +575,6 @@ var div = document.createElement("div");
 
 <script type="text/javascript" href="/dedemao/js/left-nav/jquery.nav.js"></script>
 <script type="text/javascript" href="/dedemao/js/left-nav/jquery.scrollTo.js"></script>
-<script>
-
-$(document).ready(function() {
-
-  $('#nav').onePageNav({
-
-    begin: function() {
-
-	  console.log('start');
-
-    },
-
-    end: function() {
-
-	  console.log('stop');
-
-    },
-
-	scrollOffset: 30
-
-  });
-
-});
-
-</script>
 
 <!--左侧导航JS-->
 
@@ -634,13 +600,13 @@ function postPosition(el,childTagName){
 
 	var h = []; //记录每列的高度
 
-	var box = el.getElementsByTagName(childTagName);	
+	var box = el.getElementsByTagName(childTagName);
 
 	var minH = box[0].offsetHeight,
 
 	boxW = box[0].offsetWidth+margin;
 
-	n = document.documentElement.offsetWidth / boxW | 0;  
+	n = document.documentElement.offsetWidth / boxW | 0;
 
 	//计算页面能排下多少Pin
 
@@ -660,7 +626,7 @@ function postPosition(el,childTagName){
 
 				box[i].style.left = (i * boxW) + 'px';
 
-		} 
+		}
 
 		else {
 
@@ -712,23 +678,13 @@ function getarraykey(s, v) {
 
 }
 
-
-
-window.onload = function() {
-
-	postPosition($id("wrapp"),"div");
-
-};
-
-
-
 var re;
 
 window.onresize = function() {
 
 	clearTimeout(re);
 
-	re = setTimeout(resize,10);				
+	re = setTimeout(resize,10);
 
 };
 
