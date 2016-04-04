@@ -58,7 +58,7 @@ $(function(){
             var img = $target.data('img');
             var title = encodeURIComponent( $target.data('title') );
             
-            location.href = "/plus/list.php?tid=32&aid="+aid+"&img="+img+"&title="+title;
+            location.href = "signup.html?tid=32&aid="+aid+"&img="+img+"&title="+title;
         });
 
         /*$('#j_act_container').html(actTplFun({data: data})).children().on('click', function(e){
