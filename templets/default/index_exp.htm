@@ -433,7 +433,7 @@ $(document).keydown(function(event){
 
 <script type="text/template" id='j_act_tpl'>
     <%for(var i = 0, len = data.length; i < len; i++){%>
-    <li data-id='<%=data[i].id%>' style="height: 230px;border-bottom-width: 1px; border-bottom-color: black; border-bottom-style: dashed; padding: 60px;">
+    <li data-id='<%=data[i].id%>' data-img='<%=data[i].img%>' data-title='<%=data[i].title%>' style="height: 230px;border-bottom-width: 1px; border-bottom-color: black; border-bottom-style: dashed; padding: 60px;">
         <img src="<%=data[i].img%>" alt="" style="width: 337px; height: 225px; float: left;" />
         <div style="padding-left: 350px;">
             <span style="font-size: 32px; line-height: 55px;"><%=data[i].title%></span>
