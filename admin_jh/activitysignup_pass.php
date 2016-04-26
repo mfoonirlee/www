@@ -11,25 +11,46 @@
 require_once(dirname(__FILE__)."/config.php");
 require_once(DEDEINC.'/typelink.class.php');
 
-$sql="SELECT COUNT(1) AS num FROM dede_addonshare WHERE aid= ".$_GET['aid'];
+/*echo $cfg_smtp_server;
+echo $cfg_smtp_port;
+echo $cfg_smtp_usermail;
+echo $cfg_smtp_password;
+echo $cfg_sendmail_bysmtp;
+*/
+
+//die;
+//if($cfg_sendmail_bysmtp == 'Y' && !empty($cfg_smtp_server))
+//{ 
+//    $mailtype = 'TXT';
+//    require_once(DEDEINC.'/mail.class.php');
+//    $smtp = new smtp($cfg_smtp_server,$cfg_smtp_port,true,$cfg_smtp_usermail,$cfg_smtp_password);
+//    //$smtp->debug = false;
+//    $smtp->sendmail("237375784@qq.com",$cfg_webname,$cfg_smtp_usermail, "title","mail body", $mailtype);
+//}
+
+$sql="SELECT COUNT(1) AS num FROM `#@__addonshare` WHERE aid= ".$_GET['aid'];
 $row = $dsql->GetOne($sql);
-$sql1="SELECT SUM(number) AS signupnum FROM dede_activitysignup WHERE Success=1 AND activityid=".$_GET['aid']." GROUP BY activityid";
-$row1=$dsql->GetOne($sql1);
-$sql2="SELECT activitynum FROM dede_addonshare WHERE aid= ".$_GET['aid'];
-$row2=$dsql->GetOne($sql2);
-echo '{ "msg": $_GET['num'] }';
-echo $row2['activitynum'];
-die;
-if($row['num']>=1 && $row1['signupnum']+$_GET['num']>$row2['activitynum'])
-{
-echo '{ "msg": "失败,已超出分享活动的最大人数限制" }';
+if ( 0 < $row['num'] ) {
+    $sql1="SELECT SUM(number) AS signupnum FROM `#@__activitysignup` WHERE Success=1 AND activityid=".$_GET['aid']." GROUP BY activityid";
+    $row1=$dsql->GetOne($sql1);
+    $sql2="SELECT activitynum FROM `#@__addonshare` WHERE aid= ".$_GET['aid'];
+    $row2=$dsql->GetOne($sql2);
+    
+    //echo $row['num'];
+    //echo $row1['signupnum']+$_GET['num'];
+    //echo $row2['activitynum'];
+    //die;
+    
+    if($row['num']>=1 && $row1['signupnum']+$_GET['num']>$row2['activitynum'])
+    {
+        echo '{ "msg": "失败,已超出分享活动的最大人数限制" }';
+        die;
+    }
 }
-else
-{
+
 $query = "UPDATE `#@__activitysignup` SET `success` = 1 WHERE `id` = ".$_GET['id'];
 //echo $query;
 $dsql->ExecuteNoneQuery($query);
 
 echo '{ "msg": "成功" }';
-}
 

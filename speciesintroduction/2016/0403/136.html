@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>樱花树_君禾园</title>
+<meta name="keywords" content="" />
+<meta name="description" content=" " />
+<link href="/templets/default/style/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+<script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
+<script language="javascript" type="text/javascript">
+<!--
+function CheckLogin()
+{
+	  var taget_obj = document.getElementById('_ajax_feedback');
+	  myajax = new DedeAjax(taget_obj,false,false,'','','');
+	  myajax.SendGet2("/member/ajax_feedback.php");
+	  DedeXHTTP = null;
+}
+
+function postBadGood(ftype,fid)
+{
+	var taget_obj = document.getElementById(ftype+fid);
+	var saveid = GetCookie('badgoodid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==fid && hasid) continue;
+			else {
+				if(saveids[i]==fid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==10 && hasid) break;
+				if(j==9 && !hasid) break;
+			}
+		}
+		if(hasid) { alert('您刚才已表决过了喔！'); return false;}
+		else saveid += ','+fid;
+		SetCookie('badgoodid',saveid,1);
+	}
+	else
+	{
+		SetCookie('badgoodid',fid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+	DedeXHTTP = null;
+}
+function postDigg(ftype,aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	var saveid = GetCookie('diggid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==aid && hasid) continue;
+			else {
+				if(saveids[i]==aid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==20 && hasid) break;
+				if(j==19 && !hasid) break;
+			}
+		}
+		if(hasid) { alert("您已经顶过该帖，请不要重复顶帖 ！"); return; }
+		else saveid += ','+aid;
+		SetCookie('diggid',saveid,1);
+	}
+	else
+	{
+		SetCookie('diggid',aid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	var url = "/plus/digg_ajax.php?action="+ftype+"&id="+aid;
+	myajax.SendGet2(url);
+	DedeXHTTP = null;
+}
+function getDigg(aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/plus/digg_ajax.php?id="+aid);
+	DedeXHTTP = null;
+}
+-->
+</script>
+</head>
+<body class="articleview">
+无法在这个位置找到： head.htm2
+<!-- /header -->
+
+<div class="channel-nav w960 center clear">
+	<div class='sonnav'>
+	
+	</div>
+</div><!-- /channel-nav -->
+
+<div class="w960 center clear mt1">
+	<div class="pleft">
+		<div class="place">
+			<strong>当前位置:</strong> <a href='http://www.dream-gardens.com.cn//'>主页</a> > <a href='/speciesintroduction/'>物种介绍</a> > 
+		</div><!-- /place -->
+		<div class="viewbox">
+			<div class="title">
+				<h2>樱花树</h2>
+			</div><!-- /title -->
+			<div class="info">
+				<small>时间:</small>2016-04-03 13:55<small>来源:</small>未知 <small>作者:</small>admin <small>点击:</small><script src="/plus/count.php?view=yes&aid=136&mid=1" type='text/javascript' language="javascript"></script>次
+			</div><!-- /info -->
+
+			<div class="content">
+			　<font color='red'> 你会看到这个提示，那是因为你的系统无法识别某栏目的模型信息，或者你新建模型后，没为这个模型设计单独的模板。不同模型的文档浏览页的模板为：article_模型名字标识.htm
+如“article_article.htm”，更多的信息你可以在频道模型管理的地方查看。 </font>
+
+			</div><!-- /content -->
+			<div class="dede_pages">
+				<ul class="pagelist">
+                    
+				</ul>
+			</div><!-- /pages -->
+			<div class="newdigg" id="newdigg">
+				<div class="diggbox digg_good" onmousemove="this.style.backgroundPosition='left bottom';" onmouseout="this.style.backgroundPosition='left top';" onclick="javascript:postDigg('good',136)">
+					<div class="digg_act">顶一下</div>
+					<div class="digg_num">(0)</div>
+					<div class="digg_percent">
+						<div class="digg_percent_bar"><span style="width:0%"></span></div>
+						<div class="digg_percent_num">0%</div>
+					</div>
+				</div>
+				<div class="diggbox digg_bad" onmousemove="this.style.backgroundPosition='right bottom';" onmouseout="this.style.backgroundPosition='right top';" onclick="javascript:postDigg('bad',136)">
+					<div class="digg_act">踩一下</div>
+					<div class="digg_num">(0)</div>
+					<div class="digg_percent">
+						<div class="digg_percent_bar"><span style="width:0%"></span></div>
+						<div class="digg_percent_num">0%</div>
+					</div>
+				</div>
+			</div>
+			 <script language="javascript" type="text/javascript">getDigg(136);</script>
+			<div class="boxoff">
+				<strong>------分隔线----------------------------</strong>
+			</div>
+			<div class="handle">
+				<div id='diggCt' class='digg'>
+					<div class="digg_num" title="积分：0 好评：0 差评：0">0</div>
+					<div class="digg_act">
+						<a href="javascript:postDigg('good',136)">顶</a>
+						<a href="javascript:postDigg('bad',136)">踩</a>
+					</div>
+				</div><!-- /digg -->
+				<div class="context">
+					<ul>
+						<li></li>
+						<li></li>
+					</ul>
+				</div><!-- /context -->
+				<div class="actbox">
+					<ul>
+						<li id="act-fav"><a href="/plus/stow.php?aid=136" target="_blank">收藏</a></li>
+						<li id="act-err"><a href="/plus/erraddsave.php?aid=136&title=樱花树" target="_blank">挑错</a></li>
+						<li id="act-pus"><a href="/plus/recommend.php?aid=136" target="_blank">推荐</a></li>
+						<li id="act-pnt"><a href="#" onClick="window.print();">打印</a></li>
+					</ul>
+				</div><!-- /actbox -->
+			</div><!-- /handle -->
+		</div><!-- /viewbox -->
+
+<!-- //AJAX评论区 -->
+<div class='_DEDECY' style=''>
+
+		
+	</div><!-- /pleft -->
+
+	<div class="pright">
+        	<div class="infos_userinfo">
+ 			
+   	 	</div>
+
+		<div class="commend mt1">
+			<dl class="tbox">
+				<dt><strong>推荐内容</strong></dt>
+				<dd>
+					<ul class="d4">
+           
+					</ul>
+				</dd>
+			</dl>
+		</div><!-- /commend -->
+        <div id="contentRtPicAD" style="margin:10px auto"><script type="text/javascript" src="http://ad.dedecms.com/adsview/?action=single&key=contentrtpicad&charset=gbk"></script></div>
+		<div class="hot mt1">
+			<dl class="tbox">
+				<dt><strong>热点内容</strong></dt>
+				<dd>
+					<ul class="c1 ico2">
+                    <li><a href="/speciesintroduction/2016/0403/136.html">樱花树</a></li>
+
+					</ul>
+				</dd>
+			</dl>
+		</div>
+		<div id="contentRtPicAD2" style="margin:10px auto"><script type="text/javascript" src="http://ad.dedecms.com/adsview/?action=single&key=contentrtpicad2&charset=gbk"></script></div>
+	</div><!-- /pright -->
+	
+</div>
+<div id="innerfooterAD2" style="margin:10px auto; width:726px"><script type="text/javascript" src="http://ad.dedecms.com/adsview/?action=single&key=innerfooterad2&charset=gbk"></script></div>
+<div class="foot">
+        <div class="foot-content clearfix"> <span class="fl"><font color="#90">乐享君禾，体验自然</font></span>
+          <div class="fl clearfix" style="margin-left:47px;"> 
+          <a href="javascript:void(0);" class="WX-ico"></a>
+          <a target="blank" class="QQ-ico" href="/" title="上海君禾园艺有限公司"></a>
+          <a href="http://weibo.com/dreamgardens" target="_blank" class="WB-ico"></a> </div>
+          <span class="fr m_wnews clearfix"> <span class="fl"><font color="#90">欢迎拨打: <font color="#aed208">400 821 3860</font></font></span> <span id="miniNewsRegion" class="fl" style="line-height:20px; margin-top:40px;">
+          </span>
+          <style>
+.tempWrap{ margin-top:40px;}
+</style>
+          </span> 
+          <script type="text/javascript">
+
+                    jQuery(".m_wnews").slide({ mainCell:"#miniNewsRegion", effect:"topLoop", autoPlay:true});
+
+                    </script> 
+        </div>
+        <span class="foot-font2">上海君禾园艺有限公司版权所有   沪ICP备11031278号</span> </div>
+<!-- /footer -->
+
+</body>
+</html>

@@ -45,10 +45,54 @@ function Pass( id,aid,num)
     window.location.reload();
     });
 }
+
+function SendMessageToPassed()
+{
+    var aid= document.getElementById('activeId').value;    
+    if(aid != "")
+    {
+    //console.log(aid);
+    jQuery.getJSON("SendMessageToPassed.php?aid="+aid,function(data){
+    //console.log(data);
+    alert(data.msg);
+    //window.location.reload();
+    });
+    //alert("123");
+    }
+    else
+    {
+    alert("请输入活动Id");
+    }
+}
+
+function SendMessageToUnPassed()
+{
+    var aid= document.getElementById('activeId').value;    
+    if(aid != "")
+    {
+    //console.log(aid);
+    jQuery.getJSON("SendMessageToUnPassed.php?aid="+aid,function(data){
+    //console.log(data);
+    alert(data.msg);
+    //window.location.reload();
+    });
+    //alert("123");
+    }
+    else
+    {
+    alert("请输入活动Id");
+    }
+}
 </script>
 </head>
 <body onLoad="ContextMenu.intializeContextMenu()">
     <div id="main-content">
+    <form id="form1" runat ="server">
+        <label>活动Id:</label>
+        <input type="text" id="activeId" width="10px">
+        <input type="button" name="btnPass" value="审核通过发送邮件短信" onClick="SendMessageToPassed(event, this)">
+        <input type="button" name="btnUnPass" value="未审核通过发送邮件短信" onClick="SendMessageToUnPassed(event, this)">
+    </form> 
         <table width="98%" border="0" cellpadding="2" cellspacing="1" align="center" style="margin-top:8px">
             <tr>
                 <td height="28" colspan="10" style="padding-left:10px;">
