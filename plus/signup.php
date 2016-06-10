@@ -111,7 +111,7 @@ if( $fileType != 'UTF-8')
   $data = mb_convert_encoding($data ,'utf-8' , $fileType);
 }
 $result["msg"]=$data;
-$result["url"]="http://112.124.110.58:8081/user.php";
+$result["url"]="http://shop.dream-gardens.com.cn/user.php";
 }
 echo json_encode($result);
 ?>
