@@ -103,6 +103,7 @@ function SendMessageToUnPassed()
                 <td width="5%">用户名</td>
                 <td width="10%">用户等级</td>
                 <td width="25%">活动</td>
+                <td width="25%">手机号码</td>
                 <td width="10%">报名人数</td>
                 <td width="10%">审核状态</td>
                 <td width="10%">操作</td>
@@ -117,7 +118,10 @@ function SendMessageToUnPassed()
                     {dede:field.user_rank_name/}
                 </td>
                 <td>
-                    <a href="http://112.124.110.58:8080/plus/view.php?aid={dede:field.activityid/}" target="_blank">{dede:field.title/}</a>
+                    <a href="/plus/view.php?aid={dede:field.activityid/}" target="_blank">{dede:field.title/}</a>
+                </td>
+                <td>
+                    {dede:field.mobile/}
                 </td>
                 <td>
                     {dede:field.number/}
