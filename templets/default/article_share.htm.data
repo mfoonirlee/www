@@ -36,7 +36,7 @@ $result["slist"] =array();
 while($rowsignup=mysql_fetch_array($querysignup))
 {
 	$item = array();
-	$item['img'] ="http://112.124.110.58:8081/"."".iconv("gb2312","utf-8//IGNORE", $rowsignup['avatar']);
+	$item['img'] ="http://shop.dream-gardens.com.cn/"."".iconv("gb2312","utf-8//IGNORE", $rowsignup['avatar']);
 	if($rowsignup['alias'])
 	{
 		$item['name'] = iconv("gb2312","utf-8//IGNORE", $rowsignup['alias']);
@@ -59,7 +59,7 @@ $uid = 0;
 //die;
 
 $sqlcomment = "SELECT avatar,alias,username,msg,dtime,userlevel FROM dede_feedback 
-WHERE `ischeck` = 0 AND aid=".$_GET["aid"].";";
+WHERE `ischeck` = 1 AND aid=".$_GET["aid"].";";
 
 //echo $sqlcomment;
 //die;
@@ -71,7 +71,7 @@ $result["clist"] =array();
 while($rowcomment=mysql_fetch_array($querycomment))
 {
 	$item=array();
-	$item['img']="http://112.124.110.58:8081/"."".iconv("gb2312","utf-8//IGNORE", $rowcomment['avatar']);
+	$item['img']="http://shop.dream-gardens.com.cn/"."".iconv("gb2312","utf-8//IGNORE", $rowcomment['avatar']);
 	if($rowcomment['alias'])
 	{
 		$item['name']=iconv("gb2312","utf-8//IGNORE", $rowcomment['alias']);
