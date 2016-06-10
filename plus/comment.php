@@ -25,8 +25,13 @@ $time=strtotime(date('y-m-d h:i:s',time()));
 
 if (isset($uid))
 {
-$query = "INSERT INTO `dede_feedback`(`aid`,`mid`,`username`,`alias`,`avatar`,`dtime`,`msg`,`userlevel`,`ischeck`) VALUES (".$aid.", ".$uid.", 
-	'".$uname."', '".$ualias."', '".$uavatar."',".$time.",'".$info."',".$lve.",0); ";
+$sql = "SELECT `title` FROM `dede_archives` WHERE 1 = 1 AND `id` = ".$aid." LIMIT 1;";
+$row = $dsql->GetOne($sql);
+$title=$row['title'];
+
+$ip = GetIP();
+$query = "INSERT INTO `dede_feedback`(`aid`,`mid`,`username`,`arctitle`,`alias`,`avatar`,`dtime`,`msg`,`userlevel`,`ip`,`ischeck`) VALUES (".$aid.", ".$uid.", 
+	'".$uname."','".$title."','".$ualias."', '".$uavatar."',".$time.",'".$info."',".$lve.",'$ip',1); ";
  $num= $dsql->ExecuteNoneQuery($query);
 $result = array();
 if($num)
@@ -62,7 +67,7 @@ if( $fileType != 'UTF-8')
   $data = mb_convert_encoding($data ,'utf-8' , $fileType);
 }
 $result["msg"]=$data;
-$result["url"]="http://112.124.110.58:8081/user.php";
+$result["url"]="http://shop.dream-gardens.com.cn/user.php";
 }
 
 echo json_encode($result);

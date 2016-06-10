@@ -9,7 +9,7 @@ $resultlist["list"]= array();
 //$resultlist["url"]="http://112.124.110.58:8081/mobile/";
 //if($tid==1)
 //{
-	$sql = "SELECT `id`, `title`, `description`, `litpic`, `isnew`,`datestart`, `dateend`, `activitytype` ,`isactive` FROM `dede_archives` INNER JOIN `dede_addonactivity` ON `dede_archives`.`id` = `dede_addonactivity`.`aid` WHERE 1 = 1 AND `dede_archives`.`typeid` = 26 ORDER BY datestart DESC LIMIT 0,9;";
+	$sql = "SELECT `id`, `title`, `description`, `litpic`, `isnew`,`datestart`, `dateend`, `activitytype` ,`isactive` FROM `dede_archives` INNER JOIN `dede_addonactivity` ON `dede_archives`.`id` = `dede_addonactivity`.`aid` WHERE 1 = 1 AND `dede_archives`.`typeid` = 26 ORDER BY datestart desc LIMIT 0,9;";
 
     $dsql->SetQuery($sql);//将SQL查询语句格式化
 

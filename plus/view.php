@@ -33,6 +33,9 @@ if($arc->IsError) ParamError();
 $needMoney = $arc->Fields['money'];
 $needRank = $arc->Fields['arcrank'];
 
+$mid = $arc->Fields['mid'];  if(($cfg_ml->M_Rank < 1 || $mid <> $cfg_ml->M_ID) && $needRank == -1){ showMsg("该文章暂时下架,无法查看",-1); 
+ exit(); }
+
 require_once(DEDEINC.'/memberlogin.class.php');
 $cfg_ml = new MemberLogin();
 
