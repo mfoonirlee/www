@@ -73,3 +73,6 @@ tplcache
 /community/*.html
 /life/*.html
 /shouyefengguang/*.html
+
+/activities/2015/*
+/activities/2016/*
