@@ -10,7 +10,7 @@ $(function(){
         deltax = 0,
         //显示元素的总长度
         totalWidth = 0,
-        CONST_CONTAINER_WIDTH = 1200 - 12;
+        CONST_CONTAINER_WIDTH = 1191;//1200 - 12
 
     $.ajax({
         type: 'GET',
@@ -72,9 +72,9 @@ $(function(){
             if(Math.abs(deltax) < totalWidth - CONST_CONTAINER_WIDTH){
                 deltax -= CONST_CONTAINER_WIDTH;
             }
-            // else{
-            //     deltax = 0;
-            // }
+            else{
+                deltax = 0;
+            }
             turnPage(deltax);
         });
     }

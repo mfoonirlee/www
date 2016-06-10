@@ -30,23 +30,19 @@ $(function(){
         data.timestr = data.stime + '-' + data.etime;
         var htmlFun = _.template($('#j_tpl').html());
         $('#j_container').html(htmlFun({data: data}));
-        $('#j_container').find('.top').click(function(){
-            $.ajax({
-                type: 'GET',
-                url: Util.replaceUrlParam(Config.getUrl('enrollActivity'), aid),
-                contentType: 'application/json;charset=utf-8',
-                dataType: 'json',
-                success: function (data) {
-                    alert(data.msg);
-                    if(data.IsSuccess == '0' && data.url){
-                        location.href = data.url;
-                    }
-                },
-                error: function () {
-                    alert("submit failed, please try again.");
-                }
-            });
-        })
+        
+        $('#signup').on('click', function(e){
+            var $target = $(e.target || e.srcElement);
+            var aid = $target.data('id');
+            var img = $target.data('img');
+            var title = encodeURIComponent( $target.data('title') );
+            
+            location.href = "../activities/signup.html?tid=32&aid="+aid+"&img="+img+"&title="+title;
+        });
+        
+        $('#back').on('click',function(e){
+            window.history.back();
+        });
     }
 
 }());
