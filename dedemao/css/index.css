@@ -206,6 +206,7 @@ li {
   position: relative;
   float: left;
   margin: 0 15px 50px 14px;
+  width: 236px;
 }
 
 .exp ul li > div {
