@@ -11,7 +11,15 @@ $(function () {
             return key ? (param[key] || '') : param;
         },
         replaceUrlParam: function(str, val){
-            return str && str.replace(/{\w+}/, val);
+            if ( str ) {
+                for (var i=1;i<arguments.length;i++)
+                {
+                    str = str.replace(/{\w+}/, arguments[i]);
+                }
+            }
+            
+            //return str && str.replace(/{\w+}/, val);
+            return str;
         },
         parseTimeStr: function(timeStr, form){
             var d = new Date(timeStr),
