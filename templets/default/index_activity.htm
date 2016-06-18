@@ -12,12 +12,12 @@ $atype = $_GET["atype"];
 if(true === isset($atype))
 {
 $sql = "SELECT `id`, `title`, `description`, `litpic`, `isnew`,`datestart`, `dateend`, `isactive` FROM `dede_archives` INNER JOIN `dede_addonactivity` ON 
-`dede_archives`.`id` = `dede_addonactivity`.`aid` WHERE 1 = 1 AND `dede_archives`.`typeid` = 26  AND `dede_addonactivity`.`activitytype` = ".$_GET["atype"].";";
+`dede_archives`.`id` = `dede_addonactivity`.`aid` WHERE 1 = 1 AND `dede_archives`.`typeid` = 26  AND `dede_addonactivity`.`activitytype` = ".$_GET["atype"]."  ORDER BY `datestart` DESC;";
 }
 else
 {
 $sql = "SELECT `id`, `title`, `description`, `litpic`, `isnew`,`datestart`, `dateend`, `isactive` FROM `dede_archives` INNER JOIN `dede_addonactivity` ON 
-`dede_archives`.`id` = `dede_addonactivity`.`aid` WHERE 1 = 1 AND `dede_archives`.`typeid` = 26;";
+`dede_archives`.`id` = `dede_addonactivity`.`aid` WHERE 1 = 1 AND `dede_archives`.`typeid` = 26 ORDER BY `datestart` DESC;";
 }
 
 $query = mysql_query($sql);
