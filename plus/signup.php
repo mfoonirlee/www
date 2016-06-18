@@ -36,7 +36,7 @@ $uavatar = $_SESSION['_img'];
 
 if (isset($uid))
 {
-$sql1="SELECT datestart,dateend from dede_addonactivity where aid==".$_GET["aid"].";";
+$sql1="SELECT datestart,dateend from dede_addonactivity where aid=".$_GET["aid"].";";
 $row = $dsql->GetOne($sql1);
 $startdate=strtotime(date("Y-m-d",$row['datestart']));
 $enddate=strtotime(date("Y-m-d",$row['dateend']));
@@ -60,6 +60,7 @@ $row = $dsql->GetOne($sql);
 if($row['signupnum']>=1)
 {
 $result["IsSuccess"]=0;
+//$data=$mobile+$uname+$time;
 $data="该活动您已经报名，不可重复报名";
 $fileType = mb_detect_encoding($data, array('UTF-8','GBK','LATIN1','BIG5'));
 if( $fileType != 'UTF-8')
